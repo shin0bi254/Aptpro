@@ -1,412 +1,380 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --navy:#0B1F3A;
-  --navy-light:#162D52;
-  --teal:#00C2A8;
-  --teal-dark:#009E88;
-  --teal-light:#E0F9F5;
-  --amber:#F5A623;
-  --white:#FFFFFF;
-  --off:#F6F8FA;
-  --text:#1A2B3C;
-  --muted:#556070;
-  --border:#D8E2EE;
-  --font-display:'DM Serif Display',serif;
-  --font-body:'DM Sans',sans-serif;
-}
-html{scroll-behavior:smooth}
-body{font-family:var(--font-body);color:var(--text);background:var(--white);font-size:16px;line-height:1.6}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AptPro Business & IT Solutions — Website Development, AI Automations, and Cybersecurity for Kenyan SMEs." />
+  <title>AptPro Business & IT Solutions | Nairobi, Kenya</title>
 
-nav{position:sticky;top:0;z-index:100;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:.9rem 2.5rem;box-shadow:0 2px 12px rgba(0,0,0,.18)}
-.nav-logo{font-family:var(--font-display);color:var(--white);font-size:1.3rem;letter-spacing:-.01em}
-.nav-logo span{color:var(--teal)}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.875rem;transition:color .2s}
-.nav-links a:hover{color:var(--teal)}
-.nav-cta{background:var(--teal);color:var(--navy);font-weight:600;font-size:.875rem;padding:.55rem 1.25rem;border-radius:6px;text-decoration:none;transition:background .2s}
-.nav-cta:hover{background:var(--teal-dark)}
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-/* HERO */
-.hero{background:var(--navy);padding:5rem 2.5rem 4.5rem;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-100px;right:-60px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(0,194,168,.13) 0%,transparent 70%)}
-.hero::after{content:'';position:absolute;bottom:-80px;left:25%;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(0,194,168,.07) 0%,transparent 70%)}
-.hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1}
-.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,194,168,.12);border:1px solid rgba(0,194,168,.28);color:var(--teal);font-size:.78rem;font-weight:500;padding:.35rem .9rem;border-radius:20px;margin-bottom:1.5rem;letter-spacing:.05em}
-.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0}
-h1.hero-title{font-family:var(--font-display);color:var(--white);font-size:3rem;line-height:1.15;margin-bottom:1.25rem;max-width:700px}
-h1.hero-title span{color:var(--teal)}
-.hero-sub{color:rgba(255,255,255,.62);font-size:1.05rem;max-width:530px;margin-bottom:2rem;line-height:1.75}
-.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-bottom:2.75rem}
-.btn-primary{background:var(--teal);color:var(--navy);font-weight:600;padding:.8rem 1.75rem;border-radius:8px;text-decoration:none;font-size:.95rem;transition:background .2s;font-family:var(--font-body)}
-.btn-primary:hover{background:var(--teal-dark)}
-.btn-ghost{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:var(--white);font-weight:500;padding:.8rem 1.5rem;border-radius:8px;text-decoration:none;font-size:.95rem;transition:background .2s;font-family:var(--font-body)}
-.btn-ghost:hover{background:rgba(255,255,255,.13)}
-.hero-stats{display:flex;gap:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
-.stat-num{font-family:var(--font-display);color:var(--teal);font-size:1.8rem;display:block}
-.stat-lbl{color:rgba(255,255,255,.45);font-size:.8rem}
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 
-/* SERVICES */
-section{padding:4rem 2.5rem}
-.section-inner{max-width:860px;margin:0 auto}
-.s-label{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:.55rem}
-h2.s-title{font-family:var(--font-display);font-size:2rem;color:var(--text);margin-bottom:.75rem;line-height:1.2}
-.s-sub{color:var(--muted);font-size:1rem;max-width:520px;margin-bottom:2.5rem;line-height:1.7}
-.svc-bg{background:var(--off)}
-.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem}
-.svc-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.5rem;position:relative;transition:box-shadow .2s,border-color .2s}
-.svc-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.08);border-color:var(--teal)}
-.svc-card.featured{border:2px solid var(--teal)}
-.svc-pill{position:absolute;top:-11px;left:1.25rem;background:var(--teal);color:var(--navy);font-size:.68rem;font-weight:700;padding:.22rem .75rem;border-radius:20px;letter-spacing:.06em}
-.svc-icon{width:40px;height:40px;background:var(--teal-light);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
-.svc-icon svg{width:20px;height:20px;stroke:var(--teal-dark);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.svc-name{font-weight:600;font-size:.95rem;color:var(--text);margin-bottom:.4rem}
-.svc-desc{font-size:.83rem;color:var(--muted);line-height:1.55;margin-bottom:.9rem}
-.svc-tags{display:flex;flex-wrap:wrap;gap:.35rem}
-.tag{font-size:.7rem;font-weight:500;background:var(--teal-light);color:var(--teal-dark);padding:.2rem .55rem;border-radius:4px}
-
-/* WHY US */
-.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;margin-top:2rem}
-.why-card{padding:1.25rem;border-radius:12px;border:1px solid var(--border);background:var(--white)}
-.why-num{font-family:var(--font-display);font-size:2.2rem;color:var(--teal);margin-bottom:.25rem}
-.why-title{font-weight:600;font-size:.95rem;margin-bottom:.35rem}
-.why-desc{font-size:.83rem;color:var(--muted);line-height:1.55}
-
-/* PROCESS */
-.process-bg{background:var(--navy)}
-.process-bg .s-title{color:var(--white)}
-.process-bg .s-sub{color:rgba(255,255,255,.5)}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;counter-reset:steps}
-.step{background:var(--navy-light);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:1.5rem;position:relative;counter-increment:steps}
-.step::before{content:counter(steps,'0'counter(steps));font-family:var(--font-display);font-size:2rem;color:rgba(0,194,168,.25);display:block;margin-bottom:.5rem;line-height:1}
-.step-title{font-weight:600;font-size:.95rem;color:var(--white);margin-bottom:.35rem}
-.step-desc{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.55}
-
-/* CASE STUDIES */
-.cases-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-.case-card{border:1px solid var(--border);border-radius:14px;padding:1.5rem;transition:box-shadow .2s}
-.case-card:hover{box-shadow:0 6px 20px rgba(0,0,0,.07)}
-.case-sector{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:.6rem}
-.case-metric{font-family:var(--font-display);font-size:2rem;color:var(--navy);margin-bottom:.25rem}
-.case-desc{font-size:.85rem;color:var(--muted);line-height:1.55}
-
-/* TESTIMONIALS */
-.testi-bg{background:var(--off)}
-.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-.testi-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem}
-.testi-text{font-size:.88rem;color:var(--text);line-height:1.65;margin-bottom:1rem;font-style:italic}
-.testi-author{display:flex;align-items:center;gap:.6rem}
-.avatar{width:32px;height:32px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:.68rem;font-weight:700;flex-shrink:0}
-.testi-name{font-size:.82rem;font-weight:600}
-.testi-role{font-size:.75rem;color:var(--muted)}
-
-/* LEAD MAGNET */
-.magnet{background:linear-gradient(135deg,var(--teal-light) 0%,#E8F4FF 100%);border-radius:16px;padding:2.5rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
-.magnet-text{flex:1;min-width:220px}
-.magnet-title{font-family:var(--font-display);font-size:1.5rem;color:var(--navy);margin-bottom:.5rem}
-.magnet-desc{font-size:.9rem;color:var(--muted);line-height:1.65;margin-bottom:1.25rem;max-width:380px}
-.magnet-form{display:flex;gap:.75rem;flex-wrap:wrap}
-.magnet-form input{border:1px solid var(--border);border-radius:8px;padding:.7rem 1rem;font-size:.9rem;font-family:var(--font-body);color:var(--text);background:var(--white);flex:1;min-width:160px}
-.magnet-form button{background:var(--navy);color:var(--white);border:none;border-radius:8px;padding:.7rem 1.5rem;font-size:.9rem;font-weight:600;cursor:pointer;font-family:var(--font-body);white-space:nowrap}
-.magnet-visual{flex-shrink:0;background:var(--white);border-radius:12px;padding:1.25rem;width:195px;border:1px solid var(--border)}
-.mv-title{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);margin-bottom:.75rem}
-.mv-item{display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--muted);margin-bottom:.45rem}
-.mv-dot{width:14px;height:14px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.55rem;color:var(--navy);font-weight:700}
-
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
-.contact-info{display:flex;flex-direction:column;gap:1rem}
-.contact-item{display:flex;align-items:flex-start;gap:.75rem}
-.c-icon{width:38px;height:38px;background:var(--teal-light);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.c-icon svg{width:16px;height:16px;stroke:var(--teal-dark);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.c-label{font-size:.72rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:.1rem}
-.c-value{font-size:.9rem;color:var(--text);font-weight:500}
-.book-box{background:var(--off);border-radius:14px;padding:1.5rem;border:1px solid var(--border)}
-.book-box h3{font-family:var(--font-display);font-size:1.25rem;color:var(--navy);margin-bottom:.4rem}
-.book-box p{font-size:.85rem;color:var(--muted);margin-bottom:1.25rem;line-height:1.6}
-.book-slots{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.25rem}
-.slot{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:.55rem .9rem;font-size:.83rem;cursor:pointer;transition:border-color .2s;color:var(--text)}
-.slot:hover,.slot.active{border-color:var(--teal);color:var(--teal-dark);font-weight:500}
-.book-btn{width:100%;background:var(--teal);color:var(--navy);font-weight:700;padding:.8rem;border-radius:8px;border:none;font-size:.95rem;cursor:pointer;font-family:var(--font-body)}
-
-footer{background:var(--navy);padding:2rem 2.5rem;text-align:center}
-footer p{color:rgba(255,255,255,.38);font-size:.8rem}
-footer span{color:var(--teal)}
-
-.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.35);z-index:999;cursor:pointer;text-decoration:none}
-.wa-float svg{width:26px;height:26px;fill:white}
-
-@media(max-width:640px){
-  h1.hero-title{font-size:2rem}
-  nav{padding:.8rem 1.25rem}
-  .hero,section{padding:3rem 1.25rem}
-  .contact-grid{grid-template-columns:1fr}
-  .nav-links{display:none}
-}
-</style>
+  <!-- Favicon (replace with your own) -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
 </head>
 <body>
 
-<nav>
-  <div class="nav-logo">apt<span>pro</span></div>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#process">How it works</a></li>
-    <li><a href="#work">Our work</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="#contact" class="nav-cta">Get a free consultation</a>
-</nav>
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="AptPro home">
+        apt<span>pro</span>
+      </a>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-badge">Nairobi-based · Web · Cybersecurity · AI Automations</div>
-    <h1 class="hero-title">We build smarter, <span>safer digital businesses</span> for Kenyan SMEs.</h1>
-    <p class="hero-sub">From high-converting websites to AI-powered automations and cybersecurity — AptPro is the digital partner that grows with your business.</p>
-    <div class="hero-ctas">
-      <a href="#contact" class="btn-primary">Start a project</a>
-      <a href="#services" class="btn-ghost">See what we do</a>
+      <!-- Desktop links -->
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why us</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="btn btn-primary nav-cta">Get a free consultation</a>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </div>
-    <div class="hero-stats">
-      <div><span class="stat-num">60+</span><span class="stat-lbl">businesses served</span></div>
-      <div><span class="stat-num">3-in-1</span><span class="stat-lbl">web · AI · security</span></div>
-      <div><span class="stat-num">KES-first</span><span class="stat-lbl">transparent pricing</span></div>
-      <div><span class="stat-num">5★</span><span class="stat-lbl">client satisfaction</span></div>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#why-us" class="mobile-link">Why us</a></li>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary mobile-cta">Get a free consultation</a>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- SERVICES -->
-<section id="services" class="svc-bg">
-  <div class="section-inner">
-    <p class="s-label">What we do</p>
-    <h2 class="s-title">Everything your business needs to thrive online</h2>
-    <p class="s-sub">Three core disciplines, one trusted partner. No outsourcing — everything built in-house, right here in Nairobi.</p>
-    <div class="svc-grid">
+  <main>
 
-      <div class="svc-card featured">
-        <div class="svc-pill">MOST POPULAR</div>
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-        <div class="svc-name">Website development</div>
-        <div class="svc-desc">Fast, mobile-first websites that convert visitors into customers. Wix, WordPress, or custom builds.</div>
-        <div class="svc-tags"><span class="tag">Wix</span><span class="tag">WordPress</span><span class="tag">E-commerce</span><span class="tag">Landing pages</span></div>
-      </div>
-
-      <div class="svc-card">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-        <div class="svc-name">AI automations</div>
-        <div class="svc-desc">Automate repetitive tasks, customer follow-ups, and workflows using AI — so you focus on what matters.</div>
-        <div class="svc-tags"><span class="tag">WhatsApp bots</span><span class="tag">CRM flows</span><span class="tag">AI agents</span></div>
-      </div>
-
-      <div class="svc-card">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <div class="svc-name">Cybersecurity</div>
-        <div class="svc-desc">Protect your business from phishing, M-Pesa fraud, ransomware, and DPA non-compliance.</div>
-        <div class="svc-tags"><span class="tag">Risk audit</span><span class="tag">DPA 2019</span><span class="tag">Staff training</span></div>
-      </div>
-
-      <div class="svc-card">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
-        <div class="svc-name">Digital strategy & SEO</div>
-        <div class="svc-desc">Be found on Google. We set up local SEO, Google My Business, and content strategies built for Kenya.</div>
-        <div class="svc-tags"><span class="tag">Local SEO</span><span class="tag">Google Ads</span><span class="tag">Analytics</span></div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- WHY US -->
-<section id="why">
-  <div class="section-inner">
-    <p class="s-label">Why AptPro</p>
-    <h2 class="s-title">The all-in-one digital partner Kenyan SMEs deserve</h2>
-    <p class="s-sub">No more juggling five different vendors. We handle your web presence, automation, and security under one roof.</p>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-num">01</div>
-        <div class="why-title">Built for Kenya</div>
-        <div class="why-desc">KES pricing, M-Pesa integration, Swahili support, and local compliance — no USD sticker shock.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-num">02</div>
-        <div class="why-title">One team, all disciplines</div>
-        <div class="why-desc">Web dev, AI, and security expertise in one place. Your strategy stays coherent across every service.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-num">03</div>
-        <div class="why-title">WhatsApp-first support</div>
-        <div class="why-desc">Real support on a channel you actually use. Not a ticketing system you'll forget to check.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-num">04</div>
-        <div class="why-title">Results-first approach</div>
-        <div class="why-desc">We report in plain language — leads generated, hours saved, threats blocked. Not jargon.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process" class="process-bg">
-  <div class="section-inner">
-    <p class="s-label" style="color:rgba(0,194,168,.8)">How it works</p>
-    <h2 class="s-title">From first call to live results in weeks</h2>
-    <p class="s-sub">A clear, no-surprises process — so you always know what's happening.</p>
-    <div class="steps">
-      <div class="step">
-        <div class="step-title">Free discovery call</div>
-        <div class="step-desc">30 min on WhatsApp. We learn about your business, goals, and gaps — no hard sell.</div>
-      </div>
-      <div class="step">
-        <div class="step-title">Custom proposal</div>
-        <div class="step-desc">A scoped plan in KES with clear deliverables and timelines. No vague retainers.</div>
-      </div>
-      <div class="step">
-        <div class="step-title">Build & implement</div>
-        <div class="step-desc">We execute — website, automation flows, or security hardening. Weekly updates via WhatsApp.</div>
-      </div>
-      <div class="step">
-        <div class="step-title">Launch & optimise</div>
-        <div class="step-desc">Go live with confidence. We monitor, measure, and iterate for 30 days post-launch.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CASE STUDIES -->
-<section id="work">
-  <div class="section-inner">
-    <p class="s-label">Our work</p>
-    <h2 class="s-title">Real results for Kenyan businesses</h2>
-    <p class="s-sub">Numbers, not promises.</p>
-    <div class="cases-grid">
-      <div class="case-card">
-        <div class="case-sector">E-commerce · Westlands</div>
-        <div class="case-metric">3× revenue</div>
-        <div class="case-desc">Rebuilt a slow WordPress site into a fast Wix store with M-Pesa checkout. Sales tripled in 60 days.</div>
-      </div>
-      <div class="case-card">
-        <div class="case-sector">Logistics · Mombasa</div>
-        <div class="case-metric">40 hrs/month saved</div>
-        <div class="case-desc">WhatsApp booking bot + automated invoicing replaced manual admin across a 12-person ops team.</div>
-      </div>
-      <div class="case-card">
-        <div class="case-sector">SACCO · Nairobi</div>
-        <div class="case-metric">KES 2M fraud blocked</div>
-        <div class="case-desc">Cybersecurity audit uncovered two critical gaps. Closed before a planned phishing campaign hit.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testi-bg">
-  <div class="section-inner">
-    <p class="s-label">What clients say</p>
-    <h2 class="s-title">Trusted by SMEs across Kenya</h2>
-    <p class="s-sub" style="margin-bottom:1.5rem">In their own words.</p>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-text">"AptPro built our website and set up an automated WhatsApp follow-up system. Enquiries converted 2× faster within the first month."</div>
-        <div class="testi-author"><div class="avatar">JM</div><div><div class="testi-name">James Mwangi</div><div class="testi-role">MD, Westlands Hardware Ltd</div></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-text">"Walisaidia sana na cybersecurity na website yetu. Tunawapendekeza sana kwa biashara yoyote Kenya."</div>
-        <div class="testi-author"><div class="avatar">FA</div><div><div class="testi-name">Fatuma Abdi</div><div class="testi-role">CEO, Abdi Logistics, Mombasa</div></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-text">"The AI automation they built handles all our new member onboarding. It saves us hours every week and members love the instant responses."</div>
-        <div class="testi-author"><div class="avatar">PK</div><div><div class="testi-name">Peter Kamau</div><div class="testi-role">Chairman, Umoja SACCO</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LEAD MAGNET -->
-<section id="guide">
-  <div class="section-inner">
-    <div class="magnet">
-      <div class="magnet-text">
-        <p class="s-label">Free guide</p>
-        <div class="magnet-title">The Kenyan SME Digital Starter Kit</div>
-        <div class="magnet-desc">Website, automation, and security basics in one plain-language guide. Free — delivered to your WhatsApp.</div>
-        <div class="magnet-form">
-          <input type="text" placeholder="Your WhatsApp number">
-          <input type="text" placeholder="Business name">
-          <button type="button">Send me the guide</button>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-glow hero-glow--right" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--left" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Nairobi-based · Web · AI Automations · Cybersecurity
+        </div>
+        <h1 class="hero-title" id="hero-title">
+          We build smarter, <span class="accent">safer digital businesses</span> for Kenyan SMEs.
+        </h1>
+        <p class="hero-sub">
+          From high-converting websites to AI-powered automations and cybersecurity —
+          AptPro is the all-in-one digital partner that grows with your business.
+        </p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">Start a project</a>
+          <a href="#services" class="btn btn-ghost">See what we do</a>
+        </div>
+        <div class="hero-stats" aria-label="Key stats">
+          <div class="stat">
+            <span class="stat-num">60+</span>
+            <span class="stat-lbl">businesses served</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">3-in-1</span>
+            <span class="stat-lbl">web · AI · security</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">KES-first</span>
+            <span class="stat-lbl">transparent pricing</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">5★</span>
+            <span class="stat-lbl">client satisfaction</span>
+          </div>
         </div>
       </div>
-      <div class="magnet-visual">
-        <div class="mv-title">Inside the guide</div>
-        <div class="mv-item"><div class="mv-dot">✓</div>Website must-haves</div>
-        <div class="mv-item"><div class="mv-dot">✓</div>AI tools for SMEs</div>
-        <div class="mv-item"><div class="mv-dot">✓</div>M-Pesa security</div>
-        <div class="mv-item"><div class="mv-dot">✓</div>DPA compliance basics</div>
-        <div class="mv-item"><div class="mv-dot">✓</div>Local SEO checklist</div>
-        <div class="mv-item"><div class="mv-dot">✓</div>Automation quick-wins</div>
-        <div style="font-size:.72rem;color:var(--muted);margin-top:.75rem">+ 4 more chapters</div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="section section--alt" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <p class="section-label">What we do</p>
+        <h2 class="section-title" id="services-title">Everything your business needs to thrive online</h2>
+        <p class="section-sub">Three core disciplines, one trusted partner. No outsourcing — everything built in-house, right here in Nairobi.</p>
+
+        <div class="cards-grid">
+
+          <article class="card card--featured">
+            <div class="card-badge">MOST POPULAR</div>
+            <div class="card-icon" aria-hidden="true">
+              <img src="assets/icons/web.svg" alt="" width="22" height="22" />
+            </div>
+            <h3 class="card-title">Website Development</h3>
+            <p class="card-desc">Fast, mobile-first websites that convert visitors into customers. Wix, WordPress, or fully custom builds.</p>
+            <ul class="card-tags" aria-label="Technologies">
+              <li>Wix</li><li>WordPress</li><li>E-commerce</li><li>Landing pages</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <img src="assets/icons/ai.svg" alt="" width="22" height="22" />
+            </div>
+            <h3 class="card-title">AI Automations</h3>
+            <p class="card-desc">Automate repetitive tasks, customer follow-ups, and workflows using AI — so you focus on what matters.</p>
+            <ul class="card-tags" aria-label="Technologies">
+              <li>WhatsApp bots</li><li>CRM flows</li><li>AI agents</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <img src="assets/icons/security.svg" alt="" width="22" height="22" />
+            </div>
+            <h3 class="card-title">Cybersecurity</h3>
+            <p class="card-desc">Protect your business from phishing, M-Pesa fraud, ransomware, and Kenya DPA non-compliance.</p>
+            <ul class="card-tags" aria-label="Technologies">
+              <li>Risk audit</li><li>DPA 2019</li><li>Staff training</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <img src="assets/icons/seo.svg" alt="" width="22" height="22" />
+            </div>
+            <h3 class="card-title">Digital Strategy & SEO</h3>
+            <p class="card-desc">Be found on Google. Local SEO, Google My Business, and content strategies built for the Kenyan market.</p>
+            <ul class="card-tags" aria-label="Technologies">
+              <li>Local SEO</li><li>Google Ads</li><li>Analytics</li>
+            </ul>
+          </article>
+
+        </div>
       </div>
+    </section>
+
+    <!-- ===================== WHY US ===================== -->
+    <section class="section" id="why-us" aria-labelledby="why-title">
+      <div class="container">
+        <p class="section-label">Why AptPro</p>
+        <h2 class="section-title" id="why-title">The all-in-one digital partner Kenyan SMEs deserve</h2>
+        <p class="section-sub">No more juggling five different vendors. Web, automation, and security under one roof.</p>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-num" aria-hidden="true">01</div>
+            <h3 class="why-title">Built for Kenya</h3>
+            <p class="why-desc">KES pricing, M-Pesa integration, Swahili support, and local DPA compliance — no USD sticker shock.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-num" aria-hidden="true">02</div>
+            <h3 class="why-title">One team, all disciplines</h3>
+            <p class="why-desc">Web dev, AI, and security expertise in one place. Your strategy stays coherent across every service.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-num" aria-hidden="true">03</div>
+            <h3 class="why-title">WhatsApp-first support</h3>
+            <p class="why-desc">Real support on a channel you actually use — not a ticketing system you'll forget to check.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-num" aria-hidden="true">04</div>
+            <h3 class="why-title">Results-first approach</h3>
+            <p class="why-desc">We report in plain language — leads generated, hours saved, threats blocked. Not jargon.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section class="section section--dark" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <p class="section-label section-label--light">How it works</p>
+        <h2 class="section-title section-title--light" id="process-title">From first call to live results in weeks</h2>
+        <p class="section-sub section-sub--light">A clear, no-surprises process — so you always know what's happening.</p>
+
+        <ol class="steps-grid" aria-label="Our process steps">
+          <li class="step">
+            <span class="step-num" aria-hidden="true">01</span>
+            <h3 class="step-title">Free discovery call</h3>
+            <p class="step-desc">30 min on WhatsApp. We learn about your business, goals, and gaps — no hard sell.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">02</span>
+            <h3 class="step-title">Custom proposal</h3>
+            <p class="step-desc">A scoped plan in KES with clear deliverables and timelines. No vague retainers.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">03</span>
+            <h3 class="step-title">Build & implement</h3>
+            <p class="step-desc">We execute — website, automation flows, or security hardening. Weekly updates via WhatsApp.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">04</span>
+            <h3 class="step-title">Launch & optimise</h3>
+            <p class="step-desc">Go live with confidence. We monitor, measure, and iterate for 30 days post-launch.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-text">
+          <p class="section-label">About AptPro</p>
+          <h2 class="section-title" id="about-title">Nairobi-born, built for Kenyan business</h2>
+          <p class="about-body">
+            AptPro Business &amp; IT Solutions was founded to solve a simple problem:
+            Kenyan SMEs deserve the same quality of digital infrastructure as large corporations —
+            at prices that make sense locally.
+          </p>
+          <p class="about-body">
+            We combine website development, AI automation, and cybersecurity in one team.
+            No referrals to strangers. No USD invoices. Just clear, honest work that moves your business forward.
+          </p>
+          <div class="about-certs" aria-label="Certifications">
+            <span class="cert-badge"><span class="cert-dot" aria-hidden="true"></span>CEH Certified</span>
+            <span class="cert-badge"><span class="cert-dot" aria-hidden="true"></span>CompTIA Security+</span>
+            <span class="cert-badge"><span class="cert-dot" aria-hidden="true"></span>ODPC Registered DPO</span>
+            <span class="cert-badge"><span class="cert-dot" aria-hidden="true"></span>ISACA Nairobi</span>
+          </div>
+        </div>
+        <div class="about-stats" aria-label="Company highlights">
+          <div class="about-stat">
+            <span class="about-stat-num">60+</span>
+            <span class="about-stat-lbl">SMEs served across Kenya</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">KES 12M+</span>
+            <span class="about-stat-lbl">fraud prevented for clients</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">5 yrs</span>
+            <span class="about-stat-lbl">in the Kenyan market</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">3</span>
+            <span class="about-stat-lbl">core service pillars</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <p class="section-label">Get in touch</p>
+        <h2 class="section-title" id="contact-title">Let's build something together</h2>
+        <p class="section-sub">Free 30-minute discovery call. No hard sell — just an honest look at what your business needs.</p>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <img src="assets/icons/phone.svg" alt="" width="16" height="16" />
+              </div>
+              <div>
+                <p class="contact-label">WhatsApp (preferred)</p>
+                <a href="https://wa.me/254721494510" class="contact-value">+254 721 494 510</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <img src="assets/icons/email.svg" alt="" width="16" height="16" />
+              </div>
+              <div>
+                <p class="contact-label">Email</p>
+                <a href="mailto:hello@aptpro.co.ke" class="contact-value">hello@aptpro.co.ke</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <img src="assets/icons/location.svg" alt="" width="16" height="16" />
+              </div>
+              <div>
+                <p class="contact-label">Location</p>
+                <p class="contact-value">Nairobi, Kenya</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <img src="assets/icons/mpesa.svg" alt="" width="16" height="16" />
+              </div>
+              <div>
+                <p class="contact-label">M-Pesa deposit</p>
+                <p class="contact-value">Till No. 123456 · AptPro Ltd</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate aria-label="Contact form">
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Mwangi" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="whatsapp">WhatsApp number</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="+254 700 000 000" required autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="service">Service you need</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service…</option>
+                <option value="web">Website development</option>
+                <option value="ai">AI automations</option>
+                <option value="security">Cybersecurity</option>
+                <option value="seo">Digital strategy & SEO</option>
+                <option value="other">Not sure — let's talk</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell us about your business</label>
+              <textarea id="message" name="message" rows="4" placeholder="What does your business do? What's your biggest digital challenge?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn--full" id="submit-btn">
+              Send message
+            </button>
+            <p class="form-note" id="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="nav-logo">apt<span>pro</span></span>
+        <p class="footer-tagline">Web · AI Automations · Cybersecurity</p>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="https://wa.me/254721494510">WhatsApp</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year"></span> AptPro Business &amp; IT Solutions Ltd · Nairobi, Kenya</p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-inner">
-    <p class="s-label">Get in touch</p>
-    <h2 class="s-title">Let's build something together</h2>
-    <p class="s-sub">Free 30-minute discovery call. No hard sell — just an honest look at what your business needs next.</p>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <div class="contact-item">
-          <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.08 12 19.79 19.79 0 011 3.18 2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.52-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-          <div><div class="c-label">WhatsApp (preferred)</div><div class="c-value">+254 700 000 000</div></div>
-        </div>
-        <div class="contact-item">
-          <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><div class="c-label">Email</div><div class="c-value">hello@aptpro.co.ke</div></div>
-        </div>
-        <div class="contact-item">
-          <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><div class="c-label">Location</div><div class="c-value">Nairobi, Kenya</div></div>
-        </div>
-        <div class="contact-item">
-          <div class="c-icon"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
-          <div><div class="c-label">M-Pesa deposit</div><div class="c-value">Till No. 123456 · AptPro Ltd</div></div>
-        </div>
-      </div>
-      <div class="book-box">
-        <h3>Book a free discovery call</h3>
-        <p>Pick a time that works for you. We'll call on WhatsApp or phone — your choice.</p>
-        <div class="book-slots">
-          <div class="slot active" onclick="document.querySelectorAll('.slot').forEach(s=>s.classList.remove('active'));this.classList.add('active')">Mon 14 Apr · 10:00 AM</div>
-          <div class="slot" onclick="document.querySelectorAll('.slot').forEach(s=>s.classList.remove('active'));this.classList.add('active')">Tue 15 Apr · 2:00 PM</div>
-          <div class="slot" onclick="document.querySelectorAll('.slot').forEach(s=>s.classList.remove('active'));this.classList.add('active')">Wed 16 Apr · 11:00 AM</div>
-        </div>
-        <button class="book-btn">Confirm via WhatsApp</button>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- ===================== FLOATING WHATSAPP ===================== -->
+  <a href="https://wa.me/254721494510"
+     class="wa-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat with AptPro on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
 
-<footer>
-  <p><span>AptPro Ltd</span> · Nairobi, Kenya · hello@aptpro.co.ke · +254 700 000 000</p>
-  <p style="margin-top:.4rem">Web Development · AI Automations · Cybersecurity</p>
-</footer>
-
-<a href="https://wa.me/254700000000" class="wa-float" title="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
