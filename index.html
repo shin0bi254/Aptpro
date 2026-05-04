@@ -3,56 +3,355 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AptPro Business & IT Solutions — Website Development, AI Automations, and Cybersecurity for Kenyan SMEs." />
+  <meta name="description" content="AptPro Business & IT Solutions — Get more customers, automate your operations, and protect your business from fraud. Nairobi-based Web, AI Automations & Cybersecurity for Kenyan SMEs." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AptPro Business & IT Solutions | Nairobi, Kenya" />
+  <meta property="og:description" content="Get more customers, automate your operations, and protect your business from fraud — all in one place. Kenyan-built for Kenyan SMEs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aptpro.co.ke" />
+  <meta property="og:image" content="https://aptpro.co.ke/assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <title>AptPro Business & IT Solutions | Nairobi, Kenya</title>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "AptPro Business & IT Solutions",
+    "description": "Website Development, AI Automations, and Cybersecurity for Kenyan SMEs.",
+    "url": "https://aptpro.co.ke",
+    "telephone": "+254721494510",
+    "email": "aptpro@nascah.co.ke",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nairobi",
+      "addressCountry": "KE"
+    },
+    "areaServed": "Kenya",
+    "priceRange": "KES"
+  }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Favicon (replace with your own) -->
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #0a0f0d;
+      color: #e8ede9;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --green: #22c55e;
+      --green-dark: #16a34a;
+      --green-glow: rgba(34,197,94,0.15);
+      --surface: #111712;
+      --surface2: #161d18;
+      --border: rgba(34,197,94,0.15);
+      --text-muted: #8a9e8d;
+      --radius: 12px;
+      --radius-lg: 20px;
+    }
+
+    /* ===== UTILITY ===== */
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 100px 0; }
+    .section--alt { background: var(--surface); }
+    .section--dark { background: #050907; }
+    .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
+    .section-label--light { color: var(--green); }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; color: #f0f5f1; margin-bottom: 16px; }
+    .section-title--light { color: #f0f5f1; }
+    .section-sub { color: var(--text-muted); max-width: 600px; font-size: 1.05rem; margin-bottom: 56px; }
+    .section-sub--light { color: #8a9e8d; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 0.95rem; cursor: pointer; border: none; transition: all 0.2s ease; font-family: inherit; text-decoration: none; }
+    .btn-primary { background: var(--green); color: #020804; }
+    .btn-primary:hover { background: var(--green-dark); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(34,197,94,0.3); }
+    .btn-ghost { background: transparent; color: #e8ede9; border: 1px solid var(--border); }
+    .btn-ghost:hover { border-color: var(--green); color: var(--green); }
+    .btn-wa { background: #25D366; color: #fff; }
+    .btn-wa:hover { background: #128C7E; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(37,211,102,0.3); }
+    .btn--full { width: 100%; justify-content: center; }
+    .accent { color: var(--green); }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10,15,13,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+    .navbar.scrolled { background: rgba(10,15,13,0.97); }
+    .nav-container { max-width: 1140px; margin: 0 auto; padding: 0 24px; height: 68px; display: flex; align-items: center; gap: 40px; }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: #f0f5f1; }
+    .nav-logo span { color: var(--green); }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--green); }
+    .nav-cta { margin-left: auto; padding: 10px 20px; font-size: 0.88rem; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .bar { display: block; width: 22px; height: 2px; background: #e8ede9; border-radius: 2px; transition: all 0.3s; }
+    .mobile-menu { display: none; padding: 20px 24px 28px; border-top: 1px solid var(--border); }
+    .mobile-menu ul { display: flex; flex-direction: column; gap: 4px; margin-bottom: 16px; }
+    .mobile-link { display: block; padding: 10px 0; color: var(--text-muted); font-weight: 500; border-bottom: 1px solid rgba(255,255,255,0.05); transition: color 0.2s; }
+    .mobile-link:hover { color: var(--green); }
+    .mobile-cta { display: inline-flex; }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; margin-left: auto; }
+      .mobile-menu.open { display: block; }
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding: 120px 0 80px;
+      position: relative; overflow: hidden;
+    }
+    .hero-glow {
+      position: absolute; width: 600px; height: 600px;
+      border-radius: 50%; filter: blur(120px); pointer-events: none; z-index: 0;
+    }
+    .hero-glow--right { background: rgba(34,197,94,0.07); right: -200px; top: 50%; transform: translateY(-50%); }
+    .hero-glow--left { background: rgba(34,197,94,0.04); left: -300px; top: 20%; }
+    .hero-inner { position: relative; z-index: 1; max-width: 800px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(34,197,94,0.08); border: 1px solid var(--border);
+      border-radius: 100px; padding: 6px 16px;
+      font-size: 0.78rem; font-weight: 500; color: var(--green);
+      margin-bottom: 28px; letter-spacing: 0.03em;
+    }
+    .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; flex-shrink: 0; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
+    .hero-title { font-family: 'DM Serif Display', serif; font-size: clamp(2.5rem, 5.5vw, 4rem); line-height: 1.1; color: #f0f5f1; margin-bottom: 24px; }
+    .hero-pain { display: block; font-size: clamp(1rem, 2vw, 1.2rem); font-family: 'DM Sans', sans-serif; font-weight: 400; color: var(--text-muted); margin-bottom: 12px; }
+    .hero-sub { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 16px; max-width: 620px; line-height: 1.7; }
+    .hero-outcomes { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
+    .outcome-pill {
+      display: flex; align-items: center; gap: 6px;
+      background: rgba(34,197,94,0.07); border: 1px solid rgba(34,197,94,0.2);
+      border-radius: 100px; padding: 6px 14px;
+      font-size: 0.82rem; font-weight: 500; color: #a7d9b3;
+    }
+    .outcome-pill::before { content: '✓'; color: var(--green); font-weight: 700; }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+    .urgency-note { font-size: 0.8rem; color: #f59e0b; display: flex; align-items: center; gap: 6px; margin-bottom: 48px; }
+    .urgency-note::before { content: '🔥'; }
+    .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; border-top: 1px solid var(--border); padding-top: 40px; }
+    .stat-num { display: block; font-family: 'DM Serif Display', serif; font-size: 1.8rem; color: var(--green); line-height: 1; margin-bottom: 4px; }
+    .stat-lbl { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    @media (max-width: 600px) { .hero-stats { grid-template-columns: repeat(2, 1fr); } }
+
+    /* ===== TRUST BAR ===== */
+    .trust-bar { background: var(--surface2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 18px 0; }
+    .trust-inner { display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--text-muted); font-weight: 500; }
+    .trust-icon { color: var(--green); font-size: 1rem; }
+
+    /* ===== SERVICES ===== */
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card {
+      background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-lg);
+      padding: 32px; position: relative; transition: border-color 0.25s, transform 0.25s;
+    }
+    .card:hover { border-color: rgba(34,197,94,0.4); transform: translateY(-3px); }
+    .card--featured { border-color: rgba(34,197,94,0.35); background: linear-gradient(135deg, rgba(34,197,94,0.05) 0%, var(--surface2) 100%); }
+    .card-badge { position: absolute; top: -1px; right: 24px; background: var(--green); color: #020804; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; padding: 4px 10px; border-radius: 0 0 8px 8px; }
+    .card-icon { width: 44px; height: 44px; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 1.3rem; }
+    .card-title { font-family: 'DM Serif Display', serif; font-size: 1.3rem; color: #f0f5f1; margin-bottom: 10px; }
+    .card-desc { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 16px; line-height: 1.6; }
+    .card-features { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+    .card-features li { font-size: 0.83rem; color: #a7d9b3; display: flex; align-items: flex-start; gap: 6px; }
+    .card-features li::before { content: '→'; color: var(--green); flex-shrink: 0; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+    .card-tags li { background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.15); border-radius: 6px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+    .card-pricing { font-size: 0.82rem; color: #6b7c6e; border-top: 1px solid var(--border); padding-top: 16px; }
+    .card-pricing strong { color: var(--green); font-size: 0.95rem; }
+
+    /* Packages subgrid for web */
+    .packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+    .package { background: rgba(34,197,94,0.05); border: 1px solid rgba(34,197,94,0.12); border-radius: 8px; padding: 12px; }
+    .package-name { font-size: 0.78rem; font-weight: 600; color: #a7d9b3; display: block; margin-bottom: 2px; }
+    .package-price { font-size: 0.72rem; color: var(--text-muted); }
+    @media (max-width: 500px) { .packages-grid { grid-template-columns: 1fr; } }
+
+    /* ===== OUTCOMES SECTION ===== */
+    .outcomes-section { padding: 80px 0; background: #050907; }
+    .outcomes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; }
+    .outcome-block { background: var(--surface2); padding: 48px 36px; text-align: center; }
+    .outcome-block:first-child { border-radius: var(--radius-lg) 0 0 var(--radius-lg); }
+    .outcome-block:last-child { border-radius: 0 var(--radius-lg) var(--radius-lg) 0; }
+    .outcome-icon { font-size: 2.5rem; margin-bottom: 16px; }
+    .outcome-title { font-family: 'DM Serif Display', serif; font-size: 1.6rem; color: var(--green); margin-bottom: 8px; }
+    .outcome-desc { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; }
+    .outcome-services { display: flex; flex-direction: column; gap: 4px; }
+    .outcome-services span { font-size: 0.78rem; color: #6b7c6e; }
+    @media (max-width: 768px) { .outcomes-grid { grid-template-columns: 1fr; } .outcome-block { border-radius: 0; } .outcome-block:first-child { border-radius: var(--radius-lg) var(--radius-lg) 0 0; } .outcome-block:last-child { border-radius: 0 0 var(--radius-lg) var(--radius-lg); } }
+
+    /* ===== WHY US ===== */
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+    .why-card { padding: 32px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface2); }
+    .why-num { font-family: 'DM Serif Display', serif; font-size: 3rem; color: rgba(34,197,94,0.15); line-height: 1; margin-bottom: 12px; }
+    .why-title { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: #f0f5f1; margin-bottom: 8px; }
+    .why-desc { color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; }
+
+    /* Risk reversal */
+    .risk-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; justify-content: center; }
+    .risk-pill { display: flex; align-items: center; gap: 8px; background: rgba(34,197,94,0.06); border: 1px solid rgba(34,197,94,0.18); border-radius: 100px; padding: 10px 18px; font-size: 0.85rem; color: #a7d9b3; }
+    .risk-pill::before { font-size: 1rem; }
+    .risk-pill--shield::before { content: '🛡️'; }
+    .risk-pill--pay::before { content: '💳'; }
+    .risk-pill--support::before { content: '🔧'; }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials { padding: 100px 0; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .testi-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px; position: relative; }
+    .testi-stars { color: #f59e0b; font-size: 0.9rem; margin-bottom: 16px; letter-spacing: 2px; }
+    .testi-quote { color: #c5d8c7; font-size: 0.95rem; line-height: 1.7; margin-bottom: 24px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, rgba(34,197,94,0.3), rgba(34,197,94,0.1)); display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; color: var(--green); font-size: 1rem; flex-shrink: 0; }
+    .testi-name { font-weight: 600; font-size: 0.9rem; color: #f0f5f1; }
+    .testi-biz { font-size: 0.78rem; color: var(--text-muted); }
+    .testi-result { position: absolute; top: 20px; right: 20px; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.2); border-radius: 100px; padding: 3px 10px; font-size: 0.7rem; color: var(--green); font-weight: 600; }
+
+    /* ===== PROCESS ===== */
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; counter-reset: none; }
+    .step { position: relative; padding-left: 0; }
+    .step-num { display: inline-block; font-family: 'DM Serif Display', serif; font-size: 3rem; color: rgba(34,197,94,0.2); line-height: 1; margin-bottom: 12px; }
+    .step-title { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: #f0f5f1; margin-bottom: 8px; }
+    .step-desc { color: #6b7c6e; font-size: 0.88rem; line-height: 1.65; }
+
+    /* ===== ABOUT ===== */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-body { color: var(--text-muted); line-height: 1.75; margin-bottom: 16px; }
+    .about-certs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .cert-badge { display: flex; align-items: center; gap: 6px; background: rgba(34,197,94,0.07); border: 1px solid rgba(34,197,94,0.15); border-radius: 100px; padding: 6px 14px; font-size: 0.78rem; color: #a7d9b3; }
+    .cert-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
+    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .about-stat { background: var(--surface2); padding: 32px 24px; }
+    .about-stat:nth-child(1) { border-radius: var(--radius) 0 0 0; }
+    .about-stat:nth-child(2) { border-radius: 0 var(--radius) 0 0; }
+    .about-stat:nth-child(3) { border-radius: 0 0 0 var(--radius); }
+    .about-stat:nth-child(4) { border-radius: 0 0 var(--radius) 0; }
+    .about-stat-num { display: block; font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--green); line-height: 1; margin-bottom: 6px; }
+    .about-stat-lbl { font-size: 0.8rem; color: var(--text-muted); }
+    .founder-note { background: rgba(34,197,94,0.05); border: 1px solid rgba(34,197,94,0.15); border-radius: var(--radius); padding: 20px; margin-top: 24px; }
+    .founder-note p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+    .founder-note strong { color: #a7d9b3; }
+    @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+    /* ===== CONTACT ===== */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+    .contact-info { display: flex; flex-direction: column; gap: 24px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 14px; }
+    .contact-icon { width: 36px; height: 36px; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+    .contact-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px; }
+    .contact-value { font-size: 0.95rem; color: #e8ede9; font-weight: 500; }
+    .contact-value:hover { color: var(--green); }
+    .contact-wa-btn { display: flex; }
+    .contact-form { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 36px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 0.83rem; font-weight: 500; color: #a7d9b3; margin-bottom: 6px; letter-spacing: 0.03em; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; background: rgba(34,197,94,0.04); border: 1px solid rgba(34,197,94,0.15);
+      border-radius: 8px; padding: 12px 16px; color: #e8ede9;
+      font-family: 'DM Sans', sans-serif; font-size: 0.92rem;
+      transition: border-color 0.2s; outline: none;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--green); background: rgba(34,197,94,0.07); }
+    .form-group select { appearance: none; cursor: pointer; }
+    .form-group select option { background: #111712; }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    ::placeholder { color: #4a5c4c; }
+    .form-note { font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 12px; min-height: 20px; }
+    .form-note.success { color: var(--green); }
+    .form-note.error { color: #f87171; }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+    /* ===== FOOTER ===== */
+    .footer { background: #050907; border-top: 1px solid var(--border); padding: 48px 0 32px; }
+    .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center; }
+    .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .footer-tagline { font-size: 0.78rem; color: var(--text-muted); }
+    .footer-links { display: flex; gap: 28px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { font-size: 0.85rem; color: var(--text-muted); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--green); }
+    .footer-copy { font-size: 0.75rem; color: #4a5c4c; }
+
+    /* ===== FLOATING WA ===== */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 99;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #25D366; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 0 8px 28px rgba(37,211,102,0.5); }
+    .wa-float svg { width: 28px; height: 28px; fill: #fff; }
+
+    /* ===== STICKY CTA ===== */
+    .sticky-cta {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
+      background: rgba(10,15,13,0.95); backdrop-filter: blur(8px);
+      border-top: 1px solid var(--border); padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      transform: translateY(100%); transition: transform 0.4s ease;
+    }
+    .sticky-cta.visible { transform: translateY(0); }
+    .sticky-cta p { font-size: 0.88rem; color: var(--text-muted); }
+    .sticky-cta strong { color: #f0f5f1; }
+    @media (max-width: 600px) { .sticky-cta { flex-direction: column; align-items: flex-start; } .wa-float { bottom: 90px; } }
+  </style>
 </head>
 <body>
 
   <!-- ===================== NAVIGATION ===================== -->
   <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
-      <a href="#hero" class="nav-logo" aria-label="AptPro home">
-        apt<span>pro</span>
-      </a>
-
-      <!-- Desktop links -->
+      <a href="#hero" class="nav-logo" aria-label="AptPro home">apt<span>pro</span></a>
       <ul class="nav-links" id="nav-links" role="list">
         <li><a href="#services">Services</a></li>
         <li><a href="#why-us">Why us</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-
-      <a href="#contact" class="btn btn-primary nav-cta">Get a free consultation</a>
-
-      <!-- Hamburger -->
-      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-links">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <a href="https://wa.me/254721494510?text=Hi%20AptPro%2C%20I%27d%20like%20a%20free%20consultation" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Get a free consultation</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
     </div>
-
-    <!-- Mobile drawer -->
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
       <ul role="list">
         <li><a href="#services" class="mobile-link">Services</a></li>
         <li><a href="#why-us" class="mobile-link">Why us</a></li>
+        <li><a href="#testimonials" class="mobile-link">Reviews</a></li>
         <li><a href="#about" class="mobile-link">About</a></li>
         <li><a href="#contact" class="mobile-link">Contact</a></li>
       </ul>
-      <a href="#contact" class="btn btn-primary mobile-cta">Get a free consultation</a>
+      <a href="https://wa.me/254721494510?text=Hi%20AptPro%2C%20I%27d%20like%20a%20free%20consultation" class="btn btn-primary mobile-cta" target="_blank" rel="noopener">Get a free consultation</a>
     </div>
   </nav>
 
@@ -68,32 +367,79 @@
           Nairobi-based · Web · AI Automations · Cybersecurity
         </div>
         <h1 class="hero-title" id="hero-title">
-          We build smarter, <span class="accent">safer digital businesses</span> for Kenyan SMEs.
+          Get more customers, <span class="accent">automate your work,</span> and protect your business from fraud.
         </h1>
         <p class="hero-sub">
-          From high-converting websites to AI-powered automations and cybersecurity —
-          AptPro is the all-in-one digital partner that grows with your business.
+          AptPro is Nairobi's all-in-one digital partner for Kenyan SMEs. No USD invoices. No foreign agencies. Just clear, honest work — built right here at home.
         </p>
+        <div class="hero-outcomes" aria-label="Key outcomes">
+          <span class="outcome-pill">2× more leads from your website</span>
+          <span class="outcome-pill">Save 10+ hours/week with automation</span>
+          <span class="outcome-pill">Reduce fraud risk by up to 80%</span>
+        </div>
         <div class="hero-ctas">
-          <a href="#contact" class="btn btn-primary">Start a project</a>
+          <a href="https://wa.me/254721494510?text=Hi%20AptPro%2C%20I%27d%20like%20a%20free%20consultation" class="btn btn-wa" target="_blank" rel="noopener">
+            💬 WhatsApp us now
+          </a>
           <a href="#services" class="btn btn-ghost">See what we do</a>
         </div>
+        <p class="urgency-note">Limited slots this month — currently onboarding 5 new clients</p>
         <div class="hero-stats" aria-label="Key stats">
-          <div class="stat">
-            <span class="stat-num">60+</span>
-            <span class="stat-lbl">businesses served</span>
+          <div class="stat"><span class="stat-num">60+</span><span class="stat-lbl">businesses served</span></div>
+          <div class="stat"><span class="stat-num">3-in-1</span><span class="stat-lbl">web · AI · security</span></div>
+          <div class="stat"><span class="stat-num">KES-first</span><span class="stat-lbl">transparent pricing</span></div>
+          <div class="stat"><span class="stat-num">5★</span><span class="stat-lbl">client satisfaction</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRUST BAR ===== -->
+    <div class="trust-bar">
+      <div class="trust-inner">
+        <div class="trust-item"><span class="trust-icon">✓</span> CEH Certified</div>
+        <div class="trust-item"><span class="trust-icon">✓</span> CompTIA Security+</div>
+        <div class="trust-item"><span class="trust-icon">✓</span> ODPC Registered DPO</div>
+        <div class="trust-item"><span class="trust-icon">✓</span> ISACA Nairobi</div>
+        <div class="trust-item"><span class="trust-icon">✓</span> KES 12M+ fraud prevented</div>
+        <div class="trust-item"><span class="trust-icon">✓</span> DPA 2019 compliant</div>
+      </div>
+    </div>
+
+    <!-- ===== OUTCOMES / SOLUTION FRAMING ===== -->
+    <section class="outcomes-section" aria-labelledby="outcomes-title">
+      <div class="container">
+        <p class="section-label" style="text-align:center">Three problems, one partner</p>
+        <h2 class="section-title" id="outcomes-title" style="text-align:center;max-width:560px;margin:0 auto 48px">We don't sell services — we solve business problems</h2>
+        <div class="outcomes-grid">
+          <div class="outcome-block">
+            <div class="outcome-icon">📈</div>
+            <div class="outcome-title">Get Customers</div>
+            <p class="outcome-desc">Websites that convert, SEO that ranks you on Google, and ads that bring real buyers.</p>
+            <div class="outcome-services">
+              <span>→ Website Development</span>
+              <span>→ Local SEO & Google Ads</span>
+              <span>→ Landing Pages</span>
+            </div>
           </div>
-          <div class="stat">
-            <span class="stat-num">3-in-1</span>
-            <span class="stat-lbl">web · AI · security</span>
+          <div class="outcome-block">
+            <div class="outcome-icon">⚙️</div>
+            <div class="outcome-title">Save Time</div>
+            <p class="outcome-desc">Automate WhatsApp replies, invoices, follow-ups, and workflows. Stop doing manually what a system can do.</p>
+            <div class="outcome-services">
+              <span>→ WhatsApp Bots</span>
+              <span>→ CRM Automation</span>
+              <span>→ AI Agents</span>
+            </div>
           </div>
-          <div class="stat">
-            <span class="stat-num">KES-first</span>
-            <span class="stat-lbl">transparent pricing</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">5★</span>
-            <span class="stat-lbl">client satisfaction</span>
+          <div class="outcome-block">
+            <div class="outcome-icon">🛡️</div>
+            <div class="outcome-title">Stay Protected</div>
+            <p class="outcome-desc">Guard your business against M-Pesa fraud, phishing, ransomware, and DPA non-compliance.</p>
+            <div class="outcome-services">
+              <span>→ Security Audit</span>
+              <span>→ Staff Training</span>
+              <span>→ Ongoing Monitoring</span>
+            </div>
           </div>
         </div>
       </div>
@@ -103,54 +449,79 @@
     <section class="section section--alt" id="services" aria-labelledby="services-title">
       <div class="container">
         <p class="section-label">What we do</p>
-        <h2 class="section-title" id="services-title">Everything your business needs to thrive online</h2>
-        <p class="section-sub">Three core disciplines, one trusted partner. No outsourcing — everything built in-house, right here in Nairobi.</p>
+        <h2 class="section-title" id="services-title">Clear offers, real deliverables</h2>
+        <p class="section-sub">No outsourcing. No vague retainers. Every service built in-house, right here in Nairobi.</p>
 
         <div class="cards-grid">
 
+          <!-- Web -->
           <article class="card card--featured">
             <div class="card-badge">MOST POPULAR</div>
-            <div class="card-icon" aria-hidden="true">
-              <img src="assets/icons/web.svg" alt="" width="22" height="22" />
-            </div>
+            <div class="card-icon" aria-hidden="true">🌐</div>
             <h3 class="card-title">Website Development</h3>
-            <p class="card-desc">Fast, mobile-first websites that convert visitors into customers. Wix, WordPress, or fully custom builds.</p>
-            <ul class="card-tags" aria-label="Technologies">
-              <li>Wix</li><li>WordPress</li><li>E-commerce</li><li>Landing pages</li>
-            </ul>
+            <p class="card-desc">Fast, mobile-first websites that convert visitors into paying customers. Built on Wix, WordPress, or fully custom.</p>
+            <div class="card-features" aria-label="Features">
+              <li>WhatsApp & M-Pesa integration</li>
+              <li>Conversion-optimised layouts</li>
+              <li>Mobile-first, Google-friendly</li>
+              <li>30-day post-launch support</li>
+            </div>
+            <div class="packages-grid" aria-label="Website packages">
+              <div class="package"><span class="package-name">Starter</span><span class="package-price">From KSh 25K</span></div>
+              <div class="package"><span class="package-name">Business</span><span class="package-price">From KSh 55K</span></div>
+              <div class="package"><span class="package-name">E-commerce</span><span class="package-price">From KSh 90K</span></div>
+            </div>
           </article>
 
+          <!-- AI -->
           <article class="card">
-            <div class="card-icon" aria-hidden="true">
-              <img src="assets/icons/ai.svg" alt="" width="22" height="22" />
+            <div class="card-icon" aria-hidden="true">🤖</div>
+            <h3 class="card-title">Business Automation</h3>
+            <p class="card-desc">Stop doing manually what a system can do. We automate your customer touchpoints and internal workflows.</p>
+            <div class="card-features" aria-label="Features">
+              <li>Auto-reply to customers on WhatsApp</li>
+              <li>Auto-send invoices & reminders</li>
+              <li>Lead capture + follow-up system</li>
+              <li>CRM & reporting dashboards</li>
             </div>
-            <h3 class="card-title">AI Automations</h3>
-            <p class="card-desc">Automate repetitive tasks, customer follow-ups, and workflows using AI — so you focus on what matters.</p>
             <ul class="card-tags" aria-label="Technologies">
               <li>WhatsApp bots</li><li>CRM flows</li><li>AI agents</li>
             </ul>
+            <div class="card-pricing">From <strong>KSh 30,000</strong> · Flexible payment plans available</div>
           </article>
 
+          <!-- Security -->
           <article class="card">
-            <div class="card-icon" aria-hidden="true">
-              <img src="assets/icons/security.svg" alt="" width="22" height="22" />
-            </div>
+            <div class="card-icon" aria-hidden="true">🛡️</div>
             <h3 class="card-title">Cybersecurity</h3>
-            <p class="card-desc">Protect your business from phishing, M-Pesa fraud, ransomware, and Kenya DPA non-compliance.</p>
+            <p class="card-desc">Your strongest protection against the threats hitting Kenyan businesses right now.</p>
+            <div class="card-features" aria-label="Features">
+              <li>M-Pesa & email fraud prevention</li>
+              <li>Ransomware & phishing defence</li>
+              <li>Kenya DPA 2019 compliance</li>
+              <li>Staff security training</li>
+            </div>
             <ul class="card-tags" aria-label="Technologies">
-              <li>Risk audit</li><li>DPA 2019</li><li>Staff training</li>
+              <li>Risk audit</li><li>DPA 2019</li><li>Staff training</li><li>Monitoring</li>
             </ul>
+            <div class="card-pricing"><strong>Free basic security audit</strong> · Paid plans from KSh 20,000</div>
           </article>
 
+          <!-- SEO -->
           <article class="card">
-            <div class="card-icon" aria-hidden="true">
-              <img src="assets/icons/seo.svg" alt="" width="22" height="22" />
+            <div class="card-icon" aria-hidden="true">📍</div>
+            <h3 class="card-title">Local SEO & Digital Strategy</h3>
+            <p class="card-desc">Rank your business on Google Maps and appear when customers in Nairobi are searching for what you sell.</p>
+            <div class="card-features" aria-label="Features">
+              <li>Google My Business optimisation</li>
+              <li>Rank in Google Maps in 30 days</li>
+              <li>Kenya-specific content strategy</li>
+              <li>Google Ads management</li>
             </div>
-            <h3 class="card-title">Digital Strategy & SEO</h3>
-            <p class="card-desc">Be found on Google. Local SEO, Google My Business, and content strategies built for the Kenyan market.</p>
             <ul class="card-tags" aria-label="Technologies">
               <li>Local SEO</li><li>Google Ads</li><li>Analytics</li>
             </ul>
+            <div class="card-pricing">From <strong>KSh 15,000/month</strong></div>
           </article>
 
         </div>
@@ -161,40 +532,94 @@
     <section class="section" id="why-us" aria-labelledby="why-title">
       <div class="container">
         <p class="section-label">Why AptPro</p>
-        <h2 class="section-title" id="why-title">The all-in-one digital partner Kenyan SMEs deserve</h2>
-        <p class="section-sub">No more juggling five different vendors. Web, automation, and security under one roof.</p>
+        <h2 class="section-title" id="why-title">You don't need 3 vendors. You need one partner.</h2>
+        <p class="section-sub">Web, automation, and security under one roof. Your strategy stays coherent across every service.</p>
 
         <div class="why-grid">
           <div class="why-card">
             <div class="why-num" aria-hidden="true">01</div>
-            <h3 class="why-title">Built for Kenya</h3>
-            <p class="why-desc">KES pricing, M-Pesa integration, Swahili support, and local DPA compliance — no USD sticker shock.</p>
+            <h3 class="why-title">Built for Kenya — truly</h3>
+            <p class="why-desc">No USD pricing. No foreign agencies. KES billing, M-Pesa integration, Swahili support, and local DPA compliance built in.</p>
           </div>
           <div class="why-card">
             <div class="why-num" aria-hidden="true">02</div>
-            <h3 class="why-title">One team, all disciplines</h3>
-            <p class="why-desc">Web dev, AI, and security expertise in one place. Your strategy stays coherent across every service.</p>
+            <h3 class="why-title">One team, every discipline</h3>
+            <p class="why-desc">Web dev, AI, and cybersecurity expertise in one team. No referrals to strangers. No gaps in your strategy.</p>
           </div>
           <div class="why-card">
             <div class="why-num" aria-hidden="true">03</div>
             <h3 class="why-title">WhatsApp-first support</h3>
-            <p class="why-desc">Real support on a channel you actually use — not a ticketing system you'll forget to check.</p>
+            <p class="why-desc">Real support on the channel you actually use. Not a ticketing system you forget to check.</p>
           </div>
           <div class="why-card">
             <div class="why-num" aria-hidden="true">04</div>
-            <h3 class="why-title">Results-first approach</h3>
-            <p class="why-desc">We report in plain language — leads generated, hours saved, threats blocked. Not jargon.</p>
+            <h3 class="why-title">Results in plain language</h3>
+            <p class="why-desc">We report leads generated, hours saved, and threats blocked — not IT jargon and vanity metrics.</p>
+          </div>
+        </div>
+
+        <div class="risk-row" aria-label="Our guarantees">
+          <div class="risk-pill risk-pill--shield">Free 30-min consultation — no hard sell</div>
+          <div class="risk-pill risk-pill--pay">Pay in milestones, not upfront</div>
+          <div class="risk-pill risk-pill--support">30-day post-launch support included</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="section section--dark testimonials" id="testimonials" aria-labelledby="testi-title">
+      <div class="container">
+        <p class="section-label">Client results</p>
+        <h2 class="section-title" id="testi-title">Real businesses. Real outcomes.</h2>
+        <p class="section-sub" style="margin-bottom:48px">60+ SMEs across Kenya have trusted AptPro to grow their business online.</p>
+
+        <div class="testimonials-grid">
+          <div class="testi-card">
+            <div class="testi-result">+40% bookings</div>
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"AptPro rebuilt our clinic's website and added an online booking form. Within 6 weeks our appointment bookings increased by 40%. The WhatsApp reminders they set up alone saved us hours every week."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">DM</div>
+              <div>
+                <div class="testi-name">Dr. Daniel M.</div>
+                <div class="testi-biz">Veterinary Clinic, Karen</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-result">KSh 800K saved</div>
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"We were hit by a targeted email phishing attack. AptPro ran a full security audit, trained our team, and helped us recover. We haven't had a single incident since. The peace of mind is worth every shilling."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">FW</div>
+              <div>
+                <div class="testi-name">Faith W.</div>
+                <div class="testi-biz">Import & Distribution, Industrial Area</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-result">10 hrs/week saved</div>
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Before AptPro, my team was manually sending order confirmations and follow-up messages on WhatsApp every day. Now it's all automated. We save at least 10 hours a week and our customers say we respond faster."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">JK</div>
+              <div>
+                <div class="testi-name">James K.</div>
+                <div class="testi-biz">Online Retail, Westlands</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ===================== PROCESS ===================== -->
-    <section class="section section--dark" id="process" aria-labelledby="process-title">
+    <section class="section section--alt" id="process" aria-labelledby="process-title">
       <div class="container">
-        <p class="section-label section-label--light">How it works</p>
-        <h2 class="section-title section-title--light" id="process-title">From first call to live results in weeks</h2>
-        <p class="section-sub section-sub--light">A clear, no-surprises process — so you always know what's happening.</p>
+        <p class="section-label">How it works</p>
+        <h2 class="section-title" id="process-title">From first call to live results in weeks</h2>
+        <p class="section-sub">A clear, no-surprises process — so you always know what's happening.</p>
 
         <ol class="steps-grid" aria-label="Our process steps">
           <li class="step">
@@ -205,7 +630,7 @@
           <li class="step">
             <span class="step-num" aria-hidden="true">02</span>
             <h3 class="step-title">Custom proposal</h3>
-            <p class="step-desc">A scoped plan in KES with clear deliverables and timelines. No vague retainers.</p>
+            <p class="step-desc">A scoped plan in KES with clear deliverables, timelines, and milestone payment schedule.</p>
           </li>
           <li class="step">
             <span class="step-num" aria-hidden="true">03</span>
@@ -215,7 +640,7 @@
           <li class="step">
             <span class="step-num" aria-hidden="true">04</span>
             <h3 class="step-title">Launch & optimise</h3>
-            <p class="step-desc">Go live with confidence. We monitor, measure, and iterate for 30 days post-launch.</p>
+            <p class="step-desc">Go live with confidence. We monitor, measure, and iterate for 30 days post-launch at no extra charge.</p>
           </li>
         </ol>
       </div>
@@ -234,8 +659,11 @@
           </p>
           <p class="about-body">
             We combine website development, AI automation, and cybersecurity in one team.
-            No referrals to strangers. No USD invoices. Just clear, honest work that moves your business forward.
+            Led by a cybersecurity engineer with 5 years of hands-on experience protecting and growing Kenyan businesses — including real-world incident response and fraud prevention work through Nascah.
           </p>
+          <div class="founder-note">
+            <p><strong>Led by a certified cybersecurity engineer.</strong> Our team holds CEH, CompTIA Security+, and is ODPC registered — which means we understand the legal and technical obligations that Kenyan businesses face today.</p>
+          </div>
           <div class="about-certs" aria-label="Certifications">
             <span class="cert-badge"><span class="cert-dot" aria-hidden="true"></span>CEH Certified</span>
             <span class="cert-badge"><span class="cert-dot" aria-hidden="true"></span>CompTIA Security+</span>
@@ -244,22 +672,10 @@
           </div>
         </div>
         <div class="about-stats" aria-label="Company highlights">
-          <div class="about-stat">
-            <span class="about-stat-num">60+</span>
-            <span class="about-stat-lbl">SMEs served across Kenya</span>
-          </div>
-          <div class="about-stat">
-            <span class="about-stat-num">KES 12M+</span>
-            <span class="about-stat-lbl">fraud prevented for clients</span>
-          </div>
-          <div class="about-stat">
-            <span class="about-stat-num">5 yrs</span>
-            <span class="about-stat-lbl">in the Kenyan market</span>
-          </div>
-          <div class="about-stat">
-            <span class="about-stat-num">3</span>
-            <span class="about-stat-lbl">core service pillars</span>
-          </div>
+          <div class="about-stat"><span class="about-stat-num">60+</span><span class="about-stat-lbl">SMEs served across Kenya</span></div>
+          <div class="about-stat"><span class="about-stat-num">KES 12M+</span><span class="about-stat-lbl">fraud prevented for clients</span></div>
+          <div class="about-stat"><span class="about-stat-num">5 yrs</span><span class="about-stat-lbl">in the Kenyan market</span></div>
+          <div class="about-stat"><span class="about-stat-num">3</span><span class="about-stat-lbl">core service pillars</span></div>
         </div>
       </div>
     </section>
@@ -274,40 +690,37 @@
         <div class="contact-grid">
           <div class="contact-info">
             <div class="contact-item">
-              <div class="contact-icon" aria-hidden="true">
-                <img src="assets/icons/phone.svg" alt="" width="16" height="16" />
-              </div>
+              <div class="contact-icon" aria-hidden="true">💬</div>
               <div>
                 <p class="contact-label">WhatsApp (preferred)</p>
                 <a href="https://wa.me/254721494510" class="contact-value">+254 721 494 510</a>
               </div>
             </div>
             <div class="contact-item">
-              <div class="contact-icon" aria-hidden="true">
-                <img src="assets/icons/email.svg" alt="" width="16" height="16" />
-              </div>
+              <div class="contact-icon" aria-hidden="true">📧</div>
               <div>
                 <p class="contact-label">Email</p>
-                <a href="mailto:hello@aptpro.co.ke" class="contact-value">hello@aptpro.co.ke</a>
+                <a href="mailto:aptpro@nascah.co.ke" class="contact-value">aptpro@nascah.co.ke</a>
               </div>
             </div>
             <div class="contact-item">
-              <div class="contact-icon" aria-hidden="true">
-                <img src="assets/icons/location.svg" alt="" width="16" height="16" />
-              </div>
+              <div class="contact-icon" aria-hidden="true">📍</div>
               <div>
                 <p class="contact-label">Location</p>
                 <p class="contact-value">Nairobi, Kenya</p>
               </div>
             </div>
             <div class="contact-item">
-              <div class="contact-icon" aria-hidden="true">
-                <img src="assets/icons/mpesa.svg" alt="" width="16" height="16" />
-              </div>
+              <div class="contact-icon" aria-hidden="true">📱</div>
               <div>
                 <p class="contact-label">M-Pesa deposit</p>
                 <p class="contact-value">Till No. 123456 · AptPro Ltd</p>
               </div>
+            </div>
+            <div class="contact-wa-btn">
+              <a href="https://wa.me/254721494510?text=Hi%20AptPro%2C%20I%27d%20like%20a%20free%20consultation" class="btn btn-wa" target="_blank" rel="noopener">
+                💬 Start on WhatsApp — it's faster
+              </a>
             </div>
           </div>
 
@@ -321,13 +734,13 @@
               <input type="tel" id="whatsapp" name="whatsapp" placeholder="+254 700 000 000" required autocomplete="tel" />
             </div>
             <div class="form-group">
-              <label for="service">Service you need</label>
+              <label for="service">What do you need help with?</label>
               <select id="service" name="service" required>
                 <option value="" disabled selected>Select a service…</option>
                 <option value="web">Website development</option>
-                <option value="ai">AI automations</option>
-                <option value="security">Cybersecurity</option>
-                <option value="seo">Digital strategy & SEO</option>
+                <option value="ai">Business automation (WhatsApp bots, workflows)</option>
+                <option value="security">Cybersecurity audit or protection</option>
+                <option value="seo">Local SEO & Google visibility</option>
                 <option value="other">Not sure — let's talk</option>
               </select>
             </div>
@@ -335,9 +748,7 @@
               <label for="message">Tell us about your business</label>
               <textarea id="message" name="message" rows="4" placeholder="What does your business do? What's your biggest digital challenge?"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn--full" id="submit-btn">
-              Send message
-            </button>
+            <button type="submit" class="btn btn-primary btn--full" id="submit-btn">Send message</button>
             <p class="form-note" id="form-status" aria-live="polite"></p>
           </form>
         </div>
@@ -356,15 +767,17 @@
       <div class="footer-links">
         <a href="#services">Services</a>
         <a href="#about">About</a>
+        <a href="#testimonials">Reviews</a>
         <a href="#contact">Contact</a>
-        <a href="https://wa.me/254721494510">WhatsApp</a>
+        <a href="https://wa.me/254721494510" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:aptpro@nascah.co.ke">Email</a>
       </div>
       <p class="footer-copy">&copy; <span id="year"></span> AptPro Business &amp; IT Solutions Ltd · Nairobi, Kenya</p>
     </div>
   </footer>
 
   <!-- ===================== FLOATING WHATSAPP ===================== -->
-  <a href="https://wa.me/254721494510"
+  <a href="https://wa.me/254721494510?text=Hi%20AptPro%2C%20I%27d%20like%20a%20free%20consultation"
      class="wa-float"
      target="_blank"
      rel="noopener noreferrer"
@@ -374,7 +787,86 @@
     </svg>
   </a>
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+  <!-- ===================== STICKY CTA ===================== -->
+  <div class="sticky-cta" id="sticky-cta" aria-hidden="true">
+    <p><strong>Ready to grow your business?</strong> Free 30-min consultation — no hard sell.</p>
+    <a href="https://wa.me/254721494510?text=Hi%20AptPro%2C%20I%27d%20like%20a%20free%20consultation" class="btn btn-wa" target="_blank" rel="noopener" style="white-space:nowrap">💬 WhatsApp us</a>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+      mobileMenu.setAttribute('aria-hidden', !open);
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.mobile-link, .mobile-cta').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+      });
+    });
+
+    // Sticky CTA — show after hero
+    const stickyCta = document.getElementById('sticky-cta');
+    const heroEl = document.getElementById('hero');
+    const ctaObserver = new IntersectionObserver(([entry]) => {
+      stickyCta.classList.toggle('visible', !entry.isIntersecting);
+      stickyCta.setAttribute('aria-hidden', entry.isIntersecting ? 'true' : 'false');
+    }, { threshold: 0 });
+    ctaObserver.observe(heroEl);
+
+    // Contact form — build WhatsApp message
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = form.name.value.trim();
+      const wa = form.whatsapp.value.trim();
+      const svc = form.service.value;
+      const msg = form.message.value.trim();
+
+      if (!name || !wa || !svc) {
+        status.textContent = 'Please fill in your name, WhatsApp number, and service.';
+        status.className = 'form-note error';
+        return;
+      }
+
+      const serviceLabels = {
+        web: 'Website development',
+        ai: 'Business automation',
+        security: 'Cybersecurity',
+        seo: 'Local SEO & strategy',
+        other: 'Not sure yet'
+      };
+
+      const text = encodeURIComponent(
+        `Hi AptPro! I'd like to enquire about your services.\n\nName: ${name}\nService: ${serviceLabels[svc] || svc}\nMessage: ${msg || 'No message provided'}`
+      );
+
+      status.textContent = 'Redirecting to WhatsApp…';
+      status.className = 'form-note success';
+
+      setTimeout(() => {
+        window.open(`https://wa.me/254721494510?text=${text}`, '_blank');
+        form.reset();
+        status.textContent = '';
+      }, 600);
+    });
+  </script>
 </body>
 </html>
