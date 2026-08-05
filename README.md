@@ -23,13 +23,16 @@ The project is configured with `output: "export"` in `next.config.ts`, so the st
 out
 ```
 
-## Cloudflare Pages
+## Cloudflare Workers Static Assets
 
-Use these settings for a static deployment from GitHub to Cloudflare Pages:
+Use these settings for the connected Cloudflare build:
 
 - Build command: `npm run build`
-- Output directory: `out`
+- Deploy command: `npx wrangler deploy`
+- Static assets directory: `out`
 - Node.js version: use the current LTS version supported by Cloudflare Pages for this project
+
+Wrangler is configured in `wrangler.jsonc` to deploy the generated `out` directory as static assets. This project does not use OpenNext, SSR, middleware, API routes, or server-side runtime functions.
 
 No backend is required for the current website. The quote form prepares an email or WhatsApp enquiry in the visitor's own app when verified contact details are configured.
 
