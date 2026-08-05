@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aptpro Business & IT Solutions Website
 
-## Getting Started
+One-page marketing website for Aptpro Business & IT Solutions, built with Next.js App Router and Tailwind CSS.
 
-First, run the development server:
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+The project is configured with `output: "export"` in `next.config.ts`, so the static production output is generated in:
 
-To learn more about Next.js, take a look at the following resources:
+```text
+out
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Cloudflare Pages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Use these settings for a static deployment from GitHub to Cloudflare Pages:
 
-## Deploy on Vercel
+- Build command: `npm run build`
+- Output directory: `out`
+- Node.js version: use the current LTS version supported by Cloudflare Pages for this project
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+No backend is required for the current website. The quote form prepares an email or WhatsApp enquiry in the visitor's own app when verified contact details are configured.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Editable Business Information
+
+Update `src/lib/site-content.ts` before launch:
+
+- `contact.whatsappNumber`
+- `contact.phoneNumber`
+- `contact.email`
+- `contact.location`
+- `canonicalUrl`
+
+Do not add unverified clients, awards, certifications, statistics, partnerships, or project outcomes.
+
+## Environment Variables
+
+No public runtime environment variables are required for the static website.
+
+The repository currently contains Prisma-related files and a local database environment entry. These are not used by the static marketing page. Do not commit real production secrets.

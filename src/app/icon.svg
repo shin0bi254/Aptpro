@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Aptpro">
+  <rect width="64" height="64" rx="12" fill="#07111f"/>
+  <rect x="12" y="12" width="40" height="40" rx="8" fill="#10233c" stroke="#4dd4ff" stroke-width="2"/>
+  <path d="M22 39 31 18h5l9 21h-6l-2-5H30l-2 5h-6Zm10-10h4l-2-6-2 6Z" fill="#f7fbff"/>
+  <path d="M18 45h28" stroke="#49e6a0" stroke-width="4" stroke-linecap="round"/>
+</svg>

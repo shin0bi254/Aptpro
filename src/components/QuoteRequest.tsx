@@ -1,0 +1,166 @@
+"use client";
+
+import { FormEvent, useMemo, useState } from "react";
+import { getMailToUrl, getWhatsAppUrl, siteConfig } from "@/lib/site-content";
+
+type Status = {
+  type: "idle" | "error" | "success";
+  message: string;
+};
+
+const serviceOptions = [
+  "Managed IT support",
+  "Cybersecurity assessment",
+  "Custom software or ERP",
+  "Networks, CCTV, or infrastructure",
+  "Website or digital platform",
+  "Business systems support",
+  "Technology strategy",
+];
+
+export function QuoteRequest() {
+  const [status, setStatus] = useState<Status>({ type: "idle", message: "" });
+
+  const verifiedEmail = Boolean(siteConfig.contact.email);
+  const verifiedWhatsApp = Boolean(siteConfig.contact.whatsappNumber);
+  const canPrepareEnquiry = verifiedEmail || verifiedWhatsApp;
+
+  const fallbackNote = useMemo(() => {
+    if (canPrepareEnquiry) {
+      return "";
+    }
+
+    return "Add a verified Aptpro email or WhatsApp number before launch to activate enquiry links.";
+  }, [canPrepareEnquiry]);
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const trap = String(formData.get("company_website") ?? "").trim();
+
+    if (trap) {
+      setStatus({
+        type: "success",
+        message: "Thanks. Your enquiry has been prepared.",
+      });
+      return;
+    }
+
+    const name = String(formData.get("name") ?? "").trim();
+    const organization = String(formData.get("organization") ?? "").trim();
+    const contactMethod = String(formData.get("contactMethod") ?? "").trim();
+    const service = String(formData.get("service") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
+
+    if (!name || !organization || !contactMethod || !service || !message) {
+      setStatus({
+        type: "error",
+        message: "Please complete all fields before preparing your enquiry.",
+      });
+      return;
+    }
+
+    const enquiry = [
+      `Name: ${name}`,
+      `Organization: ${organization}`,
+      `Preferred contact: ${contactMethod}`,
+      `Service needed: ${service}`,
+      "",
+      message,
+    ].join("\n");
+
+    const mailUrl = getMailToUrl(enquiry);
+    const whatsappUrl = getWhatsAppUrl(`Hello Aptpro,\n\n${enquiry}`);
+
+    if (mailUrl) {
+      window.location.href = mailUrl;
+      setStatus({
+        type: "success",
+        message: "Opening your email app with the enquiry prepared.",
+      });
+      return;
+    }
+
+    if (whatsappUrl) {
+      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+      setStatus({
+        type: "success",
+        message: "Opening WhatsApp with the enquiry prepared.",
+      });
+      return;
+    }
+
+    setStatus({
+      type: "error",
+      message: fallbackNote,
+    });
+  }
+
+  return (
+    <form className="quote-form" onSubmit={handleSubmit} noValidate>
+      <div className="form-row">
+        <label>
+          <span>Name</span>
+          <input name="name" type="text" autoComplete="name" required />
+        </label>
+        <label>
+          <span>Organization</span>
+          <input name="organization" type="text" autoComplete="organization" required />
+        </label>
+      </div>
+
+      <div className="form-row">
+        <label>
+          <span>Preferred contact</span>
+          <input
+            name="contactMethod"
+            type="text"
+            autoComplete="email tel"
+            placeholder="Phone, WhatsApp, or email"
+            required
+          />
+        </label>
+        <label>
+          <span>Service needed</span>
+          <select name="service" required defaultValue="">
+            <option value="" disabled>
+              Select a service
+            </option>
+            {serviceOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      <label>
+        <span>Message</span>
+        <textarea
+          name="message"
+          rows={4}
+          placeholder="Briefly describe what you need help with."
+          required
+        />
+      </label>
+
+      <label className="honeypot" aria-hidden="true">
+        <span>Company website</span>
+        <input name="company_website" type="text" tabIndex={-1} autoComplete="off" />
+      </label>
+
+      <div className="form-actions">
+        <button type="submit" disabled={!canPrepareEnquiry}>
+          {canPrepareEnquiry ? "Prepare enquiry" : "Contact details required"}
+        </button>
+        <p>{fallbackNote || "Your enquiry opens in your email or WhatsApp app so you can review it before sending."}</p>
+      </div>
+
+      <p className={`form-status ${status.type}`} aria-live="polite">
+        {status.message}
+      </p>
+    </form>
+  );
+}
