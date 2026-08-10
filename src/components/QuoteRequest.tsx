@@ -9,12 +9,11 @@ type Status = {
 };
 
 const serviceOptions = [
-  "Managed IT support",
-  "Cybersecurity assessment",
-  "Custom software or ERP",
-  "Networks, CCTV, or infrastructure",
-  "Website or digital platform",
-  "Business systems support",
+  "Managed IT & Infrastructure",
+  "Cybersecurity & Risk",
+  "Custom Software & Automation",
+  "Web & Digital Platforms",
+  "Business Systems Support",
   "Technology strategy",
 ];
 
@@ -70,23 +69,23 @@ export function QuoteRequest() {
       message,
     ].join("\n");
 
-    const mailUrl = getMailToUrl(enquiry);
     const whatsappUrl = getWhatsAppUrl(`Hello Aptpro,\n\n${enquiry}`);
-
-    if (mailUrl) {
-      window.location.href = mailUrl;
-      setStatus({
-        type: "success",
-        message: "Opening your email app with the enquiry prepared.",
-      });
-      return;
-    }
+    const mailUrl = getMailToUrl(enquiry);
 
     if (whatsappUrl) {
       window.open(whatsappUrl, "_blank", "noopener,noreferrer");
       setStatus({
         type: "success",
         message: "Opening WhatsApp with the enquiry prepared.",
+      });
+      return;
+    }
+
+    if (mailUrl) {
+      window.location.href = mailUrl;
+      setStatus({
+        type: "success",
+        message: "Opening your email app with the enquiry prepared.",
       });
       return;
     }
@@ -153,9 +152,9 @@ export function QuoteRequest() {
 
       <div className="form-actions">
         <button type="submit" disabled={!canPrepareEnquiry}>
-          {canPrepareEnquiry ? "Prepare enquiry" : "Contact details required"}
+          {canPrepareEnquiry ? "Prepare WhatsApp enquiry" : "Contact details required"}
         </button>
-        <p>{fallbackNote || "Your enquiry opens in your email or WhatsApp app so you can review it before sending."}</p>
+        <p>{fallbackNote || "Your enquiry opens in WhatsApp or email so you can review it before sending."}</p>
       </div>
 
       <p className={`form-status ${status.type}`} aria-live="polite">

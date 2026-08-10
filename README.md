@@ -38,13 +38,15 @@ No backend is required for the current website. The quote form prepares an email
 
 ## Editable Business Information
 
-Update `src/lib/site-content.ts` before launch:
+Verified public contact details are centralized in `src/lib/site-content.ts`:
 
 - `contact.whatsappNumber`
 - `contact.phoneNumber`
 - `contact.email`
+- `contact.secondaryEmail`
 - `contact.location`
-- `canonicalUrl`
+
+The deployed Cloudflare URL was not verified in this repository. When confirmed, set `canonicalUrl` in `src/lib/site-content.ts`; until then, `metadataBaseUrl` is only a local build fallback for metadata asset resolution.
 
 Do not add unverified clients, awards, certifications, statistics, partnerships, or project outcomes.
 

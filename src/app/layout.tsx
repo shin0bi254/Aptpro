@@ -2,10 +2,19 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site-content";
 import "./globals.css";
 
+const socialImage = [
+  {
+    url: "/opengraph-image",
+    width: 1200,
+    height: 630,
+    alt: "Aptpro Business & IT Solutions landing page preview",
+  },
+];
+
 export const metadata: Metadata = {
-  metadataBase: siteConfig.canonicalUrl ? new URL(siteConfig.canonicalUrl) : undefined,
+  metadataBase: new URL(siteConfig.canonicalUrl || siteConfig.metadataBaseUrl),
   title: {
-    default: `${siteConfig.businessName} | IT Support, Cybersecurity, Software & Automation in Kenya`,
+    default: `${siteConfig.businessName} | Secure IT Support, Systems & Automation in Kenya`,
     template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.description,
@@ -34,21 +43,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: siteConfig.businessName,
-    title: `${siteConfig.businessName} | Business & IT Solutions`,
+    title: `${siteConfig.businessName} | Technology that keeps your business moving`,
     description: siteConfig.description,
     locale: "en_KE",
-    images: [
-      {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: "Aptpro Business & IT Solutions",
-      },
-    ],
+    images: socialImage,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.businessName} | Business & IT Solutions`,
+    title: `${siteConfig.businessName} | Secure IT Support in Kenya`,
     description: siteConfig.description,
     images: ["/opengraph-image"],
   },
