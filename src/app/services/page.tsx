@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, ServiceCard, ConsultationCta } from "@/components/PageSections";
 import { SiteShell } from "@/components/SiteChrome";
-import { serviceCategories } from "@/lib/site-content";
+import { createRouteMetadata, serviceCategories } from "@/lib/site-content";
 
-export const metadata: Metadata = {
-  title: "Services",
-  description:
-    "Managed IT support, cybersecurity, software, websites, infrastructure and technology consulting services from Aptpro.",
-};
+export const metadata: Metadata = createRouteMetadata("/services");
 
 export default function ServicesPage() {
   return (

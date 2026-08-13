@@ -1,6 +1,6 @@
 # Aptpro Business & IT Solutions Website
 
-One-page marketing website for Aptpro Business & IT Solutions, built with Next.js App Router and Tailwind CSS.
+Multi-page marketing website for Aptpro Business & IT Solutions, built with Next.js App Router and Tailwind CSS.
 
 ## Local Development
 
@@ -38,15 +38,14 @@ No backend is required for the current website. The quote form prepares an email
 
 ## Editable Business Information
 
-Verified public contact details are centralized in `src/lib/site-content.ts`:
+Verified public contact details are centralized in `src/lib/site-config.ts`:
 
 - `contact.whatsappNumber`
 - `contact.phoneNumber`
 - `contact.email`
-- `contact.secondaryEmail`
 - `contact.location`
 
-The deployed Cloudflare URL was not verified in this repository. When confirmed, set `canonicalUrl` in `src/lib/site-content.ts`; until then, `metadataBaseUrl` is only a local build fallback for metadata asset resolution.
+Production metadata, canonical URLs, sitemap routes, and public contact values are centralized in `src/lib/site-config.ts`. Operational domain, DNS, mail, and redirect notes are recorded in `docs/production-configuration.md`.
 
 Do not add unverified clients, awards, certifications, statistics, partnerships, or project outcomes.
 

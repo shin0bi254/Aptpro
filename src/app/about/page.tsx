@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
 import { ConsultationCta, CredibilityCard, PageHero } from "@/components/PageSections";
 import { SiteShell } from "@/components/SiteChrome";
-import { positioning, workingApproach } from "@/lib/site-content";
+import { createRouteMetadata, positioning, workingApproach } from "@/lib/site-content";
 
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "Aptpro is a Kenyan business and technology consultancy focused on practical IT support, cybersecurity-aware engineering and operational improvement.",
-};
+export const metadata: Metadata = createRouteMetadata("/about");
 
 export default function AboutPage() {
   return (

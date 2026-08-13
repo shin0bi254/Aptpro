@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
 import { ConsultationCta, PageHero, ProjectCard } from "@/components/PageSections";
 import { SiteShell } from "@/components/SiteChrome";
-import { projects } from "@/lib/site-content";
+import { createRouteMetadata, projects } from "@/lib/site-content";
 
-export const metadata: Metadata = {
-  title: "Projects and Experience",
-  description:
-    "Selected Aptpro experience across ERP systems, veterinary imaging, laboratory workflows, websites, CCTV planning, business IT support and operational concepts.",
-};
+export const metadata: Metadata = createRouteMetadata("/projects");
 
 export default function ProjectsPage() {
   const selected = projects.filter((project) =>

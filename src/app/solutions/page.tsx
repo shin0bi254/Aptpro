@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
 import { ConsultationCta, PageHero, SolutionCard } from "@/components/PageSections";
 import { SiteShell } from "@/components/SiteChrome";
-import { businessSolutions, solutionApproach } from "@/lib/site-content";
+import { businessSolutions, createRouteMetadata, solutionApproach } from "@/lib/site-content";
 
-export const metadata: Metadata = {
-  title: "Business Solutions",
-  description:
-    "Aptpro structures business technology solutions around manual records, reporting gaps, weak access controls, unreliable networks and workflow problems.",
-};
+export const metadata: Metadata = createRouteMetadata("/solutions");
 
 export default function SolutionsPage() {
   return (

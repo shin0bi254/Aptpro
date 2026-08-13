@@ -1,44 +1,16 @@
-export type ContactChannel = "whatsapp" | "phone" | "email";
-
-export const siteConfig = {
-  businessName: "Aptpro Business & IT Solutions",
-  shortName: "Aptpro",
-  tagline: "Technology that keeps your business moving.",
-  description:
-    "Secure IT support, cybersecurity, business systems, automation, and digital platforms for growing Kenyan organizations.",
-  areaServed: "Kenya",
-  contact: {
-    whatsappNumber: "254721494510",
-    phoneNumber: "0721494510",
-    email: "aptpro@nascah.co.ke",
-    secondaryEmail: "tednganga99@gmail.com",
-    location: "Kenya",
-  },
-  // No deployed Cloudflare URL was verified in this repository. Add it here when confirmed.
-  canonicalUrl: "",
-  // Local fallback used only to resolve metadata asset URLs during static builds.
-  metadataBaseUrl: "http://localhost:3000",
-  quoteSubject: "Technology support consultation request for Aptpro",
-  whatsappMessage:
-    "Hello Aptpro, I would like to discuss technology support for my business.",
-};
-
-export const navItems = [
-  { label: "Services", href: "/services" },
-  { label: "Solutions", href: "/solutions" },
-  { label: "Projects", href: "/projects" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
-
-export const homeAnchors = [
-  { label: "Services", href: "#services" },
-  { label: "Solutions", href: "#solutions" },
-  { label: "Featured Work", href: "#work" },
-  { label: "How We Work", href: "#approach" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
-];
+export {
+  absoluteUrl,
+  createRouteMetadata,
+  getMailToUrl,
+  getPhoneUrl,
+  getWhatsAppUrl,
+  hasVerifiedContact,
+  homeAnchors,
+  navItems,
+  publicRoutes,
+  siteConfig,
+} from "./site-config";
+export type { ContactChannel, PublicRoute } from "./site-config";
 
 export const positioning = [
   {
@@ -448,48 +420,3 @@ export const projects = [
     status: "Consulting concept",
   },
 ];
-
-export function getWhatsAppUrl(message = siteConfig.whatsappMessage) {
-  const number = siteConfig.contact.whatsappNumber.replace(/\D/g, "");
-
-  if (!number) {
-    return "";
-  }
-
-  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
-}
-
-export function getMailToUrl(body?: string) {
-  if (!siteConfig.contact.email) {
-    return "";
-  }
-
-  const params = new URLSearchParams({
-    subject: siteConfig.quoteSubject,
-    body: body ?? siteConfig.whatsappMessage,
-  });
-
-  return `mailto:${siteConfig.contact.email}?${params.toString()}`;
-}
-
-export function getPhoneUrl() {
-  const number = siteConfig.contact.whatsappNumber.replace(/\D/g, "");
-
-  if (!number) {
-    return "";
-  }
-
-  return `tel:+${number}`;
-}
-
-export function hasVerifiedContact(channel: ContactChannel) {
-  if (channel === "whatsapp") {
-    return Boolean(siteConfig.contact.whatsappNumber);
-  }
-
-  if (channel === "phone") {
-    return Boolean(siteConfig.contact.phoneNumber);
-  }
-
-  return Boolean(siteConfig.contact.email);
-}

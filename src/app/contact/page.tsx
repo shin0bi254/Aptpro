@@ -2,12 +2,9 @@ import type { Metadata } from "next";
 import { QuoteRequest } from "@/components/QuoteRequest";
 import { ContactOptions, PageHero } from "@/components/PageSections";
 import { SiteShell } from "@/components/SiteChrome";
+import { createRouteMetadata } from "@/lib/site-content";
 
-export const metadata: Metadata = {
-  title: "Contact and Consultation",
-  description:
-    "Contact Aptpro by WhatsApp, phone or email, or prepare a structured consultation enquiry without relying on a fake website submission.",
-};
+export const metadata: Metadata = createRouteMetadata("/contact");
 
 export default function ContactPage() {
   return (

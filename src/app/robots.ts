@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { siteConfig } from "@/lib/site-content";
+import { siteConfig } from "@/lib/site-config";
 
 export const dynamic = "force-static";
 
@@ -10,6 +10,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: siteConfig.canonicalUrl ? `${siteConfig.canonicalUrl}/sitemap.xml` : undefined,
+    sitemap: `${siteConfig.canonicalOrigin}/sitemap.xml`,
+    host: siteConfig.canonicalOrigin,
   };
 }

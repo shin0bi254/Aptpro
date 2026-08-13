@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site-content";
+import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
 const socialImage = [
@@ -12,7 +12,7 @@ const socialImage = [
 ];
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.canonicalUrl || siteConfig.metadataBaseUrl),
+  metadataBase: new URL(siteConfig.canonicalOrigin),
   title: {
     default: `${siteConfig.businessName} | Secure IT Support, Systems & Automation in Kenya`,
     template: `%s | ${siteConfig.shortName}`,
@@ -45,6 +45,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.businessName,
     title: `${siteConfig.businessName} | Technology that keeps your business moving`,
     description: siteConfig.description,
+    url: siteConfig.canonicalOrigin,
     locale: "en_KE",
     images: socialImage,
   },
@@ -54,11 +55,9 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: ["/opengraph-image"],
   },
-  alternates: siteConfig.canonicalUrl
-    ? {
-        canonical: siteConfig.canonicalUrl,
-      }
-    : undefined,
+  alternates: {
+    canonical: absoluteUrl("/"),
+  },
   icons: {
     icon: "/icon.svg",
   },

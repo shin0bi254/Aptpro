@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { OperationsVisual, SignalDivider, IconGlyph } from "@/components/BrandMotif";
 import { ConsultationCta, CredibilityCard, ProjectCard, SolutionCard } from "@/components/PageSections";
@@ -14,16 +15,25 @@ import {
   solutionPaths,
   workingApproach,
 } from "@/lib/site-content";
+import { absoluteUrl, createRouteMetadata } from "@/lib/site-config";
+
+export const metadata: Metadata = createRouteMetadata("/");
 
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: siteConfig.businessName,
+    url: siteConfig.canonicalOrigin,
+    logo: absoluteUrl("/icon.svg"),
     description: siteConfig.description,
     areaServed: siteConfig.areaServed,
     telephone: siteConfig.contact.phoneNumber,
     email: siteConfig.contact.email,
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "KE",
+    },
     serviceType: services.map((service) => service.title),
   };
 

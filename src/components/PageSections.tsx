@@ -204,15 +204,6 @@ export function ContactOptions() {
         <span>Email</span>
         <strong>{siteConfig.contact.email}</strong>
       </a>
-      <a
-        className="contact-link"
-        href={`mailto:${siteConfig.contact.secondaryEmail}?subject=${encodeURIComponent(siteConfig.quoteSubject)}`}
-        data-reveal
-        style={revealStyle(3)}
-      >
-        <span>Secondary email</span>
-        <strong>{siteConfig.contact.secondaryEmail}</strong>
-      </a>
     </div>
   );
 }
