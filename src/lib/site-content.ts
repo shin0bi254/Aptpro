@@ -180,10 +180,12 @@ export const nascahErp = {
   value:
     "The system gives teams a structured way to manage records, reduce scattered handovers, and support clinical and administrative work from one coordinated platform.",
   capabilities: [
-    "Case-centred clinical workflow management",
-    "Billing, inventory, and reporting",
-    "Laboratory and imaging integration workflows",
-    "Communications and operational handovers",
+    "Case-centred operations",
+    "Clinical workflows",
+    "Billing and inventory",
+    "Laboratory and imaging",
+    "Communications and handovers",
+    "Reporting",
     "Role-based access control",
     "Security-aware system design",
   ],

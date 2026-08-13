@@ -32,7 +32,18 @@ function IconGlyph({ name }: { name: string }) {
       <span />
       <span />
       <span />
+      <span />
     </span>
+  );
+}
+
+function SignalDivider({ tone = "light" }: { tone?: "light" | "dark" }) {
+  return (
+    <div className={`signal-divider ${tone}`} aria-hidden="true">
+      <span />
+      <span />
+      <span />
+    </div>
   );
 }
 
@@ -59,10 +70,17 @@ function ContactLink({
 
 function OperationsVisual() {
   const nodes = ["Support", "Security", "Systems", "Automation"];
+  const checkpoints = ["Messy tools", "Secure hub", "Clear operations"];
 
   return (
     <div className="ops-visual" aria-label="Connected secure business operations visual" role="img">
+      <div className="ops-status">
+        <span />
+        <strong>Live operations map</strong>
+        <small>Support + security + systems</small>
+      </div>
       <div className="ops-map">
+        <div className="ops-boundary" />
         <div className="ops-core">
           <span>A</span>
           <strong>Aptpro</strong>
@@ -80,7 +98,18 @@ function OperationsVisual() {
           <path d="M260 210 L115 315" />
           <path d="M260 210 L400 316" />
           <circle cx="260" cy="210" r="118" />
+          <path className="signal-path main" d="M72 210 C150 150 213 150 260 210 C318 284 378 278 454 210" />
         </svg>
+        <span className="signal-packet packet-one" />
+        <span className="signal-packet packet-two" />
+      </div>
+      <div className="ops-checkpoints">
+        {checkpoints.map((item, index) => (
+          <span key={item}>
+            <small>{String(index + 1).padStart(2, "0")}</small>
+            {item}
+          </span>
+        ))}
       </div>
       <div className="ops-console">
         <div>
@@ -171,6 +200,10 @@ export default function Home() {
               networks, websites, and practical technology strategy for Kenyan teams that need
               dependable operations.
             </p>
+            <p className="hero-note">
+              We connect the daily tools people depend on, then make them easier to support,
+              safer to use, and clearer to manage.
+            </p>
             <div className="hero-actions">
               <a className="primary-button" href="#contact">
                 Request a consultation
@@ -187,6 +220,8 @@ export default function Home() {
           </div>
           <OperationsVisual />
         </section>
+
+        <SignalDivider tone="dark" />
 
         <section className="trust-strip" aria-label="Aptpro positioning">
           {positioning.map((item) => (
@@ -234,7 +269,7 @@ export default function Home() {
             </div>
             <div className="service-stack">
               {services.map((service, index) => (
-                <article className="service-panel" key={service.title}>
+                <article className={`service-panel service-${index + 1}`} key={service.title}>
                   <div className="service-title">
                     <IconGlyph name={`glyph-${index + 1}`} />
                     <span>{String(index + 1).padStart(2, "0")}</span>
@@ -265,6 +300,8 @@ export default function Home() {
           </div>
         </section>
 
+        <SignalDivider />
+
         <section className="solutions section-shell" id="solutions">
           <div className="section-heading compact">
             <p className="eyebrow">Solutions by need</p>
@@ -293,17 +330,22 @@ export default function Home() {
             </a>
           </div>
           <div className="work-panel" aria-label="NASCAH ERP capability map">
-            <div className="work-orbit">
-              <strong>NASCAH ERP</strong>
-              <span>Clinical + operational workflows</span>
-            </div>
-            <ul>
-              {nascahErp.capabilities.map((capability) => (
-                <li key={capability}>{capability}</li>
+            <div className="work-map">
+              <div className="work-core">
+                <strong>NASCAH ERP</strong>
+                <span>Secure operational system</span>
+              </div>
+              {nascahErp.capabilities.map((capability, index) => (
+                <div className={`work-node work-node-${index + 1}`} key={capability}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{capability}</strong>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </section>
+
+        <SignalDivider tone="dark" />
 
         <section className="approach-section" id="approach">
           <div className="section-shell">
@@ -345,7 +387,7 @@ export default function Home() {
           <div className="section-shell contact-grid">
             <div className="contact-copy">
               <p className="eyebrow">Request a quote</p>
-              <h2>Need IT support, a secure system, or a better way to run operations?</h2>
+              <h2>Bring the problem. Aptpro will help turn it into a practical next step.</h2>
               <p>
                 Use WhatsApp, phone, email, or the structured enquiry builder. The website does
                 not pretend to submit to a backend; your message opens in your own app for review.
