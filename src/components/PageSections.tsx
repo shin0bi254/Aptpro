@@ -82,8 +82,14 @@ export function ServiceCard({
         <IconGlyph name={`glyph-${(index % 5) + 1}`} />
         <span>{String(index + 1).padStart(2, "0")}</span>
       </div>
-      <h2>{title}</h2>
-      <p>{description}</p>
+      <div className="detail-card-copy">
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </div>
+      <div className="service-value">
+        <span>Operational value</span>
+        <p>Clearer support, safer access, better continuity and tools that fit the way staff work.</p>
+      </div>
       <ul>
         {items.map((item) => (
           <li key={item}>{item}</li>
@@ -102,6 +108,7 @@ export function SolutionCard({ title, detail, index }: { title: string; detail: 
       <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
       <h3>{title}</h3>
       <p>{detail}</p>
+      <small>Map problem - design response - support adoption</small>
     </Link>
   );
 }
@@ -120,20 +127,26 @@ export function ProjectCard({
   };
   index: number;
 }) {
+  const statusClass = project.status.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
   return (
-    <article className="project-card">
+    <article className={`project-card status-${statusClass}`}>
       <div className="project-card-top">
         <span>{project.status}</span>
         <small>{String(index + 1).padStart(2, "0")}</small>
       </div>
       <h2>{project.name}</h2>
       <p className="project-category">{project.category}</p>
-      <p>
-        <strong>Business problem:</strong> {project.problem}
-      </p>
-      <p>
-        <strong>Aptpro role:</strong> {project.role}
-      </p>
+      <div className="project-brief">
+        <p>
+          <strong>Business problem</strong>
+          {project.problem}
+        </p>
+        <p>
+          <strong>Aptpro involvement</strong>
+          {project.role}
+        </p>
+      </div>
       <ul>
         {project.capabilities.map((capability) => (
           <li key={capability}>{capability}</li>
@@ -146,6 +159,7 @@ export function ProjectCard({
 export function CredibilityCard({ title, detail }: { title: string; detail: string }) {
   return (
     <article className="credibility-card">
+      <span aria-hidden="true" />
       <h2>{title}</h2>
       <p>{detail}</p>
     </article>

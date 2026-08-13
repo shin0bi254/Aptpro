@@ -1,20 +1,18 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
-import { getMailToUrl, getWhatsAppUrl, siteConfig } from "@/lib/site-content";
+import { getMailToUrl, getWhatsAppUrl, serviceCategories, siteConfig } from "@/lib/site-content";
 
 type Status = {
   type: "idle" | "error" | "success";
   message: string;
 };
 
-const serviceOptions = [
-  "Managed IT & Infrastructure",
-  "Cybersecurity & Risk",
-  "Custom Software & Automation",
-  "Web & Digital Platforms",
-  "Business Systems Support",
-  "Technology strategy",
+const contactMethods = [
+  "WhatsApp",
+  "Phone call",
+  "Email",
+  "Any convenient channel",
 ];
 
 export function QuoteRequest() {
@@ -112,13 +110,16 @@ export function QuoteRequest() {
       <div className="form-row">
         <label>
           <span>Preferred contact</span>
-          <input
-            name="contactMethod"
-            type="text"
-            autoComplete="email tel"
-            placeholder="Phone, WhatsApp, or email"
-            required
-          />
+          <select name="contactMethod" required defaultValue="">
+            <option value="" disabled>
+              Select a channel
+            </option>
+            {contactMethods.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
         </label>
         <label>
           <span>Service needed</span>
@@ -126,9 +127,9 @@ export function QuoteRequest() {
             <option value="" disabled>
               Select a service
             </option>
-            {serviceOptions.map((option) => (
-              <option key={option} value={option}>
-                {option}
+            {serviceCategories.map((option) => (
+              <option key={option.title} value={option.title}>
+                {option.title}
               </option>
             ))}
           </select>
@@ -156,6 +157,10 @@ export function QuoteRequest() {
         </button>
         <p>{fallbackNote || "Your enquiry opens in WhatsApp or email so you can review it before sending."}</p>
       </div>
+
+      <p className="privacy-note">
+        Aptpro does not receive this form until you send it from WhatsApp or your email app.
+      </p>
 
       <p className={`form-status ${status.type}`} aria-live="polite">
         {status.message}
