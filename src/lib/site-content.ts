@@ -66,59 +66,64 @@ export const businessProblems = [
 
 export const services = [
   {
-    title: "Managed IT & Infrastructure",
+    title: "Website Design & Development",
     problem:
-      "Devices, networks, email, remote sites, and CCTV become expensive when support is reactive and undocumented.",
+      "A weak website makes a capable business look unclear, slow to trust, or difficult to contact.",
     delivery:
-      "Aptpro provides support routines, troubleshooting, setup, documentation, Microsoft 365 and email support, networks, CCTV, backups, and infrastructure improvement.",
+      "Aptpro builds business websites, company profiles, e-commerce foundations, redesigns, WordPress support plans and custom Next.js websites with performance, security and SEO foundations.",
     value:
-      "Your team gets clearer support paths, healthier systems, and fewer avoidable interruptions.",
-    items: ["Managed IT support", "Network installation", "CCTV and remote-site technology", "Microsoft 365 and email"],
-    action: "Get IT support",
+      "Customers understand your offer faster, trust the business sooner and have clearer ways to enquire.",
+    items: ["Company websites", "E-commerce foundations", "Website redesign", "SEO and maintenance"],
+    action: "Plan a website",
+    href: "/website-design",
   },
   {
-    title: "Cybersecurity & Risk",
+    title: "ERP & Business Systems",
     problem:
-      "Weak passwords, loose access, unmanaged devices, and poor backup habits leave business data exposed.",
+      "Manual records, duplicated spreadsheets and disconnected tools hide work from managers and slow staff down.",
     delivery:
-      "Aptpro assesses risks, hardens accounts and endpoints, improves access control, reviews backup posture, and builds practical security routines.",
+      "Aptpro designs custom ERP systems, workflow digitisation, dashboards, role-based access, reporting and integrations around the way the operation actually works.",
     value:
-      "Security becomes part of daily operations without making normal work unnecessarily difficult.",
-    items: ["Cybersecurity assessments", "Account hardening", "Role-based access", "Backup and recovery planning"],
+      "Teams get clearer records, controlled approvals, better reporting and phased systems they can adopt.",
+    items: ["Custom ERP", "Workflow mapping", "Dashboards", "Role-based access"],
+    action: "Discuss an ERP",
+    href: "/erp-systems",
+  },
+  {
+    title: "Cybersecurity",
+    problem:
+      "Weak account controls, unmanaged devices, exposed websites and poor backup habits create avoidable business risk.",
+    delivery:
+      "Aptpro provides authorised, defensive assessments, access-control reviews, vulnerability management, website security, hardening and incident-readiness planning.",
+    value:
+      "Security becomes a practical operating discipline rather than an afterthought or a scare tactic.",
+    items: ["Security reviews", "Access hardening", "Website security", "Backup readiness"],
     action: "Request a security review",
+    href: "/cybersecurity",
   },
   {
-    title: "Custom Software & Automation",
+    title: "IT & Infrastructure",
     problem:
-      "Manual spreadsheets, repeated handovers, and disconnected tools hide work and slow decisions.",
+      "Devices, networks, email, local servers, CCTV and specialist systems become expensive when support is reactive and undocumented.",
     delivery:
-      "Aptpro designs custom software, ERP workflows, dashboards, AI-assisted processes, integrations, and automation around your real operating model.",
+      "Aptpro supports managed IT, networks, business email, Outlook, QuickBooks access, local intranets, cloud deployment, backups, remote access and CCTV planning.",
     value:
-      "Teams spend less time chasing records and more time acting on clear, connected information.",
-    items: ["Custom business apps", "ERP systems", "Workflow automation", "Operational reporting"],
-    action: "Discuss automation",
+      "The working environment becomes easier to support, document, recover and improve.",
+    items: ["Managed IT", "Networks", "Business email", "Local and cloud infrastructure"],
+    action: "Review infrastructure",
+    href: "/it-infrastructure",
   },
   {
-    title: "Web & Digital Platforms",
+    title: "Technology Consulting",
     problem:
-      "A weak website or fragmented digital experience can make a capable business look unclear or difficult to trust.",
+      "Buying or rebuilding technology without understanding the workflow can lock a business into the wrong solution.",
     delivery:
-      "Aptpro builds professional websites, customer portals, digital service platforms, and conversion-focused landing pages.",
+      "Aptpro maps workflows, risks, costs, users, data movement and adoption constraints before recommending a practical build, support or improvement path.",
     value:
-      "Customers understand what you offer faster and have clearer ways to enquire or access services.",
-    items: ["Business websites", "Customer portals", "Digital platforms", "Conversion-focused pages"],
-    action: "Plan a digital platform",
-  },
-  {
-    title: "Business Systems Support",
-    problem:
-      "Useful tools such as QuickBooks, Microsoft 365, and workplace systems can underperform when setup and workflows are unclear.",
-    delivery:
-      "Aptpro helps choose, configure, troubleshoot, document, and improve business systems and technology strategy.",
-    value:
-      "Your tools fit the business better and are easier for staff to use consistently.",
-    items: ["QuickBooks support", "Tool selection", "Process improvement", "Technology strategy"],
-    action: "Improve business systems",
+      "Decisions are clearer before money is spent, systems are built in phases and documentation survives the launch.",
+    items: ["Discovery", "Process mapping", "Risk analysis", "Implementation roadmaps"],
+    action: "Scope a project",
+    href: "/services",
   },
 ];
 
@@ -212,6 +217,181 @@ export const serviceCategories = [
     ],
     action: "Request consulting",
   },
+];
+
+export const servicePageContent = {
+  websiteDesign: {
+    eyebrow: "Website design Nairobi",
+    title: "Business websites built for credibility, conversion and maintainable growth.",
+    intro:
+      "Aptpro designs and develops professional websites for Nairobi and Kenyan businesses that need more than attractive pages. The work connects positioning, enquiry flow, search visibility, speed, security, hosting and ongoing maintenance.",
+    outcomes: [
+      "A clearer first impression for customers comparing providers online",
+      "Stronger enquiry paths through WhatsApp, email and structured calls to action",
+      "Fast, static-friendly builds with practical SEO foundations",
+      "Secure deployment choices, business-email support and documented maintenance",
+    ],
+    builds: [
+      "Company and service websites",
+      "Website redesigns",
+      "E-commerce and catalogue websites",
+      "Custom Next.js websites",
+      "WordPress support and recovery",
+      "Landing pages for campaigns or offers",
+      "Customer portals and digital platforms when the scope requires software engineering",
+    ],
+    process: [
+      "Positioning and service-architecture review",
+      "Content structure, conversion paths and sitemap",
+      "Visual design system and responsive interface",
+      "Development with performance, accessibility and security foundations",
+      "SEO metadata, structured data, sitemap and launch checks",
+      "Hosting, domain, business-email and maintenance planning",
+    ],
+    considerations: [
+      "Pricing depends on scope, content readiness, integrations, e-commerce depth, number of pages and maintenance requirements.",
+      "Aptpro can support WordPress where it is the right fit, and can build custom Next.js websites when performance, control and long-term maintainability matter.",
+      "Website work is treated as a business system: customers must understand the offer, trust it and know what to do next.",
+    ],
+    faqs: [
+      {
+        question: "Does Aptpro offer website design in Nairobi?",
+        answer:
+          "Yes. Aptpro supports Nairobi and Kenyan businesses with company websites, website redesigns, e-commerce foundations, custom Next.js websites, WordPress support, SEO foundations, hosting and maintenance planning.",
+      },
+      {
+        question: "Can Aptpro help with domain and business email setup?",
+        answer:
+          "Yes. Aptpro can help plan and configure domain, hosting and business-email requirements as part of a website or infrastructure engagement.",
+      },
+      {
+        question: "Do you publish fixed website packages?",
+        answer:
+          "No fixed price is published because scope, content, integrations, functionality and support requirements vary. Aptpro first clarifies the business objective and then scopes a practical delivery path.",
+      },
+      {
+        question: "Can Aptpro maintain an existing WordPress website?",
+        answer:
+          "Aptpro can support WordPress websites, diagnose problems, improve structure and advise when a rebuild or custom implementation would be more maintainable.",
+      },
+    ],
+  },
+  erpSystems: {
+    eyebrow: "Custom ERP systems Kenya",
+    title: "Business systems designed around workflows, roles, records and reporting.",
+    intro:
+      "Aptpro helps growing SMEs digitise operations in practical phases. The focus is not generic software theatre: it is clear customer records, inventory, billing, service delivery, approvals, dashboards, communication and audit trails that match how staff work.",
+    industries: [
+      "Healthcare and veterinary operations",
+      "Retail and inventory-led businesses",
+      "Professional services",
+      "Training and education businesses",
+      "Field-service teams",
+      "Agriculture and outreach programmes",
+      "Property and facility operations",
+      "Growing SMEs with manual workflows",
+    ],
+    capabilities: [
+      "Customer management",
+      "Inventory and procurement",
+      "Billing and payments workflow",
+      "Appointments and service delivery",
+      "Role-based access",
+      "Reports and dashboards",
+      "Documented approvals and audit trails",
+      "Local intranet or cloud deployment planning",
+      "Integrations where technically and commercially appropriate",
+    ],
+    process: [
+      "Operational discovery",
+      "Workflow mapping",
+      "Requirements and risk analysis",
+      "System architecture",
+      "Phased implementation",
+      "Data preparation and migration",
+      "User testing",
+      "Training",
+      "Deployment",
+      "Support and continuous improvement",
+    ],
+    caseStudy:
+      "NASCAH ERP is an active development and implementation engagement for complex veterinary operations. It demonstrates reusable ERP capabilities across customer management, service delivery, clinical workflows, inventory, billing, communication, reporting and access control without making veterinary work Aptpro's whole identity.",
+  },
+  cybersecurity: {
+    eyebrow: "Defensive cybersecurity services Kenya",
+    title: "Security reviews and hardening for authorised business environments.",
+    intro:
+      "Aptpro focuses on defensive cybersecurity: reducing practical business risk through assessment, access control, secure configuration, vulnerability management and recovery readiness. The goal is safer operations, not fear-based theatre.",
+    services: [
+      "Security assessments",
+      "Vulnerability management",
+      "Access-control reviews",
+      "Website security reviews",
+      "Network hardening",
+      "Security configuration reviews",
+      "Backup and recovery reviews",
+      "Security awareness",
+      "Risk prioritisation",
+      "Secure architecture",
+      "Incident-readiness planning",
+      "Security-conscious software development",
+    ],
+    principles: [
+      "Work only in authorised environments",
+      "Prioritise risk by business impact",
+      "Harden identity, backups, endpoints, networks and web surfaces",
+      "Document findings in plain language",
+      "Turn security into routines that staff can follow",
+    ],
+  },
+  infrastructure: {
+    eyebrow: "Managed IT services Nairobi",
+    title: "Structured IT and infrastructure support for the technology staff depend on.",
+    intro:
+      "Aptpro treats infrastructure as a business service: documented, supportable and aligned with continuity. The work covers daily IT support, networks, email, local servers, cloud deployment, remote access, backups and specialist systems.",
+    services: [
+      "Managed IT support",
+      "Network setup and troubleshooting",
+      "Local servers and intranets",
+      "Cloud deployment",
+      "User and device support",
+      "Business email and Microsoft Outlook",
+      "QuickBooks access support",
+      "Backup planning",
+      "Remote access",
+      "CCTV planning",
+      "PACS and specialist-system integration",
+      "Business continuity",
+    ],
+    supportModel: [
+      "Diagnose the environment before changing it",
+      "Document access, devices, services and recovery steps",
+      "Separate quick fixes from structural improvements",
+      "Plan deployments around connectivity, power, users and risk",
+      "Keep private infrastructure details out of public-facing material",
+    ],
+  },
+};
+
+export const projectGroups = [
+  "Websites and digital platforms",
+  "ERP and business systems",
+  "Cybersecurity and infrastructure",
+  "Specialist integrations",
+  "Concepts and deployment planning",
+];
+
+export const externalSeoChecklist = [
+  "Google Business Profile setup and maintenance",
+  "Google Search Console verification and sitemap submission",
+  "Bing Webmaster Tools verification",
+  "Consistent business-directory citations",
+  "Ethical client review collection after approved work",
+  "Project backlinks from client sites where appropriate",
+  "Portfolio outreach and local citations",
+  "Regular useful content based on real customer questions",
+  "Performance monitoring after deployment",
+  "Search-query tracking and monthly SEO review",
 ];
 
 export const solutionPaths = [
@@ -316,43 +496,43 @@ export const workingApproach = [
 export const projects = [
   {
     name: "NASCAH Veterinary ERP",
-    category: "Veterinary operations platform",
+    category: "ERP and business systems",
     problem:
       "Veterinary work involves customers, animals, clinical cases, appointments, triage, consultations, laboratory, imaging, pharmacy, inventory, billing, reporting and communications across different roles.",
     role:
       "Active development and implementation engagement for an integrated ERP with role-based access, local intranet deployment planning and staged migration where appropriate.",
     capabilities: ["ERP workflows", "Clinical operations", "Inventory and billing", "Role-based access"],
-    status: "Active development",
+    status: "Active implementation",
   },
   {
     name: "Veterinary Imaging and PACS",
-    category: "Clinical imaging infrastructure",
+    category: "Specialist integrations",
     problem: "Imaging workflows need reliable local access, organized studies and connectivity between imaging equipment and clinical teams.",
     role:
       "Configuration and integration work involving Orthanc PACS, CT, X-ray and ultrasound workflows, DICOM connectivity and local imaging access.",
     capabilities: ["Orthanc PACS", "DICOM workflows", "Local imaging access"],
-    status: "Technical implementation",
+    status: "Implemented support",
   },
   {
     name: "Laboratory Integration",
-    category: "Clinical systems planning",
+    category: "Specialist integrations",
     problem: "Laboratory activity needs to connect with clinical records without creating duplicated entry or unclear handovers.",
     role: "Technical planning and integration work involving veterinary laboratory equipment and clinical-system workflows.",
     capabilities: ["Integration planning", "Clinical workflow mapping", "System design"],
-    status: "Technical planning",
+    status: "Deployment planning",
   },
   {
     name: "Tesni Energies Website",
-    category: "Solar-energy website",
+    category: "Websites and digital platforms",
     problem: "A solar-energy business needed clearer service presentation and troubleshooting support for its web presence.",
     role:
-      "Website work including service structure, WordPress troubleshooting and presentation of residential, commercial, installation, maintenance, storage and consultation services.",
-    capabilities: ["Website structure", "WordPress support", "Service presentation"],
+      "Website support including service structure, WordPress troubleshooting and clearer presentation of residential, commercial, installation, maintenance, storage and consultation services.",
+    capabilities: ["Website structure", "WordPress support", "Service presentation", "Conversion flow"],
     status: "Implemented support",
   },
   {
     name: "Pet Food E-commerce Concept",
-    category: "Retail ordering concept",
+    category: "Websites and digital platforms",
     problem: "A pet-food business needed a simple way to present products and guide customers toward enquiry or ordering.",
     role: "Product catalogue, cart and WhatsApp-assisted ordering experience designed for a pet-food business.",
     capabilities: ["Catalogue design", "Cart flow", "WhatsApp ordering"],
@@ -360,7 +540,7 @@ export const projects = [
   },
   {
     name: "Farm CCTV Solution",
-    category: "Remote-site technology",
+    category: "Cybersecurity and infrastructure",
     problem: "A rural farm environment needs monitoring that accounts for power, connectivity, coverage and remote access.",
     role:
       "Planning for a solar-powered 4G CCTV deployment with attention to coverage, connectivity, power and remote monitoring.",
@@ -369,7 +549,7 @@ export const projects = [
   },
   {
     name: "Business IT Support",
-    category: "Operational support",
+    category: "Cybersecurity and infrastructure",
     problem: "Everyday IT issues interrupt work when networks, accounting users, email and workstation setup are not handled quickly.",
     role:
       "Network-adapter troubleshooting, network issue resolution, QuickBooks user support, business-email creation, password resets and Outlook configuration.",
@@ -378,7 +558,7 @@ export const projects = [
   },
   {
     name: "Business Email and Domain Infrastructure",
-    category: "Workplace systems",
+    category: "Cybersecurity and infrastructure",
     problem: "Professional communication needs reliable DNS, domain and branded-email configuration.",
     role: "Domain, DNS and branded-email configuration for professional business communication.",
     capabilities: ["DNS", "Domain setup", "Business email"],
@@ -386,7 +566,7 @@ export const projects = [
   },
   {
     name: "Local Server and Intranet Deployment",
-    category: "Local infrastructure",
+    category: "Cybersecurity and infrastructure",
     problem: "Some business applications need reliable multi-computer access without exposing private systems publicly.",
     role: "Windows-based local hosting and multi-computer access planning for business applications.",
     capabilities: ["Local hosting", "Intranet planning", "Windows deployment"],
@@ -394,7 +574,7 @@ export const projects = [
   },
   {
     name: "Pastoral Livestock Outreach Data System",
-    category: "Field-data concept",
+    category: "Concepts and deployment planning",
     problem: "Outreach work needs lightweight records for owners, herds, animal categories, treatments and medication issued.",
     role:
       "A lightweight field-data concept for recording owners, herd details, animal categories, treatments and medication issued during veterinary outreach work.",
@@ -403,7 +583,7 @@ export const projects = [
   },
   {
     name: "Security and Network Diagnostic Tool Concept",
-    category: "Cybersecurity diagnostics",
+    category: "Concepts and deployment planning",
     problem: "Support teams need structured diagnostics and reporting for authorized security and network reviews.",
     role:
       "A command-line cybersecurity and network-scanning concept focused on structured diagnostics and reporting for authorized environments.",
@@ -412,7 +592,7 @@ export const projects = [
   },
   {
     name: "Workflow and Cost-Mapping Consulting",
-    category: "Operations consulting",
+    category: "Concepts and deployment planning",
     problem: "Small businesses often need to understand workflows, expenses, pricing and reporting before changing systems.",
     role:
       "Operational mapping concepts for service businesses and training studios that need clearer workflows, expenses, pricing and reporting.",

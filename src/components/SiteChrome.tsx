@@ -193,13 +193,12 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
   const whatsappUrl = getWhatsAppUrl();
   const serviceLinks = [
-    "Managed IT",
-    "Cybersecurity",
-    "Business systems",
-    "Web platforms",
-    "Infrastructure",
+    { label: "Website design", href: "/website-design" },
+    { label: "ERP systems", href: "/erp-systems" },
+    { label: "Cybersecurity", href: "/cybersecurity" },
+    { label: "IT infrastructure", href: "/it-infrastructure" },
   ];
-  const trustBadges = ["Kenya-focused support", "Security-aware delivery", "No fake form storage"];
+  const trustBadges = ["Nairobi and Kenya focus", "Security-aware delivery", "No fake form storage"];
 
   return (
     <>
@@ -240,8 +239,8 @@ export function SiteFooter() {
           <nav aria-label="Footer service focus">
             <strong>Focus</strong>
             {serviceLinks.map((item) => (
-              <Link key={item} href="/services">
-                {item}
+              <Link key={item.href} href={item.href}>
+                {item.label}
               </Link>
             ))}
           </nav>

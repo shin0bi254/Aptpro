@@ -4,7 +4,17 @@ export type ContactChannel = "whatsapp" | "phone" | "email";
 
 export type PublicRoute = {
   label: string;
-  href: "/" | "/services" | "/solutions" | "/projects" | "/about" | "/contact";
+  href:
+    | "/"
+    | "/website-design"
+    | "/erp-systems"
+    | "/cybersecurity"
+    | "/it-infrastructure"
+    | "/services"
+    | "/solutions"
+    | "/projects"
+    | "/about"
+    | "/contact";
   title: string;
   description: string;
   changeFrequency: "weekly" | "monthly" | "yearly";
@@ -14,9 +24,9 @@ export type PublicRoute = {
 export const siteConfig = {
   businessName: "Aptpro Business & IT Solutions",
   shortName: "Aptpro",
-  tagline: "Technology that keeps your business moving.",
+  tagline: "Websites. Systems. Secure operations.",
   description:
-    "Secure IT support, cybersecurity, business systems, automation, and digital platforms for growing Kenyan organizations.",
+    "Aptpro designs professional websites, custom ERP systems, cybersecurity programmes and reliable IT infrastructure for growing Kenyan organizations.",
   areaServed: "Kenya",
   primaryDomain: "aptpro.co.ke",
   canonicalOrigin: "https://aptpro.co.ke",
@@ -29,7 +39,7 @@ export const siteConfig = {
   },
   quoteSubject: "Technology support consultation request for Aptpro",
   whatsappMessage:
-    "Hello Aptpro, I would like to discuss technology support for my business.",
+    "Hello Aptpro, I would like to discuss a website, business system, cybersecurity or IT infrastructure project.",
   socialLinks: [],
 } as const;
 
@@ -37,18 +47,54 @@ export const publicRoutes: PublicRoute[] = [
   {
     label: "Home",
     href: "/",
-    title: "Secure IT Support, Systems & Automation in Kenya",
+    title: "Website Design, ERP Systems, Cybersecurity & IT Consulting in Kenya",
     description:
-      "Aptpro Business & IT Solutions provides practical IT support, cybersecurity, business systems, automation, websites and infrastructure support for growing Kenyan organizations.",
+      "Aptpro Business & IT Solutions builds conversion-focused websites, custom ERP systems, cybersecurity programmes and reliable IT infrastructure for Nairobi and Kenyan businesses.",
     changeFrequency: "weekly",
     priority: 1,
   },
   {
+    label: "Websites",
+    href: "/website-design",
+    title: "Website Design Nairobi & Website Development Kenya",
+    description:
+      "Professional website design and website development in Nairobi and Kenya: business websites, e-commerce, redesigns, WordPress support, Next.js builds, SEO foundations, hosting and maintenance.",
+    changeFrequency: "monthly",
+    priority: 0.96,
+  },
+  {
+    label: "ERP & Business Systems",
+    href: "/erp-systems",
+    title: "Custom ERP Systems and Business Software Development in Kenya",
+    description:
+      "Aptpro designs custom ERP systems, workflow digitisation and business software for Kenyan SMEs that need clearer records, approvals, reporting, billing, inventory and role-based access.",
+    changeFrequency: "monthly",
+    priority: 0.94,
+  },
+  {
+    label: "Cybersecurity",
+    href: "/cybersecurity",
+    title: "Cybersecurity Services Kenya for Defensive Business Security",
+    description:
+      "Defensive cybersecurity services in Kenya: security assessments, access-control reviews, vulnerability management, website security, backup reviews, network hardening and secure architecture.",
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+  {
+    label: "IT & Infrastructure",
+    href: "/it-infrastructure",
+    title: "Managed IT Services Nairobi and Business Infrastructure Support",
+    description:
+      "Managed IT services, network support, business email, local servers, intranets, cloud deployment, backups, remote access, CCTV planning and specialist-system integration for Kenyan businesses.",
+    changeFrequency: "monthly",
+    priority: 0.88,
+  },
+  {
     label: "Services",
     href: "/services",
-    title: "Managed IT, Cybersecurity & Business Technology Services",
+    title: "Technology Consulting Services for Websites, ERP, Security and IT",
     description:
-      "Explore Aptpro services for managed IT support, cybersecurity, custom software, websites, infrastructure, networking and technology consulting in Kenya.",
+      "Explore Aptpro service divisions for website development, ERP systems, cybersecurity, managed IT, infrastructure and technology consulting in Kenya.",
     changeFrequency: "monthly",
     priority: 0.9,
   },
@@ -95,12 +141,12 @@ export const navItems = publicRoutes
   .map(({ label, href }) => ({ label, href }));
 
 export const homeAnchors = [
-  { label: "Services", href: "#services" },
-  { label: "Solutions", href: "#solutions" },
+  { label: "Capabilities", href: "#capabilities" },
+  { label: "Websites", href: "#websites" },
+  { label: "ERP Systems", href: "#erp" },
+  { label: "Security & IT", href: "#security" },
   { label: "Featured Work", href: "#work" },
-  { label: "How We Work", href: "#approach" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Process", href: "#approach" },
 ];
 
 export function absoluteUrl(path = "/") {

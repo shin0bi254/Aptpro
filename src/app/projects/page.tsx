@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { ConsultationCta, PageHero, ProjectCard } from "@/components/PageSections";
 import { SiteShell } from "@/components/SiteChrome";
-import { createRouteMetadata, projects } from "@/lib/site-content";
+import { createRouteMetadata, projectGroups, projects } from "@/lib/site-content";
 
 export const metadata: Metadata = createRouteMetadata("/projects");
 
 export default function ProjectsPage() {
   const selected = projects.filter((project) =>
-    ["Active development", "Technical implementation", "Implemented support", "Deployment planning"].includes(project.status),
+    ["Active implementation", "Implemented support", "Delivered", "Deployment planning"].includes(project.status),
   );
   const concepts = projects.filter((project) => !selected.includes(project));
 
@@ -22,8 +22,20 @@ export default function ProjectsPage() {
 
         <section className="section-shell projects-page">
           <div className="section-heading compact">
+            <p className="eyebrow">Portfolio architecture</p>
+            <h2>Work grouped by the way customers evaluate Aptpro.</h2>
+          </div>
+          <div className="tag-matrix project-groups">
+            {projectGroups.map((group) => (
+              <span key={group}>{group}</span>
+            ))}
+          </div>
+        </section>
+
+        <section className="section-shell projects-page">
+          <div className="section-heading compact">
             <p className="eyebrow">Selected work</p>
-            <h2>Active, implemented and deployment-focused work.</h2>
+            <h2>Active, implemented and deployment-focused work with honest status labels.</h2>
           </div>
           <div className="project-grid">
             {selected.map((project, index) => (

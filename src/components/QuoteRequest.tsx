@@ -8,11 +8,21 @@ type Status = {
   message: string;
 };
 
-const contactMethods = [
-  "WhatsApp",
-  "Phone call",
-  "Email",
-  "Any convenient channel",
+const contactMethods = ["WhatsApp", "Email", "Phone call", "Any convenient channel"];
+const projectTypes = [
+  "Website project",
+  "ERP or business system",
+  "Cybersecurity",
+  "IT support",
+  "Infrastructure",
+  "Consultation",
+];
+const budgetRanges = [
+  "Not sure yet",
+  "Under KES 50,000",
+  "KES 50,000 - 150,000",
+  "KES 150,000 - 500,000",
+  "Above KES 500,000",
 ];
 
 export function QuoteRequest() {
@@ -47,14 +57,18 @@ export function QuoteRequest() {
 
     const name = String(formData.get("name") ?? "").trim();
     const organization = String(formData.get("organization") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const phone = String(formData.get("phone") ?? "").trim();
     const contactMethod = String(formData.get("contactMethod") ?? "").trim();
     const service = String(formData.get("service") ?? "").trim();
+    const budget = String(formData.get("budget") ?? "").trim();
+    const timeline = String(formData.get("timeline") ?? "").trim();
     const message = String(formData.get("message") ?? "").trim();
 
-    if (!name || !organization || !contactMethod || !service || !message) {
+    if (!name || !organization || !email || !phone || !contactMethod || !service || !timeline || !message) {
       setStatus({
         type: "error",
-        message: "Please complete all fields before preparing your enquiry.",
+        message: "Please complete the required fields before preparing your enquiry.",
       });
       return;
     }
@@ -62,14 +76,27 @@ export function QuoteRequest() {
     const enquiry = [
       `Name: ${name}`,
       `Organization: ${organization}`,
+      `Email: ${email}`,
+      `Phone: ${phone}`,
       `Preferred contact: ${contactMethod}`,
-      `Service needed: ${service}`,
+      `Project type: ${service}`,
+      `Budget range: ${budget || "Not provided"}`,
+      `Desired timeline: ${timeline}`,
       "",
       message,
     ].join("\n");
 
     const whatsappUrl = getWhatsAppUrl(`Hello Aptpro,\n\n${enquiry}`);
     const mailUrl = getMailToUrl(enquiry);
+
+    if (contactMethod === "Email" && mailUrl) {
+      window.location.href = mailUrl;
+      setStatus({
+        type: "success",
+        message: "Opening your email app with the enquiry prepared.",
+      });
+      return;
+    }
 
     if (whatsappUrl) {
       window.open(whatsappUrl, "_blank", "noopener,noreferrer");
@@ -119,6 +146,35 @@ export function QuoteRequest() {
       </div>
 
       <div className="form-row">
+        <label className="floating-field">
+          <span>Email</span>
+          <input name="email" type="email" autoComplete="email" placeholder=" " required />
+        </label>
+        <label className="floating-field">
+          <span>Phone</span>
+          <input name="phone" type="tel" autoComplete="tel" placeholder=" " required />
+        </label>
+      </div>
+
+      <div className="form-row">
+        <label className="floating-field select-field">
+          <span>Project type</span>
+          <select name="service" required defaultValue="">
+            <option value="" disabled>
+              Select a project type
+            </option>
+            {projectTypes.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+            {serviceCategories.map((option) => (
+              <option key={option.title} value={option.title}>
+                {option.title}
+              </option>
+            ))}
+          </select>
+        </label>
         <label className="floating-field select-field">
           <span>Preferred contact</span>
           <select name="contactMethod" required defaultValue="">
@@ -132,30 +188,37 @@ export function QuoteRequest() {
             ))}
           </select>
         </label>
+      </div>
+
+      <div className="form-row">
         <label className="floating-field select-field">
-          <span>Service needed</span>
-          <select name="service" required defaultValue="">
+          <span>Budget range (optional)</span>
+          <select name="budget" defaultValue="">
             <option value="" disabled>
-              Select a service
+              Select a range
             </option>
-            {serviceCategories.map((option) => (
-              <option key={option.title} value={option.title}>
-                {option.title}
+            {budgetRanges.map((option) => (
+              <option key={option} value={option}>
+                {option}
               </option>
             ))}
           </select>
         </label>
+        <label className="floating-field">
+          <span>Desired timeline</span>
+          <input name="timeline" type="text" placeholder=" " required />
+        </label>
       </div>
 
       <label className="floating-field textarea-field">
-        <span>Message</span>
+        <span>Project description</span>
         <textarea
           name="message"
           rows={4}
           placeholder=" "
           required
         />
-        <small>Briefly describe what you need help with.</small>
+        <small>Describe the business goal, current problem, audience, users, systems or risks involved.</small>
       </label>
 
       <label className="honeypot" aria-hidden="true">

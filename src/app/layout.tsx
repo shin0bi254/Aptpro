@@ -14,7 +14,7 @@ const socialImage = [
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.canonicalOrigin),
   title: {
-    default: `${siteConfig.businessName} | Secure IT Support, Systems & Automation in Kenya`,
+    default: `${siteConfig.businessName} | Website Design, ERP Systems, Cybersecurity and IT in Kenya`,
     template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.description,
@@ -22,9 +22,14 @@ export const metadata: Metadata = {
   keywords: [
     "IT support Kenya",
     "cybersecurity Kenya",
+    "website design Nairobi",
+    "website development Kenya",
+    "web designers in Nairobi",
     "business software Kenya",
     "managed IT support",
     "ERP systems Kenya",
+    "custom ERP systems Kenya",
+    "managed IT services Nairobi",
     "Aptpro",
   ],
   authors: [{ name: siteConfig.businessName }],
@@ -43,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: siteConfig.businessName,
-    title: `${siteConfig.businessName} | Technology that keeps your business moving`,
+    title: `${siteConfig.businessName} | Websites, ERP, Cybersecurity and IT`,
     description: siteConfig.description,
     url: siteConfig.canonicalOrigin,
     locale: "en_KE",
@@ -51,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.businessName} | Secure IT Support in Kenya`,
+    title: `${siteConfig.businessName} | Website Design and Secure Business Technology in Kenya`,
     description: siteConfig.description,
     images: ["/opengraph-image"],
   },

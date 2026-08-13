@@ -31,15 +31,15 @@ export function SignalDivider({ tone = "light" }: { tone?: "light" | "dark" }) {
 }
 
 export function OperationsVisual() {
-  const nodes = ["Support", "Security", "Systems", "Automation"];
-  const checkpoints = ["Messy tools", "Secure hub", "Clear operations"];
+  const nodes = ["Websites", "ERP", "Security", "Infrastructure"];
+  const checkpoints = ["Discover", "Design", "Secure", "Operate"];
 
   return (
     <div className="ops-visual" aria-label="Connected secure business operations visual" role="img">
       <div className="ops-status">
         <span />
-        <strong>Live operations map</strong>
-        <small>Support + security + systems</small>
+        <strong>Digital operations map</strong>
+        <small>Web + ERP + security + IT</small>
       </div>
       <div className="ops-map">
         <div className="ops-boundary" />
@@ -75,13 +75,13 @@ export function OperationsVisual() {
       </div>
       <div className="ops-console">
         <div>
-          <small>Today&apos;s focus</small>
-          <strong>Reliable, secure business operations</strong>
+          <small>Consultancy signal</small>
+          <strong>Websites that convert. Systems that scale. Technology you can trust.</strong>
         </div>
         <ul>
-          <li>Access reviewed before systems go live</li>
-          <li>Support paths documented for staff</li>
-          <li>Workflows shaped around real handovers</li>
+          <li>Website journeys mapped before build</li>
+          <li>ERP workflows phased around adoption</li>
+          <li>Security and support documented from launch</li>
         </ul>
       </div>
     </div>

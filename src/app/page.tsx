@@ -48,28 +48,33 @@ export default function Home() {
         <section className="hero">
           <div className="hero-copy">
             <p className="eyebrow">Based in Kenya - supporting growing organizations</p>
-            <h1>Technology that keeps your business moving.</h1>
+            <h1>Websites that convert. Systems that scale. Technology you can trust.</h1>
             <p className="hero-lede">
-              Aptpro designs, secures and improves the technology that businesses depend on:
-              practical IT support, cybersecurity, business systems, automation, networks and
-              websites for teams that need dependable operations.
+              Aptpro helps Nairobi and Kenyan businesses build professional websites, custom ERP
+              systems, defensive cybersecurity programmes and reliable IT infrastructure with the
+              discipline expected from serious technology partners.
             </p>
             <p className="hero-note">
-              We connect the daily tools people depend on, then make them easier to support,
-              safer to use, and clearer to manage.
+              The work starts with the business operation: customers, staff, records, risk,
+              handovers, infrastructure and the practical path from first enquiry to dependable
+              delivery.
             </p>
             <div className="hero-actions">
               <Link className="primary-button" href="/contact">
-                Book a Consultation
+                Start a Project
               </Link>
-              <Link className="secondary-button" href="/services">
-                Explore Our Services
+              <Link className="secondary-button" href="/projects">
+                Explore Our Work
               </Link>
+              <a className="secondary-button" href={`https://wa.me/${siteConfig.contact.whatsappNumber}`}>
+                WhatsApp Aptpro
+              </a>
             </div>
             <div className="hero-proof" aria-label="Aptpro service focus">
-              <span>Managed IT</span>
+              <span>Website design</span>
+              <span>ERP systems</span>
               <span>Cybersecurity</span>
-              <span>ERP & automation</span>
+              <span>IT infrastructure</span>
             </div>
           </div>
           <OperationsVisual />
@@ -119,14 +124,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="services-section" id="services">
+        <section className="services-section" id="capabilities">
           <div className="section-shell">
             <div className="section-heading">
               <p className="eyebrow">Core services</p>
               <h2>Technology work organized around business operations.</h2>
               <p>
-                The homepage highlights the core categories. The services page goes deeper into
-                troubleshooting, security, software, websites, infrastructure and consulting.
+                Aptpro is organised around four serious delivery areas: websites that earn trust,
+                ERP systems that structure operations, cybersecurity that reduces risk and IT
+                infrastructure that keeps work moving.
               </p>
             </div>
             <div className="service-stack">
@@ -153,11 +159,92 @@ export default function Home() {
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
-                  <Link className="service-action" href="/services">
+                  <Link className="service-action" href={service.href}>
                     View service
                   </Link>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="feature-band websites-band" id="websites">
+          <div className="section-shell feature-grid">
+            <div className="section-intro">
+              <p className="eyebrow">Website design & development</p>
+              <h2>Company websites with conversion, credibility, speed and security built in.</h2>
+              <p>
+                Aptpro builds professional websites for Kenyan businesses that need customers to
+                understand the offer quickly, trust the brand and take the next step through
+                WhatsApp, email, calls or structured enquiries.
+              </p>
+              <Link className="inline-link" href="/website-design">
+                Explore website design in Nairobi
+              </Link>
+            </div>
+            <div className="systems-composition" aria-hidden="true">
+              <span>Landing</span>
+              <span>Services</span>
+              <span>SEO</span>
+              <span>Contact</span>
+              <strong>Fast static website</strong>
+            </div>
+          </div>
+        </section>
+
+        <section className="section-shell split-section" id="erp">
+          <div className="section-intro sticky-intro">
+            <p className="eyebrow">ERP & business systems</p>
+            <h2>Digitise the operation in practical phases.</h2>
+            <p>
+              Customer records, inventory, billing, approvals, dashboards and role-based access are
+              designed around real workflows before software is built.
+            </p>
+            <Link className="inline-link" href="/erp-systems">
+              See ERP systems
+            </Link>
+          </div>
+          <div className="problem-list">
+            {["Workflow mapping", "Requirements and risk analysis", "Phased implementation", "Training and support"].map((item, index) => (
+              <article key={item} className="problem-item reveal" style={{ "--i": index } as CSSProperties}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <div>
+                  <h3>{item}</h3>
+                  <p>
+                    Aptpro keeps the work understandable for owners and usable for staff, with
+                    documentation and adoption considered throughout delivery.
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="feature-band security-band" id="security">
+          <div className="section-shell feature-grid reversed">
+            <div className="systems-composition shield" aria-hidden="true">
+              <span>Access</span>
+              <span>Backup</span>
+              <span>Network</span>
+              <span>Devices</span>
+              <strong>Secure operating baseline</strong>
+            </div>
+            <div className="section-intro">
+              <p className="eyebrow">Cybersecurity & infrastructure</p>
+              <h2>Security-conscious IT support without scare tactics.</h2>
+              <p>
+                Aptpro handles authorised security assessments, access-control reviews, website
+                security, network hardening, managed IT, business email, local servers, remote
+                access, backups and specialist integrations.
+              </p>
+              <div className="hero-actions">
+                <Link className="secondary-button dark-text" href="/cybersecurity">
+                  Cybersecurity
+                </Link>
+                <Link className="secondary-button dark-text" href="/it-infrastructure">
+                  IT infrastructure
+                </Link>
+              </div>
             </div>
           </div>
         </section>

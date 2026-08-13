@@ -75,12 +75,14 @@ export function ServiceCard({
   description,
   items,
   action,
+  href = "/contact",
   index,
 }: {
   title: string;
   description: string;
   items: string[];
   action: string;
+  href?: string;
   index: number;
 }) {
   const badge = index === 0 ? "Popular" : index === 2 ? "Featured" : index === 3 ? "New" : "";
@@ -108,7 +110,7 @@ export function ServiceCard({
         ))}
       </ul>
       <p className="detail-card-reveal">Useful when support, security, tools and daily workflow need to be handled together.</p>
-      <Link className="service-action" href="/contact">
+      <Link className="service-action" href={href}>
         {action}
       </Link>
     </article>
@@ -144,7 +146,7 @@ export function ProjectCard({
   index: number;
 }) {
   const statusClass = project.status.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-  const badge = ["Active development", "Technical implementation", "Deployment planning"].includes(project.status)
+  const badge = ["Active implementation", "Delivered", "Deployment planning"].includes(project.status)
     ? "Featured"
     : project.status.includes("concept")
       ? "New"
