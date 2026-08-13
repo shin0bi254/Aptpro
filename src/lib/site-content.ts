@@ -24,6 +24,14 @@ export const siteConfig = {
 };
 
 export const navItems = [
+  { label: "Services", href: "/services" },
+  { label: "Solutions", href: "/solutions" },
+  { label: "Projects", href: "/projects" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
+
+export const homeAnchors = [
   { label: "Services", href: "#services" },
   { label: "Solutions", href: "#solutions" },
   { label: "Featured Work", href: "#work" },
@@ -142,6 +150,98 @@ export const services = [
   },
 ];
 
+export const serviceCategories = [
+  {
+    title: "Managed IT and Technical Support",
+    description:
+      "Responsive support for the devices, accounts, networks, email and everyday systems your team depends on.",
+    items: [
+      "IT troubleshooting",
+      "Workstation and user support",
+      "Network configuration and diagnostics",
+      "Business email setup and support",
+      "Microsoft Outlook configuration",
+      "QuickBooks user and access support",
+      "Device, software and account setup",
+      "Ongoing IT support",
+    ],
+    action: "Book IT support",
+  },
+  {
+    title: "Cybersecurity",
+    description:
+      "Practical reviews and hardening work that reduce exposure without making normal business work difficult.",
+    items: [
+      "Security assessments",
+      "Vulnerability identification",
+      "Access-control reviews",
+      "Network-security reviews",
+      "Security hardening",
+      "Cybersecurity awareness and operational guidance",
+      "Secure system design",
+    ],
+    action: "Request a security review",
+  },
+  {
+    title: "Software and Business Systems",
+    description:
+      "Custom systems and automation for businesses that need clearer records, controlled access and better reporting.",
+    items: [
+      "Custom ERP and operational systems",
+      "Workflow digitisation",
+      "Dashboards and reporting",
+      "Role-based access control",
+      "Inventory, billing and customer-management systems",
+      "Business process mapping",
+      "System integration and automation",
+    ],
+    action: "Discuss a system",
+  },
+  {
+    title: "Websites and Digital Platforms",
+    description:
+      "Professional digital platforms that explain your offer clearly and support enquiries, service delivery and trust.",
+    items: [
+      "Professional company websites",
+      "E-commerce and catalogue websites",
+      "Website maintenance",
+      "Hosting and deployment",
+      "Domain and business-email configuration",
+      "Search and performance foundations",
+    ],
+    action: "Plan a website",
+  },
+  {
+    title: "Infrastructure and Networking",
+    description:
+      "Local, cloud and site infrastructure planned around reliability, maintainability and business continuity.",
+    items: [
+      "Local server deployment",
+      "Intranet systems",
+      "Network troubleshooting",
+      "CCTV planning and deployment",
+      "Remote-access configuration",
+      "Cloud and local infrastructure",
+      "Backup and business-continuity planning",
+    ],
+    action: "Review infrastructure",
+  },
+  {
+    title: "Technology Consulting",
+    description:
+      "Clear technology advice, workflow analysis and roadmaps before you buy, build, migrate or rescue a system.",
+    items: [
+      "IT strategy",
+      "Technology procurement guidance",
+      "Operational workflow analysis",
+      "Digital transformation planning",
+      "Project scoping",
+      "Documentation and implementation roadmaps",
+    ],
+    action: "Request consulting",
+  },
+];
+
 export const solutionPaths = [
   {
     title: "I need reliable ongoing IT support",
@@ -168,6 +268,33 @@ export const solutionPaths = [
     detail:
       "Clear advice before buying, rebuilding, securing, automating, or rescuing an existing system.",
   },
+];
+
+export const businessSolutions = [
+  "Businesses relying on manual records",
+  "Disconnected departments and duplicated work",
+  "Unclear operational costs and weak reporting",
+  "Poor inventory visibility",
+  "Unreliable networks and recurring IT problems",
+  "Weak access controls and security exposure",
+  "Businesses needing professional websites and branded email",
+  "Organizations that need affordable systems without enterprise-level complexity",
+  "Field teams and outreach programmes that need simple data capture",
+  "Growing organizations that need structured workflows and accountability",
+].map((title) => ({
+  title,
+  detail:
+    "Aptpro starts with the workflow, identifies risk and friction, then designs a practical improvement path that staff can adopt.",
+}));
+
+export const solutionApproach = [
+  "Discover the actual operational problem",
+  "Map the current workflow",
+  "Identify risks and inefficiencies",
+  "Design the appropriate solution",
+  "Implement in practical phases",
+  "Train users and support adoption",
+  "Review and improve",
 ];
 
 export const nascahErp = {
@@ -211,6 +338,114 @@ export const workingApproach = [
   {
     step: "Support and improve",
     detail: "Keep systems useful after launch through support, refinements, better documentation, and continuous improvement.",
+  },
+];
+
+export const projects = [
+  {
+    name: "NASCAH Veterinary ERP",
+    category: "Veterinary operations platform",
+    problem:
+      "Veterinary work involves customers, animals, clinical cases, appointments, triage, consultations, laboratory, imaging, pharmacy, inventory, billing, reporting and communications across different roles.",
+    role:
+      "Active development and implementation engagement for an integrated ERP with role-based access, local intranet deployment planning and staged migration where appropriate.",
+    capabilities: ["ERP workflows", "Clinical operations", "Inventory and billing", "Role-based access"],
+    status: "Active development",
+  },
+  {
+    name: "Veterinary Imaging and PACS",
+    category: "Clinical imaging infrastructure",
+    problem: "Imaging workflows need reliable local access, organized studies and connectivity between imaging equipment and clinical teams.",
+    role:
+      "Configuration and integration work involving Orthanc PACS, CT, X-ray and ultrasound workflows, DICOM connectivity and local imaging access.",
+    capabilities: ["Orthanc PACS", "DICOM workflows", "Local imaging access"],
+    status: "Technical implementation",
+  },
+  {
+    name: "Laboratory Integration",
+    category: "Clinical systems planning",
+    problem: "Laboratory activity needs to connect with clinical records without creating duplicated entry or unclear handovers.",
+    role: "Technical planning and integration work involving veterinary laboratory equipment and clinical-system workflows.",
+    capabilities: ["Integration planning", "Clinical workflow mapping", "System design"],
+    status: "Technical planning",
+  },
+  {
+    name: "Tesni Energies Website",
+    category: "Solar-energy website",
+    problem: "A solar-energy business needed clearer service presentation and troubleshooting support for its web presence.",
+    role:
+      "Website work including service structure, WordPress troubleshooting and presentation of residential, commercial, installation, maintenance, storage and consultation services.",
+    capabilities: ["Website structure", "WordPress support", "Service presentation"],
+    status: "Implemented support",
+  },
+  {
+    name: "Pet Food E-commerce Concept",
+    category: "Retail ordering concept",
+    problem: "A pet-food business needed a simple way to present products and guide customers toward enquiry or ordering.",
+    role: "Product catalogue, cart and WhatsApp-assisted ordering experience designed for a pet-food business.",
+    capabilities: ["Catalogue design", "Cart flow", "WhatsApp ordering"],
+    status: "Technical concept",
+  },
+  {
+    name: "Farm CCTV Solution",
+    category: "Remote-site technology",
+    problem: "A rural farm environment needs monitoring that accounts for power, connectivity, coverage and remote access.",
+    role:
+      "Planning for a solar-powered 4G CCTV deployment with attention to coverage, connectivity, power and remote monitoring.",
+    capabilities: ["CCTV planning", "4G connectivity", "Solar power considerations"],
+    status: "Deployment planning",
+  },
+  {
+    name: "Business IT Support",
+    category: "Operational support",
+    problem: "Everyday IT issues interrupt work when networks, accounting users, email and workstation setup are not handled quickly.",
+    role:
+      "Network-adapter troubleshooting, network issue resolution, QuickBooks user support, business-email creation, password resets and Outlook configuration.",
+    capabilities: ["Troubleshooting", "QuickBooks support", "Email and Outlook"],
+    status: "Implemented support",
+  },
+  {
+    name: "Business Email and Domain Infrastructure",
+    category: "Workplace systems",
+    problem: "Professional communication needs reliable DNS, domain and branded-email configuration.",
+    role: "Domain, DNS and branded-email configuration for professional business communication.",
+    capabilities: ["DNS", "Domain setup", "Business email"],
+    status: "Implemented support",
+  },
+  {
+    name: "Local Server and Intranet Deployment",
+    category: "Local infrastructure",
+    problem: "Some business applications need reliable multi-computer access without exposing private systems publicly.",
+    role: "Windows-based local hosting and multi-computer access planning for business applications.",
+    capabilities: ["Local hosting", "Intranet planning", "Windows deployment"],
+    status: "Deployment planning",
+  },
+  {
+    name: "Pastoral Livestock Outreach Data System",
+    category: "Field-data concept",
+    problem: "Outreach work needs lightweight records for owners, herds, animal categories, treatments and medication issued.",
+    role:
+      "A lightweight field-data concept for recording owners, herd details, animal categories, treatments and medication issued during veterinary outreach work.",
+    capabilities: ["Field data capture", "Veterinary records", "Simple reporting"],
+    status: "Technical concept",
+  },
+  {
+    name: "Security and Network Diagnostic Tool Concept",
+    category: "Cybersecurity diagnostics",
+    problem: "Support teams need structured diagnostics and reporting for authorized security and network reviews.",
+    role:
+      "A command-line cybersecurity and network-scanning concept focused on structured diagnostics and reporting for authorized environments.",
+    capabilities: ["Network diagnostics", "Security reporting", "CLI tooling"],
+    status: "Technical concept",
+  },
+  {
+    name: "Workflow and Cost-Mapping Consulting",
+    category: "Operations consulting",
+    problem: "Small businesses often need to understand workflows, expenses, pricing and reporting before changing systems.",
+    role:
+      "Operational mapping concepts for service businesses and training studios that need clearer workflows, expenses, pricing and reporting.",
+    capabilities: ["Workflow mapping", "Cost analysis", "Reporting structure"],
+    status: "Consulting concept",
   },
 ];
 

@@ -1,137 +1,21 @@
-import { QuoteRequest } from "@/components/QuoteRequest";
 import type { CSSProperties } from "react";
+import Link from "next/link";
+import { OperationsVisual, SignalDivider, IconGlyph } from "@/components/BrandMotif";
+import { ConsultationCta, CredibilityCard, ProjectCard, SolutionCard } from "@/components/PageSections";
+import { SiteShell } from "@/components/SiteChrome";
 import {
   businessProblems,
-  getMailToUrl,
-  getPhoneUrl,
-  getWhatsAppUrl,
-  hasVerifiedContact,
+  homeAnchors,
   nascahErp,
-  navItems,
   positioning,
+  projects,
   services,
   siteConfig,
   solutionPaths,
   workingApproach,
 } from "@/lib/site-content";
 
-function LogoMark() {
-  return (
-    <span className="logo-mark" aria-hidden="true">
-      <span />
-      <span />
-      <span />
-      <span />
-    </span>
-  );
-}
-
-function IconGlyph({ name }: { name: string }) {
-  return (
-    <span className={`icon-glyph ${name}`} aria-hidden="true">
-      <span />
-      <span />
-      <span />
-      <span />
-    </span>
-  );
-}
-
-function SignalDivider({ tone = "light" }: { tone?: "light" | "dark" }) {
-  return (
-    <div className={`signal-divider ${tone}`} aria-hidden="true">
-      <span />
-      <span />
-      <span />
-    </div>
-  );
-}
-
-function ContactLink({
-  channel,
-  href,
-  label,
-  value,
-}: {
-  channel: "whatsapp" | "phone" | "email";
-  href: string;
-  label: string;
-  value: string;
-}) {
-  const verified = hasVerifiedContact(channel);
-
-  return verified ? (
-    <a className="contact-link" href={href}>
-      <span>{label}</span>
-      <strong>{value}</strong>
-    </a>
-  ) : null;
-}
-
-function OperationsVisual() {
-  const nodes = ["Support", "Security", "Systems", "Automation"];
-  const checkpoints = ["Messy tools", "Secure hub", "Clear operations"];
-
-  return (
-    <div className="ops-visual" aria-label="Connected secure business operations visual" role="img">
-      <div className="ops-status">
-        <span />
-        <strong>Live operations map</strong>
-        <small>Support + security + systems</small>
-      </div>
-      <div className="ops-map">
-        <div className="ops-boundary" />
-        <div className="ops-core">
-          <span>A</span>
-          <strong>Aptpro</strong>
-          <small>Operations hub</small>
-        </div>
-        {nodes.map((node, index) => (
-          <div className={`ops-node node-${index + 1}`} key={node}>
-            <span />
-            <strong>{node}</strong>
-          </div>
-        ))}
-        <svg className="ops-lines" viewBox="0 0 520 420" aria-hidden="true">
-          <path d="M260 210 L124 104" />
-          <path d="M260 210 L394 106" />
-          <path d="M260 210 L115 315" />
-          <path d="M260 210 L400 316" />
-          <circle cx="260" cy="210" r="118" />
-          <path className="signal-path main" d="M72 210 C150 150 213 150 260 210 C318 284 378 278 454 210" />
-        </svg>
-        <span className="signal-packet packet-one" />
-        <span className="signal-packet packet-two" />
-      </div>
-      <div className="ops-checkpoints">
-        {checkpoints.map((item, index) => (
-          <span key={item}>
-            <small>{String(index + 1).padStart(2, "0")}</small>
-            {item}
-          </span>
-        ))}
-      </div>
-      <div className="ops-console">
-        <div>
-          <small>Today&apos;s focus</small>
-          <strong>Reliable, secure business operations</strong>
-        </div>
-        <ul>
-          <li>Access reviewed before systems go live</li>
-          <li>Support paths documented for staff</li>
-          <li>Workflows shaped around real handovers</li>
-        </ul>
-      </div>
-    </div>
-  );
-}
-
 export default function Home() {
-  const whatsappUrl = getWhatsAppUrl();
-  const mailUrl = getMailToUrl();
-  const phoneUrl = getPhoneUrl();
-  const year = new Date().getFullYear();
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -144,51 +28,11 @@ export default function Home() {
   };
 
   return (
-    <>
+    <SiteShell>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
-
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label={`${siteConfig.businessName} home`}>
-          <LogoMark />
-          <span>
-            <strong>{siteConfig.shortName}</strong>
-            <small>Business & IT Solutions</small>
-          </span>
-        </a>
-
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          {navItems.map((item) => (
-            <a key={item.href} href={item.href}>
-              {item.label}
-            </a>
-          ))}
-        </nav>
-
-        <details className="mobile-nav">
-          <summary aria-label="Open navigation">
-            <span />
-            <span />
-            <span />
-          </summary>
-          <nav aria-label="Mobile navigation">
-            {navItems.map((item) => (
-              <a key={item.href} href={item.href}>
-                {item.label}
-              </a>
-            ))}
-            <a className="mobile-cta" href="#contact">
-              Request a quote
-            </a>
-          </nav>
-        </details>
-
-        <a className="nav-cta" href="#contact">
-          Get IT Support
-        </a>
-      </header>
 
       <main id="top">
         <section className="hero">
@@ -196,21 +40,21 @@ export default function Home() {
             <p className="eyebrow">Based in Kenya - supporting growing organizations</p>
             <h1>Technology that keeps your business moving.</h1>
             <p className="hero-lede">
-              Aptpro delivers secure IT support, cybersecurity, business systems, automation,
-              networks, websites, and practical technology strategy for Kenyan teams that need
-              dependable operations.
+              Aptpro designs, secures and improves the technology that businesses depend on:
+              practical IT support, cybersecurity, business systems, automation, networks and
+              websites for teams that need dependable operations.
             </p>
             <p className="hero-note">
               We connect the daily tools people depend on, then make them easier to support,
               safer to use, and clearer to manage.
             </p>
             <div className="hero-actions">
-              <a className="primary-button" href="#contact">
-                Request a consultation
-              </a>
-              <a className="secondary-button" href="#services">
-                Explore our services
-              </a>
+              <Link className="primary-button" href="/contact">
+                Book a Consultation
+              </Link>
+              <Link className="secondary-button" href="/services">
+                Explore Our Services
+              </Link>
             </div>
             <div className="hero-proof" aria-label="Aptpro service focus">
               <span>Managed IT</span>
@@ -232,17 +76,25 @@ export default function Home() {
           ))}
         </section>
 
+        <nav className="home-jump-nav section-shell" aria-label="Homepage sections">
+          {homeAnchors.map((item) => (
+            <a key={item.href} href={item.href}>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
         <section className="section-shell split-section" id="problems">
           <div className="section-intro sticky-intro">
             <p className="eyebrow">What gets fixed</p>
             <h2>Operational problems should not become normal.</h2>
             <p>
               Aptpro looks at the workflow behind the issue, then brings the right mix of
-              support, infrastructure, security, software, and automation.
+              support, infrastructure, security, software and automation.
             </p>
-            <a className="inline-link" href="#contact">
-              Discuss a current problem
-            </a>
+            <Link className="inline-link" href="/solutions">
+              See business solutions
+            </Link>
           </div>
           <div className="problem-list">
             {businessProblems.map((item, index) => (
@@ -260,11 +112,11 @@ export default function Home() {
         <section className="services-section" id="services">
           <div className="section-shell">
             <div className="section-heading">
-              <p className="eyebrow">Services</p>
-              <h2>Serious technology services, explained in business language.</h2>
+              <p className="eyebrow">Core services</p>
+              <h2>Technology work organized around business operations.</h2>
               <p>
-                Each service group connects the problem, the delivery work, and the operational
-                value your team should expect from a well-managed engagement.
+                The homepage highlights the core categories. The services page goes deeper into
+                troubleshooting, security, software, websites, infrastructure and consulting.
               </p>
             </div>
             <div className="service-stack">
@@ -291,9 +143,9 @@ export default function Home() {
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
-                  <a className="service-action" href="#contact">
-                    {service.action}
-                  </a>
+                  <Link className="service-action" href="/services">
+                    View service
+                  </Link>
                 </article>
               ))}
             </div>
@@ -309,11 +161,7 @@ export default function Home() {
           </div>
           <div className="solution-grid">
             {solutionPaths.map((path, index) => (
-              <a className="solution-card" href="#contact" key={path.title}>
-                <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
-                <h3>{path.title}</h3>
-                <p>{path.detail}</p>
-              </a>
+              <SolutionCard key={path.title} title={path.title} detail={path.detail} index={index} />
             ))}
           </div>
         </section>
@@ -325,9 +173,9 @@ export default function Home() {
             <p>{nascahErp.problem}</p>
             <p>{nascahErp.solution}</p>
             <p>{nascahErp.value}</p>
-            <a className="inline-link light" href="#contact">
-              Ask about custom ERP work
-            </a>
+            <Link className="inline-link light" href="/projects">
+              View projects and experience
+            </Link>
           </div>
           <div className="work-panel" aria-label="NASCAH ERP capability map">
             <div className="work-map">
@@ -367,94 +215,30 @@ export default function Home() {
 
         <section className="section-shell about-section" id="about">
           <div>
-            <p className="eyebrow">About Aptpro</p>
-            <h2>A practical technology partner for real business operations.</h2>
+            <p className="eyebrow">Credibility</p>
+            <h2>Practical, security-aware delivery for real business operations.</h2>
           </div>
-          <div className="about-copy">
-            <p>
-              Aptpro combines business understanding, cybersecurity-aware engineering, hands-on
-              technical delivery, and long-term operational improvement. The work is grounded in
-              how teams actually serve customers, manage records, communicate, and make decisions.
-            </p>
-            <p>
-              The goal is not to sell complexity. It is to help organizations run with technology
-              that is reliable, secure, understandable, and useful after launch.
-            </p>
+          <div className="credibility-grid compact">
+            {positioning.map((item) => (
+              <CredibilityCard key={item.title} title={item.title} detail={item.detail} />
+            ))}
           </div>
         </section>
 
-        <section className="contact-section" id="contact">
-          <div className="section-shell contact-grid">
-            <div className="contact-copy">
-              <p className="eyebrow">Request a quote</p>
-              <h2>Bring the problem. Aptpro will help turn it into a practical next step.</h2>
-              <p>
-                Use WhatsApp, phone, email, or the structured enquiry builder. The website does
-                not pretend to submit to a backend; your message opens in your own app for review.
-              </p>
-              <div className="contact-options" aria-label="Contact options">
-                <ContactLink
-                  channel="whatsapp"
-                  href={whatsappUrl}
-                  label="WhatsApp"
-                  value={`+${siteConfig.contact.whatsappNumber}`}
-                />
-                <ContactLink
-                  channel="phone"
-                  href={phoneUrl}
-                  label="Telephone"
-                  value={siteConfig.contact.phoneNumber}
-                />
-                <ContactLink
-                  channel="email"
-                  href={mailUrl}
-                  label="Email"
-                  value={siteConfig.contact.email}
-                />
-                <ContactLink
-                  channel="email"
-                  href={`mailto:${siteConfig.contact.secondaryEmail}?subject=${encodeURIComponent(siteConfig.quoteSubject)}`}
-                  label="Secondary email"
-                  value={siteConfig.contact.secondaryEmail}
-                />
-              </div>
-            </div>
-            <QuoteRequest />
+        <section className="section-shell projects-preview">
+          <div className="section-heading compact">
+            <p className="eyebrow">Selected experience</p>
+            <h2>Work shaped around operations, not just screens.</h2>
+          </div>
+          <div className="project-grid preview">
+            {projects.slice(0, 3).map((project, index) => (
+              <ProjectCard key={project.name} project={project} index={index} />
+            ))}
           </div>
         </section>
+
+        <ConsultationCta id="contact" />
       </main>
-
-      <footer className="site-footer">
-        <div>
-          <a className="brand footer-brand" href="#top">
-            <LogoMark />
-            <span>
-              <strong>{siteConfig.businessName}</strong>
-              <small>{siteConfig.tagline}</small>
-            </span>
-          </a>
-          <p>
-            Serving growing organizations in Kenya with IT support, cybersecurity, business
-            systems, automation, websites, CCTV, Microsoft 365, QuickBooks support, and practical
-            technology strategy.
-          </p>
-        </div>
-        <nav aria-label="Footer navigation">
-          {navItems.map((item) => (
-            <a key={item.href} href={item.href}>
-              {item.label}
-            </a>
-          ))}
-        </nav>
-        <p className="copyright">
-          &copy; {year} {siteConfig.businessName}. Enquiries are prepared on your device; no
-          website backend stores form submissions.
-        </p>
-      </footer>
-
-      <a className="floating-whatsapp" href={whatsappUrl} aria-label="Contact Aptpro on WhatsApp">
-        WhatsApp
-      </a>
-    </>
+    </SiteShell>
   );
 }
