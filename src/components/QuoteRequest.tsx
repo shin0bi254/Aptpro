@@ -17,6 +17,7 @@ const contactMethods = [
 
 export function QuoteRequest() {
   const [status, setStatus] = useState<Status>({ type: "idle", message: "" });
+  const isSuccess = status.type === "success";
 
   const verifiedEmail = Boolean(siteConfig.contact.email);
   const verifiedWhatsApp = Boolean(siteConfig.contact.whatsappNumber);
@@ -95,20 +96,30 @@ export function QuoteRequest() {
   }
 
   return (
-    <form className="quote-form" onSubmit={handleSubmit} noValidate>
+    <form
+      className={`quote-form${isSuccess ? " is-success" : ""}`}
+      onSubmit={handleSubmit}
+      onChange={() => {
+        if (status.type !== "idle") {
+          setStatus({ type: "idle", message: "" });
+        }
+      }}
+      noValidate
+      data-reveal
+    >
       <div className="form-row">
-        <label>
+        <label className="floating-field">
           <span>Name</span>
-          <input name="name" type="text" autoComplete="name" required />
+          <input name="name" type="text" autoComplete="name" placeholder=" " required />
         </label>
-        <label>
+        <label className="floating-field">
           <span>Organization</span>
-          <input name="organization" type="text" autoComplete="organization" required />
+          <input name="organization" type="text" autoComplete="organization" placeholder=" " required />
         </label>
       </div>
 
       <div className="form-row">
-        <label>
+        <label className="floating-field select-field">
           <span>Preferred contact</span>
           <select name="contactMethod" required defaultValue="">
             <option value="" disabled>
@@ -121,7 +132,7 @@ export function QuoteRequest() {
             ))}
           </select>
         </label>
-        <label>
+        <label className="floating-field select-field">
           <span>Service needed</span>
           <select name="service" required defaultValue="">
             <option value="" disabled>
@@ -136,14 +147,15 @@ export function QuoteRequest() {
         </label>
       </div>
 
-      <label>
+      <label className="floating-field textarea-field">
         <span>Message</span>
         <textarea
           name="message"
           rows={4}
-          placeholder="Briefly describe what you need help with."
+          placeholder=" "
           required
         />
+        <small>Briefly describe what you need help with.</small>
       </label>
 
       <label className="honeypot" aria-hidden="true">
@@ -162,7 +174,7 @@ export function QuoteRequest() {
         Aptpro does not receive this form until you send it from WhatsApp or your email app.
       </p>
 
-      <p className={`form-status ${status.type}`} aria-live="polite">
+      <p className={`form-status ${status.type}`} role={status.type === "error" ? "alert" : "status"} aria-live="polite">
         {status.message}
       </p>
     </form>
