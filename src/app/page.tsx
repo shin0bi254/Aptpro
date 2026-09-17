@@ -2,13 +2,13 @@ import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { OperationsVisual, SignalDivider, IconGlyph } from "@/components/BrandMotif";
-import { ConsultationCta, CredibilityCard, ProjectCard, SolutionCard } from "@/components/PageSections";
+import { ConsultationCta, SolutionCard } from "@/components/PageSections";
+import { CapabilityStrip, CaseStudyTabs, NumberedStep } from "@/components/ModernUI";
 import { SiteShell } from "@/components/SiteChrome";
 import {
   businessProblems,
   homeAnchors,
   nascahErp,
-  positioning,
   projects,
   services,
   siteConfig,
@@ -66,9 +66,6 @@ export default function Home() {
               <Link className="secondary-button" href="/projects">
                 Explore Our Work
               </Link>
-              <a className="secondary-button" href={`https://wa.me/${siteConfig.contact.whatsappNumber}`}>
-                WhatsApp Aptpro
-              </a>
             </div>
             <div className="hero-proof" aria-label="Aptpro service focus">
               <span>Website design</span>
@@ -82,14 +79,7 @@ export default function Home() {
 
         <SignalDivider tone="dark" />
 
-        <section className="trust-strip" aria-label="Aptpro positioning">
-          {positioning.map((item) => (
-            <article key={item.title}>
-              <h2>{item.title}</h2>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </section>
+        <div className="section-shell hero-capabilities"><CapabilityStrip /></div>
 
         <nav className="home-jump-nav section-shell" aria-label="Homepage sections">
           {homeAnchors.map((item) => (
@@ -205,18 +195,12 @@ export default function Home() {
             </Link>
           </div>
           <div className="problem-list">
-            {["Workflow mapping", "Requirements and risk analysis", "Phased implementation", "Training and support"].map((item, index) => (
-              <article key={item} className="problem-item reveal" style={{ "--i": index } as CSSProperties}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <div>
-                  <h3>{item}</h3>
-                  <p>
-                    Aptpro keeps the work understandable for owners and usable for staff, with
-                    documentation and adoption considered throughout delivery.
-                  </p>
-                </div>
-              </article>
-            ))}
+            {[
+              ["Workflow mapping", "Trace roles, handovers, records and approval points before software decisions are made."],
+              ["Requirements and risk analysis", "Separate essential controls from nice-to-have features and surface migration, access and continuity risks early."],
+              ["Phased implementation", "Deliver usable modules in controlled stages so operations keep moving while the system matures."],
+              ["Training and support", "Document the system, prepare users and refine workflows from real operational feedback."],
+            ].map(([title, description], index) => <NumberedStep key={title} code={String(index + 1).padStart(2, "0")} title={title} description={description} />)}
           </div>
         </section>
 
@@ -310,28 +294,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-shell about-section" id="about">
-          <div>
-            <p className="eyebrow">Credibility</p>
-            <h2>Practical, security-aware delivery for real business operations.</h2>
-          </div>
-          <div className="credibility-grid compact">
-            {positioning.map((item) => (
-              <CredibilityCard key={item.title} title={item.title} detail={item.detail} />
-            ))}
-          </div>
-        </section>
-
         <section className="section-shell projects-preview">
           <div className="section-heading compact">
             <p className="eyebrow">Selected experience</p>
             <h2>Work shaped around operations, not just screens.</h2>
           </div>
-          <div className="project-grid preview">
-            {projects.slice(0, 3).map((project, index) => (
-              <ProjectCard key={project.name} project={project} index={index} />
-            ))}
-          </div>
+          <CaseStudyTabs projects={projects.slice(0, 3)} />
         </section>
 
         <ConsultationCta id="contact" />

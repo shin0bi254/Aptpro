@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getWhatsAppUrl, navItems, siteConfig } from "@/lib/site-content";
 import { LogoMark } from "./BrandMotif";
+import { ArrowUp, ChevronDown, Menu, MessageCircle, ShieldCheck, X } from "lucide-react";
 
 type ThemePreference = "system" | "light" | "dark";
 
@@ -118,15 +119,36 @@ function useThemePreference() {
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const mobileNavRef = useRef<HTMLDetailsElement>(null);
+  const mobileNavRef = useRef<HTMLDivElement>(null);
+  const mobileTriggerRef = useRef<HTMLButtonElement>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const isScrolled = useScrollPosition(10);
   const { theme, toggleTheme } = useThemePreference();
 
   function closeMobileNav() {
-    if (mobileNavRef.current) {
-      mobileNavRef.current.open = false;
-    }
+    setMobileOpen(false);
   }
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    mobileNavRef.current?.querySelector<HTMLAnchorElement>("a")?.focus();
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+        mobileTriggerRef.current?.focus();
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [mobileOpen]);
+
+  const serviceLinks = navItems.filter((item) => ["/services", "/website-design", "/erp-systems", "/cybersecurity", "/it-infrastructure"].includes(item.href));
+  const primaryLinks = navItems.filter((item) => ["/solutions", "/projects", "/about", "/contact"].includes(item.href));
 
   return (
     <header className={`site-header${isScrolled ? " is-scrolled" : ""}`}>
@@ -139,7 +161,13 @@ export function SiteHeader() {
       </Link>
 
       <nav className="desktop-nav" aria-label="Primary navigation">
-        {navItems.map((item) => (
+        <details className="services-menu">
+          <summary>Services <ChevronDown size={15} aria-hidden="true" /></summary>
+          <div className="services-menu-panel">
+            {serviceLinks.map((item) => <Link key={item.href} href={item.href} aria-current={pathname === item.href ? "page" : undefined}>{item.label}</Link>)}
+          </div>
+        </details>
+        {primaryLinks.map((item) => (
           <Link
             key={item.href}
             href={item.href}
@@ -150,14 +178,15 @@ export function SiteHeader() {
         ))}
       </nav>
 
-      <details className="mobile-nav" ref={mobileNavRef}>
-        <summary aria-label="Open navigation">
-          <span />
-          <span />
-          <span />
-        </summary>
-        <nav aria-label="Mobile navigation">
-          {navItems.map((item) => (
+      <div className="mobile-nav">
+        <button ref={mobileTriggerRef} className="mobile-menu-trigger" type="button" aria-label={mobileOpen ? "Close navigation" : "Open navigation"} aria-expanded={mobileOpen} aria-controls="mobile-navigation" onClick={() => setMobileOpen((open) => !open)}>
+          {mobileOpen ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
+        </button>
+        {mobileOpen ? <><button className="mobile-nav-backdrop" type="button" aria-label="Close navigation" onClick={closeMobileNav} /><div id="mobile-navigation" className="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Site navigation" ref={mobileNavRef}>
+          <div className="mobile-nav-heading"><span>Navigation</span><button type="button" onClick={closeMobileNav} aria-label="Close navigation"><X size={22} aria-hidden="true" /></button></div>
+          <nav aria-label="Mobile navigation">
+          <small>Capabilities</small>
+          {serviceLinks.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -167,11 +196,14 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
+          <small>Company</small>
+          {primaryLinks.map((item) => <Link key={item.href} href={item.href} aria-current={pathname === item.href ? "page" : undefined} onClick={closeMobileNav}>{item.label}</Link>)}
           <Link className="mobile-cta" href="/contact" onClick={closeMobileNav}>
-            Book a consultation
+            Start a Project
           </Link>
-        </nav>
-      </details>
+          </nav>
+        </div></> : null}
+      </div>
 
       <button
         className="theme-toggle"
@@ -183,7 +215,7 @@ export function SiteHeader() {
       </button>
 
       <Link className="nav-cta" href="/contact">
-        Book a Consultation
+        Start a Project
       </Link>
     </header>
   );
@@ -198,7 +230,7 @@ export function SiteFooter() {
     { label: "Cybersecurity", href: "/cybersecurity" },
     { label: "IT infrastructure", href: "/it-infrastructure" },
   ];
-  const trustBadges = ["Nairobi and Kenya focus", "Security-aware delivery", "No fake form storage"];
+  const trustBadges = ["Nairobi and Kenya focus", "Security-aware delivery", "Device-prepared enquiries"];
 
   return (
     <>
@@ -206,6 +238,7 @@ export function SiteFooter() {
         <div className="section-shell social-proof-grid">
           {trustBadges.map((badge, index) => (
             <span key={badge} style={{ "--i": index } as React.CSSProperties}>
+              <ShieldCheck size={16} aria-hidden="true" />
               {badge}
             </span>
           ))}
@@ -226,6 +259,10 @@ export function SiteFooter() {
             systems, automation, websites, CCTV, Microsoft 365, QuickBooks support, and practical
             technology strategy.
           </p>
+          <div className="footer-privacy-note">
+            <ShieldCheck size={20} aria-hidden="true" />
+            <div><strong>Privacy-conscious enquiry flow</strong><p>Contact details are assembled in your browser and handed to WhatsApp or email. This static site does not store submissions in its own backend.</p></div>
+          </div>
         </div>
         <div className="footer-links">
           <nav aria-label="Footer navigation">
@@ -251,14 +288,11 @@ export function SiteFooter() {
             <span>{siteConfig.contact.location}</span>
           </div>
         </div>
-        <p className="copyright">
-          &copy; {year} {siteConfig.businessName}. Enquiries are prepared on your device; no
-          website backend stores form submissions.
-        </p>
+        <p className="copyright">&copy; {year} {siteConfig.businessName}. Built for clear, accountable technology engagement.</p>
       </footer>
 
       <a className="floating-whatsapp" href={whatsappUrl} aria-label="Contact Aptpro on WhatsApp">
-        WhatsApp
+        <MessageCircle size={22} aria-hidden="true" /><span>WhatsApp</span>
       </a>
       <Link className="mobile-sticky-cta" href="/contact">
         Book Aptpro Consultation
@@ -289,7 +323,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         onClick={scrollToTop}
         aria-label="Scroll to top"
       >
-        <span aria-hidden="true" />
+        <ArrowUp size={18} aria-hidden="true" />
       </button>
     </>
   );
