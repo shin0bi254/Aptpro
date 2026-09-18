@@ -101,7 +101,7 @@ export default function ErpSystemsPage() {
 
         <ContentGrid title="ERP systems: scope, evidence and delivery" blocks={erpBuyerContent} />
         <FaqSection faqs={erpFaqs} />
-        <RelatedLinks links={[{"href": "/projects/veterinary-systems", "label": "NASCAH ERP and veterinary engineering evidence"}, {"href": "/industries/veterinary", "label": "Veterinary operating-system requirements"}, {"href": "/industries/smes", "label": "Business systems for Kenyan SMEs"}, {"href": "/automation", "label": "Workflow integration before a full ERP"}, {"href": "/contact", "label": "Discuss ERP requirements"}]} />
+        <RelatedLinks links={[{"href": "/projects/veterinary-systems", "label": "NASCAH ERP and veterinary engineering evidence"}, {"href": "/industries/veterinary", "label": "Veterinary workflow and systems requirements"}, {"href": "/industries/smes", "label": "Business systems for Kenyan SMEs"}, {"href": "/automation", "label": "Workflow integration before a full ERP"}, {"href": "/contact", "label": "Discuss ERP requirements"}]} />
         <ConsultationCta title="Need a business system scoped properly before anyone starts coding?" />
       </main>
     </SiteShell>

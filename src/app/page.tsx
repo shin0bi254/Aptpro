@@ -282,7 +282,7 @@ export default function Home() {
 
         <ContentGrid title="Start with the immediate need, build toward structured operations" blocks={[
           {title:"For SMEs and growing teams",text:"A focused website or IT fix can be the first engagement. Review manual records, spreadsheet reporting, WhatsApp handovers and weak backups before deciding whether automation or a business system is needed."},
-          {title:"For management and procurement",text:"Aptproâ€™s approach starts with requirements and scope. Architecture, RBAC, testing, documentation, migration, training and deployment responsibilities are addressed where the project requires them."},
+          {title:"For management and procurement",text:"Aptpro’s approach starts with requirements and scope. Architecture, RBAC, testing, documentation, migration, training and deployment responsibilities are addressed where the project requires them."},
         ]} />
         <RelatedLinks title="Explore the service and industry that fit your requirements" links={[{href:"/website-design",label:"Website design and web development in Kenya"},{href:"/industries",label:"Industry-specific technology requirements"},{href:"/industries/veterinary",label:"Veterinary systems and specialist infrastructure"},{href:"/industries/smes",label:"Phased technology services for Kenyan SMEs"},{href:"/automation",label:"Business workflow automation and integration"}]} />
         <ConsultationCta id="contact" />
