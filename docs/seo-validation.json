@@ -1,0 +1,2314 @@
+{
+  "origin": "https://aptpro.co.ke",
+  "pages": {
+    "/": {
+      "httpStatus": null,
+      "title": "Technology Consultancy & Website Development in Kenya",
+      "description": "Aptpro helps Kenyan businesses with professional websites, custom ERP, defensive cybersecurity, IT support and workflow integration. Start with a practical scope.",
+      "canonical": "https://aptpro.co.ke",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "Websites that convert. Systems that scale. Technology you can trust."
+        ],
+        "h2": [
+          "Operational problems should not become normal.",
+          "Technology work organized around business operations.",
+          "Company websites with conversion, credibility, speed and security built in.",
+          "Digitise the operation in practical phases.",
+          "Security-conscious IT support without scare tactics.",
+          "Start with what you need the business to do better.",
+          "NASCAH ERP: a flagship system for case-centred operations.",
+          "A clear process for non-technical business owners.",
+          "Work shaped around operations, not just screens.",
+          "Start with the immediate need, build toward structured operations",
+          "Explore the service and industry that fit your requirements",
+          "Bring the problem. Aptpro will help turn it into a practical next step."
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#approach",
+        "#capabilities",
+        "#erp",
+        "#main-content",
+        "#security",
+        "#websites",
+        "#work",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/industries/smes",
+        "/industries/veterinary",
+        "/it-infrastructure",
+        "/projects",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 1631
+    },
+    "/website-design": {
+      "httpStatus": null,
+      "title": "Website Design & Web Development in Kenya | Aptpro",
+      "description": "Professional websites for Kenyan businesses: company sites, redesigns, WordPress, custom Next.js development, SEO foundations and support. Discuss your requirements.",
+      "canonical": "https://aptpro.co.ke/website-design",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "Professional website design and development for businesses in Kenya."
+        ],
+        "h2": [
+          "Your website is part of the business’s digital infrastructure.",
+          "Choose the website your business needs",
+          "What sits behind a useful business website",
+          "Eight stages, with decisions and responsibilities made clear",
+          "Website support with a wider technical context",
+          "What to bring to a website scoping conversation",
+          "Website design questions from Kenyan businesses",
+          "Website services in your business context",
+          "Plan the website around what your business needs next"
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://aptpro.co.ke/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Website design",
+              "item": "https://aptpro.co.ke/website-design"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://aptpro.co.ke/website-design#service",
+          "name": "Website design and development in Kenya",
+          "description": "Professional company websites, redesigns, WordPress and custom development with agreed SEO, security, performance and support foundations.",
+          "url": "https://aptpro.co.ke/website-design",
+          "serviceType": [
+            "Website design",
+            "Web development",
+            "Website redesign",
+            "WordPress development and support",
+            "Next.js development"
+          ],
+          "provider": {
+            "@id": "https://aptpro.co.ke/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Kenya"
+            },
+            {
+              "@type": "Place",
+              "name": "East Africa"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/industries/professional-services",
+        "/industries/property-management",
+        "/industries/smes",
+        "/it-infrastructure",
+        "/projects",
+        "/projects#tesni-energies",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 1582
+    },
+    "/erp-systems": {
+      "httpStatus": null,
+      "title": "Custom ERP Systems & Business Software in Kenya | Aptpro",
+      "description": "Custom ERP and business software for Kenyan organisations: workflows, billing, inventory, RBAC, migration and reporting. Scope a phased implementation with Aptpro.",
+      "canonical": "https://aptpro.co.ke/erp-systems",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "Custom ERP and business systems for organisations in Kenya."
+        ],
+        "h2": [
+          "ERP thinking for growing SMEs, not one narrow sector.",
+          "Customer management",
+          "Inventory and procurement",
+          "Billing and payments workflow",
+          "Appointments and service delivery",
+          "Role-based access",
+          "Reports and dashboards",
+          "Documented approvals and audit trails",
+          "Local intranet or cloud deployment planning",
+          "Integrations where technically and commercially appropriate",
+          "Structured delivery from discovery to continuous improvement.",
+          "NASCAH ERP: an active veterinary systems engagement.",
+          "ERP systems: scope, evidence and delivery",
+          "Questions before you scope the work",
+          "Related services and evidence",
+          "Need a business system scoped properly before anyone starts coding?"
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://aptpro.co.ke/erp-systems#service",
+          "description": "Aptpro develops ERP and business software for Kenyan organisations moving beyond manual records and disconnected tools. Phased work connects customer records, inventory, billing, approvals and reporting to staff workflows and role permissions.",
+          "name": "Custom ERP systems and business software development in Kenya",
+          "provider": {
+            "@id": "https://aptpro.co.ke/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Kenya"
+            },
+            {
+              "@type": "Place",
+              "name": "East Africa"
+            }
+          ],
+          "serviceType": [
+            "Custom ERP systems",
+            "Business software",
+            "Workflow digitisation",
+            "Business systems"
+          ],
+          "url": "https://aptpro.co.ke/erp-systems"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://aptpro.co.ke/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "ERP systems",
+              "item": "https://aptpro.co.ke/erp-systems"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/industries/smes",
+        "/industries/veterinary",
+        "/it-infrastructure",
+        "/projects",
+        "/projects/veterinary-systems",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 1030
+    },
+    "/cybersecurity": {
+      "httpStatus": null,
+      "title": "Cybersecurity Services in Kenya | Aptpro",
+      "description": "Authorised defensive cybersecurity for Kenyan organisations: assessments, access reviews, hardening and recovery readiness. Discuss a scoped security review.",
+      "canonical": "https://aptpro.co.ke/cybersecurity",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "Cybersecurity services for authorised business environments in Kenya."
+        ],
+        "h2": [
+          "Security work that ends in prioritised action, not panic.",
+          "Security assessments",
+          "Vulnerability management",
+          "Access-control reviews",
+          "Website security reviews",
+          "Network hardening",
+          "Security configuration reviews",
+          "Backup and recovery reviews",
+          "Security awareness",
+          "Risk prioritisation",
+          "Secure architecture",
+          "Incident-readiness planning",
+          "Security-conscious software development",
+          "Defensive discipline, translated into practical operations.",
+          "How to scope a defensive security review",
+          "Questions before you scope the work",
+          "Related services and evidence",
+          "Need a defensive security review before a problem becomes expensive?"
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://aptpro.co.ke/cybersecurity#service",
+          "description": "Aptpro focuses on defensive cybersecurity: reducing practical business risk through assessment, access control, secure configuration, vulnerability management and recovery readiness. Findings are prioritised by business impact and documented for practical remediation.",
+          "name": "Defensive cybersecurity services in Kenya",
+          "provider": {
+            "@id": "https://aptpro.co.ke/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Kenya"
+            },
+            {
+              "@type": "Place",
+              "name": "East Africa"
+            }
+          ],
+          "serviceType": [
+            "Security assessments",
+            "Vulnerability management",
+            "Access-control reviews",
+            "Website security reviews",
+            "Network hardening",
+            "Security configuration reviews",
+            "Backup and recovery reviews",
+            "Security awareness",
+            "Risk prioritisation",
+            "Secure architecture",
+            "Incident-readiness planning",
+            "Security-conscious software development"
+          ],
+          "url": "https://aptpro.co.ke/cybersecurity"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://aptpro.co.ke/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Cybersecurity",
+              "item": "https://aptpro.co.ke/cybersecurity"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "#security-services",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/industries/veterinary",
+        "/it-infrastructure",
+        "/projects",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 951
+    },
+    "/it-infrastructure": {
+      "httpStatus": null,
+      "title": "IT Infrastructure & Business IT Support in Kenya | Aptpro",
+      "description": "IT support and infrastructure for businesses in Kenya: networks, email, local systems, backups and specialist integrations. Review your environment with Aptpro.",
+      "canonical": "https://aptpro.co.ke/it-infrastructure",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "IT infrastructure and business IT support in Kenya."
+        ],
+        "h2": [
+          "Managed IT support",
+          "Network setup and troubleshooting",
+          "Local servers and intranets",
+          "Cloud deployment",
+          "User and device support",
+          "Business email and Microsoft Outlook",
+          "QuickBooks access support",
+          "Backup planning",
+          "Remote access",
+          "CCTV planning",
+          "PACS and specialist-system integration",
+          "Business continuity",
+          "Reliable technology depends on diagnosis, documentation and continuity planning.",
+          "Support that accounts for the operating environment",
+          "Questions before you scope the work",
+          "Related services and evidence",
+          "Need IT support that leaves your environment clearer than it found it?"
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://aptpro.co.ke/it-infrastructure#service",
+          "description": "Aptpro treats infrastructure as a business service: documented, supportable and aligned with continuity. The work covers daily IT support, networks, email, local servers, cloud deployment, remote access, backups and specialist systems.",
+          "name": "IT infrastructure and business IT support in Kenya",
+          "provider": {
+            "@id": "https://aptpro.co.ke/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Kenya"
+            },
+            {
+              "@type": "Place",
+              "name": "East Africa"
+            }
+          ],
+          "serviceType": [
+            "Managed IT support",
+            "Network setup and troubleshooting",
+            "Local servers and intranets",
+            "Cloud deployment",
+            "User and device support",
+            "Business email and Microsoft Outlook",
+            "QuickBooks access support",
+            "Backup planning",
+            "Remote access",
+            "CCTV planning",
+            "PACS and specialist-system integration",
+            "Business continuity"
+          ],
+          "url": "https://aptpro.co.ke/it-infrastructure"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://aptpro.co.ke/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "IT infrastructure",
+              "item": "https://aptpro.co.ke/it-infrastructure"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/industries/property-management",
+        "/industries/veterinary",
+        "/it-infrastructure",
+        "/projects",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 845
+    },
+    "/services": {
+      "httpStatus": null,
+      "title": "Business Technology & IT Services in Kenya | Aptpro",
+      "description": "Explore Aptpro’s website development, ERP, cybersecurity, infrastructure and automation services for Kenyan businesses. Find the scope that fits your operating needs.",
+      "canonical": "https://aptpro.co.ke/services",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "Website, software and IT services for businesses in Kenya."
+        ],
+        "h2": [
+          "Websites and Digital Platforms",
+          "Software and Business Systems",
+          "Cybersecurity",
+          "Infrastructure and Networking",
+          "Managed IT and Technical Support",
+          "Technology Consulting",
+          "Automation and industry requirements",
+          "Related services and evidence",
+          "Need help choosing the right service?"
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://aptpro.co.ke/services"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/it-infrastructure",
+        "/projects",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 749
+    },
+    "/solutions": {
+      "httpStatus": null,
+      "title": "Business Workflow & Technology Consulting in Kenya | Aptpro",
+      "description": "Map manual records, reporting gaps and disconnected workflows with Aptpro. Plan phased technology improvements before choosing software or infrastructure.",
+      "canonical": "https://aptpro.co.ke/solutions",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "Start with the operational problem, then choose the technology."
+        ],
+        "h2": [
+          "Structured enough to reduce risk. Practical enough to adopt.",
+          "Choose the smallest scope that addresses the problem",
+          "Related services and evidence",
+          "Bring the problem. Aptpro will help turn it into a practical next step."
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Business solutions",
+              "item": "https://aptpro.co.ke/solutions"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/industries/property-management",
+        "/industries/smes",
+        "/it-infrastructure",
+        "/projects",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 828
+    },
+    "/projects": {
+      "httpStatus": null,
+      "title": "Technology Projects & Engineering Experience in Kenya | Aptpro",
+      "description": "Explore Aptpro’s public engineering experience in veterinary ERP, PACS/DICOM, WordPress and business IT. Active work, implemented support and concepts stay distinct.",
+      "canonical": "https://aptpro.co.ke/projects",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "Technology work shaped by real operating environments."
+        ],
+        "h2": [
+          "Websites, systems and infrastructure in their operating context.",
+          "Public engineering experience with delivery status made explicit.",
+          "NASCAH Veterinary ERP",
+          "Veterinary Imaging and PACS",
+          "Laboratory Integration",
+          "Tesni Energies Website",
+          "Farm CCTV Solution",
+          "Business IT Support",
+          "Business Email and Domain Infrastructure",
+          "Local Server and Intranet Deployment",
+          "Ideas and planned systems presented without pretending they are completed case studies.",
+          "Pet Food E-commerce Concept",
+          "Pastoral Livestock Outreach Data System",
+          "Security and Network Diagnostic Tool Concept",
+          "Workflow and Cost-Mapping Consulting",
+          "Read the engineering scope behind the portfolio",
+          "Case study and related requirements",
+          "Have a workflow that feels hard to explain?"
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://aptpro.co.ke/projects"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/industries/energy-solar",
+        "/industries/veterinary",
+        "/it-infrastructure",
+        "/projects",
+        "/projects/veterinary-systems",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 1198
+    },
+    "/about": {
+      "httpStatus": null,
+      "title": "About Our Kenyan Technology Consultancy | Aptpro",
+      "description": "Aptpro Business & IT Solutions combines website development, software engineering, defensive security and infrastructure for Kenyan organisations and scoped regional work.",
+      "canonical": "https://aptpro.co.ke/about",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "A practical Kenyan technology partner for real business operations."
+        ],
+        "h2": [
+          "Technology should make work clearer, safer and easier to support.",
+          "Business-first technology",
+          "Security built into delivery",
+          "Practical local support",
+          "Designed around real operations",
+          "Plain-language delivery with technical discipline behind it.",
+          "Engineering and procurement expectations",
+          "Related services and evidence",
+          "Bring the problem. Aptpro will help turn it into a practical next step."
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About",
+              "item": "https://aptpro.co.ke/about"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/it-infrastructure",
+        "/projects",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 606
+    },
+    "/contact": {
+      "httpStatus": null,
+      "title": "Website & Technology Project Enquiries in Kenya | Aptpro",
+      "description": "Discuss a website, ERP, security, IT or automation project in Kenya with Aptpro. Contact us by WhatsApp, phone or email, or prepare a short project brief.",
+      "canonical": "https://aptpro.co.ke/contact",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "Discuss a website or technology project in Kenya."
+        ],
+        "h2": [
+          "Talk to Aptpro about the systems, support or workflow problem in front of you.",
+          "What can we help you scope?",
+          "Related services and evidence"
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Contact",
+              "item": "https://aptpro.co.ke/contact"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/it-infrastructure",
+        "/projects",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 489
+    },
+    "/automation": {
+      "httpStatus": null,
+      "title": "Business Automation & System Integration in Kenya | Aptpro",
+      "description": "Workflow automation and system integration for Kenyan businesses. Map repeated tasks, review interfaces and scope reporting, approvals and handovers with Aptpro.",
+      "canonical": "https://aptpro.co.ke/automation",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "Business automation and integrations built around a defined workflow."
+        ],
+        "h2": [
+          "Where automation can fit",
+          "Engineering checks before a workflow is automated",
+          "Questions before you scope the work",
+          "Related services and evidence",
+          "Which repeated task causes the most friction?"
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://aptpro.co.ke/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Automation & integration",
+              "item": "https://aptpro.co.ke/automation"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://aptpro.co.ke/automation#service",
+          "name": "Business automation and system integration in Kenya",
+          "description": "Workflow mapping, integration feasibility and scoped automation for reporting, approvals and business handovers.",
+          "url": "https://aptpro.co.ke/automation",
+          "serviceType": [
+            "Business process automation",
+            "System integration",
+            "Workflow digitisation"
+          ],
+          "provider": {
+            "@id": "https://aptpro.co.ke/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Kenya"
+            },
+            {
+              "@type": "Place",
+              "name": "East Africa"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/industries/property-management",
+        "/industries/smes",
+        "/it-infrastructure",
+        "/projects",
+        "/projects/veterinary-systems",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 657
+    },
+    "/industries": {
+      "httpStatus": null,
+      "title": "Industry Technology Solutions in Kenya | Aptpro",
+      "description": "Explore Aptpro service scopes for veterinary operations, property managers, professional services, energy businesses and SMEs in Kenya.",
+      "canonical": "https://aptpro.co.ke/industries",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "Technology services shaped around how your industry operates."
+        ],
+        "h2": [
+          "Find the operating context closest to your business",
+          "One business problem can cross several technical boundaries",
+          "Describe your business and the operating problem"
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Industries",
+              "item": "https://aptpro.co.ke/industries"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/industries/energy-solar",
+        "/industries/professional-services",
+        "/industries/property-management",
+        "/industries/smes",
+        "/industries/veterinary",
+        "/it-infrastructure",
+        "/projects",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 537
+    },
+    "/industries/veterinary": {
+      "httpStatus": null,
+      "title": "Veterinary Systems & IT Services in Kenya | Aptpro",
+      "description": "Veterinary ERP workflows, PACS/DICOM, laboratory integration planning, infrastructure and security. Explore Aptpro’s public technical experience in Kenya.",
+      "canonical": "https://aptpro.co.ke/industries/veterinary",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "Veterinary Systems & IT Services in Kenya"
+        ],
+        "h2": [
+          "The business problem comes before the platform",
+          "Technology scope for veterinary & animal healthcare",
+          "What to clarify before implementation",
+          "What the public experience establishes",
+          "Veterinary & animal healthcare: questions before an engagement",
+          "Related services and evidence",
+          "Discuss technology requirements for your organisation"
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Industries",
+              "item": "https://aptpro.co.ke/industries"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Veterinary & animal healthcare",
+              "item": "https://aptpro.co.ke/industries/veterinary"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://aptpro.co.ke/industries/veterinary#service",
+          "name": "Veterinary Systems & IT Services in Kenya",
+          "description": "Aptpro supports veterinary technology beyond the clinic website. Public experience includes an active veterinary ERP engagement, imaging and PACS configuration, laboratory integration planning and local infrastructure work.",
+          "url": "https://aptpro.co.ke/industries/veterinary",
+          "serviceType": "Industry-specific technology consultancy",
+          "provider": {
+            "@id": "https://aptpro.co.ke/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Kenya"
+            },
+            {
+              "@type": "Place",
+              "name": "East Africa"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/it-infrastructure",
+        "/projects",
+        "/projects/veterinary-systems",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 759
+    },
+    "/industries/property-management": {
+      "httpStatus": null,
+      "title": "Property & Apartment Technology Services in Kenya | Aptpro",
+      "description": "Property websites, viewing enquiries, WhatsApp communication, reporting, network and CCTV planning for apartments and property managers in Kenya.",
+      "canonical": "https://aptpro.co.ke/industries/property-management",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "Property & Apartment Technology Services in Kenya"
+        ],
+        "h2": [
+          "The business problem comes before the platform",
+          "Technology scope for property & apartments",
+          "What to clarify before implementation",
+          "What the public experience establishes",
+          "Property & apartments: questions before an engagement",
+          "Related services and evidence",
+          "Discuss technology requirements for your organisation"
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Industries",
+              "item": "https://aptpro.co.ke/industries"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Property & apartments",
+              "item": "https://aptpro.co.ke/industries/property-management"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://aptpro.co.ke/industries/property-management#service",
+          "name": "Property & Apartment Technology Services in Kenya",
+          "description": "Aptpro can scope property websites, enquiry handling, business workflows and infrastructure for property managers, apartment operators and real-estate businesses in Kenya. Each engagement begins with a review of the organisation’s existing tools and site requirements.",
+          "url": "https://aptpro.co.ke/industries/property-management",
+          "serviceType": "Industry-specific technology consultancy",
+          "provider": {
+            "@id": "https://aptpro.co.ke/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Kenya"
+            },
+            {
+              "@type": "Place",
+              "name": "East Africa"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/it-infrastructure",
+        "/projects",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 676
+    },
+    "/industries/professional-services": {
+      "httpStatus": null,
+      "title": "Websites & Business Systems for Professional Services in Kenya | Aptpro",
+      "description": "Company websites, enquiry workflows, business records and secure IT support for consultancies and professional-service organisations in Kenya.",
+      "canonical": "https://aptpro.co.ke/industries/professional-services",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "Websites & Business Systems for Professional Services in Kenya"
+        ],
+        "h2": [
+          "The business problem comes before the platform",
+          "Technology scope for professional services",
+          "What to clarify before implementation",
+          "What the public experience establishes",
+          "Professional services: questions before an engagement",
+          "Related services and evidence",
+          "Discuss technology requirements for your organisation"
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Industries",
+              "item": "https://aptpro.co.ke/industries"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Professional services",
+              "item": "https://aptpro.co.ke/industries/professional-services"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://aptpro.co.ke/industries/professional-services#service",
+          "name": "Websites & Business Systems for Professional Services in Kenya",
+          "description": "Aptpro can help professional-service organisations in Kenya explain their expertise online and organise the work behind an enquiry. Website, workflow and IT scopes follow the firm’s actual requirements.",
+          "url": "https://aptpro.co.ke/industries/professional-services",
+          "serviceType": "Industry-specific technology consultancy",
+          "provider": {
+            "@id": "https://aptpro.co.ke/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Kenya"
+            },
+            {
+              "@type": "Place",
+              "name": "East Africa"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/it-infrastructure",
+        "/projects",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 655
+    },
+    "/industries/energy-solar": {
+      "httpStatus": null,
+      "title": "Website & IT Services for Energy and Solar Businesses in Kenya | Aptpro",
+      "description": "Service-led websites, WordPress support, enquiry journeys and workflow planning for energy and solar businesses. Explore Aptpro’s public Tesni experience.",
+      "canonical": "https://aptpro.co.ke/industries/energy-solar",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "Website & IT Services for Energy and Solar Businesses in Kenya"
+        ],
+        "h2": [
+          "The business problem comes before the platform",
+          "Technology scope for energy & solar",
+          "What to clarify before implementation",
+          "What the public experience establishes",
+          "Energy & solar: questions before an engagement",
+          "Related services and evidence",
+          "Discuss technology requirements for your organisation"
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Industries",
+              "item": "https://aptpro.co.ke/industries"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Energy & solar",
+              "item": "https://aptpro.co.ke/industries/energy-solar"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://aptpro.co.ke/industries/energy-solar#service",
+          "name": "Website & IT Services for Energy and Solar Businesses in Kenya",
+          "description": "Aptpro helps energy and solar businesses present services clearly and can scope the workflow and IT needs behind enquiries. Public website-support experience includes Tesni Energies.",
+          "url": "https://aptpro.co.ke/industries/energy-solar",
+          "serviceType": "Industry-specific technology consultancy",
+          "provider": {
+            "@id": "https://aptpro.co.ke/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Kenya"
+            },
+            {
+              "@type": "Place",
+              "name": "East Africa"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/it-infrastructure",
+        "/projects",
+        "/projects#tesni-energies",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 651
+    },
+    "/industries/smes": {
+      "httpStatus": null,
+      "title": "Websites, Automation & IT Solutions for Kenyan SMEs | Aptpro",
+      "description": "Start with a website or an operating problem. Aptpro scopes automation, custom systems, infrastructure and security for growing Kenyan SMEs.",
+      "canonical": "https://aptpro.co.ke/industries/smes",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "Websites, Automation & IT Solutions for Kenyan SMEs"
+        ],
+        "h2": [
+          "The business problem comes before the platform",
+          "Technology scope for smes & growing businesses",
+          "What to clarify before implementation",
+          "What the public experience establishes",
+          "SMEs & growing businesses: questions before an engagement",
+          "Related services and evidence",
+          "Discuss technology requirements for your growing business"
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Industries",
+              "item": "https://aptpro.co.ke/industries"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "SMEs & growing businesses",
+              "item": "https://aptpro.co.ke/industries/smes"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://aptpro.co.ke/industries/smes#service",
+          "name": "Websites, Automation & IT Solutions for Kenyan SMEs",
+          "description": "Aptpro works with Kenyan SMEs that need professional websites and a more structured technology environment. Start with the immediate problem, then build toward connected records, dependable infrastructure and safer access.",
+          "url": "https://aptpro.co.ke/industries/smes",
+          "serviceType": "Industry-specific technology consultancy",
+          "provider": {
+            "@id": "https://aptpro.co.ke/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Kenya"
+            },
+            {
+              "@type": "Place",
+              "name": "East Africa"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/it-infrastructure",
+        "/projects",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 722
+    },
+    "/projects/veterinary-systems": {
+      "httpStatus": null,
+      "title": "Veterinary ERP & PACS Engineering Case Study | Aptpro",
+      "description": "Public-safe Aptpro experience around NASCAH ERP, Orthanc PACS/DICOM and laboratory planning. Understand engineering scope and the status of each engagement.",
+      "canonical": "https://aptpro.co.ke/projects/veterinary-systems",
+      "robots": "index, follow",
+      "headings": {
+        "h1": [
+          "Veterinary ERP, imaging and integration experience."
+        ],
+        "h2": [
+          "Challenge and operating environment",
+          "Public requirements and engineering approach",
+          "Operational capability and evidence limits",
+          "Related services and evidence",
+          "Need to connect software requirements with the clinical operating environment?"
+        ]
+      },
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "Organization",
+                "ProfessionalService"
+              ],
+              "@id": "https://aptpro.co.ke/#organization",
+              "name": "Aptpro Business & IT Solutions",
+              "alternateName": "Aptpro",
+              "url": "https://aptpro.co.ke",
+              "logo": "https://aptpro.co.ke/icon.svg",
+              "description": "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
+              "email": "info@aptpro.co.ke",
+              "telephone": "+254721494510",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Place",
+                  "name": "East Africa"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "KE"
+              },
+              "knowsAbout": [
+                "Website design and development",
+                "ERP and business systems",
+                "Defensive cybersecurity",
+                "IT infrastructure",
+                "Workflow automation and integration"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://aptpro.co.ke/#website",
+              "url": "https://aptpro.co.ke",
+              "name": "Aptpro Business & IT Solutions",
+              "publisher": {
+                "@id": "https://aptpro.co.ke/#organization"
+              },
+              "inLanguage": "en-KE"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aptpro.co.ke"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://aptpro.co.ke/projects"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Veterinary systems",
+              "item": "https://aptpro.co.ke/projects/veterinary-systems"
+            }
+          ]
+        }
+      ],
+      "internalLinks": [
+        "#main-content",
+        "/",
+        "/about",
+        "/automation",
+        "/contact",
+        "/cybersecurity",
+        "/erp-systems",
+        "/industries",
+        "/industries/veterinary",
+        "/it-infrastructure",
+        "/projects",
+        "/services",
+        "/solutions",
+        "/website-design"
+      ],
+      "visibleWords": 673
+    }
+  },
+  "errors": [],
+  "routeCount": 18
+}

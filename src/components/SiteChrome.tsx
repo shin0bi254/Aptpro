@@ -147,8 +147,8 @@ export function SiteHeader() {
     };
   }, [mobileOpen]);
 
-  const serviceLinks = navItems.filter((item) => ["/services", "/website-design", "/erp-systems", "/cybersecurity", "/it-infrastructure"].includes(item.href));
-  const primaryLinks = navItems.filter((item) => ["/solutions", "/projects", "/about", "/contact"].includes(item.href));
+  const serviceLinks = navItems.filter((item) => ["/services", "/website-design", "/erp-systems", "/cybersecurity", "/it-infrastructure", "/automation"].includes(item.href));
+  const primaryLinks = navItems.filter((item) => ["/solutions", "/industries", "/projects", "/about", "/contact"].includes(item.href));
 
   return (
     <header className={`site-header${isScrolled ? " is-scrolled" : ""}`}>
@@ -230,7 +230,7 @@ export function SiteFooter() {
     { label: "Cybersecurity", href: "/cybersecurity" },
     { label: "IT infrastructure", href: "/it-infrastructure" },
   ];
-  const trustBadges = ["Nairobi and Kenya focus", "Security-aware delivery", "Device-prepared enquiries"];
+  const trustBadges = ["Kenya-first delivery", "Security-aware delivery", "Device-prepared enquiries"];
 
   return (
     <>
@@ -255,9 +255,9 @@ export function SiteFooter() {
             </span>
           </Link>
           <p>
-            Serving growing organizations in Kenya with IT support, cybersecurity, business
-            systems, automation, websites, CCTV, Microsoft 365, QuickBooks support, and practical
-            technology strategy.
+            A Kenyan technology consultancy for professional websites, ERP and business systems,
+            defensive cybersecurity, IT infrastructure and workflow integration. Remote regional
+            delivery across East Africa is scoped to the engagement.
           </p>
           <div className="footer-privacy-note">
             <ShieldCheck size={20} aria-hidden="true" />

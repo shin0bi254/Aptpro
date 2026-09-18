@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import "./globals.css";
+import { EntitySchema } from "@/components/SeoSections";
 
 const socialImage = [
   {
@@ -19,19 +20,6 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   applicationName: siteConfig.businessName,
-  keywords: [
-    "IT support Kenya",
-    "cybersecurity Kenya",
-    "website design Nairobi",
-    "website development Kenya",
-    "web designers in Nairobi",
-    "business software Kenya",
-    "managed IT support",
-    "ERP systems Kenya",
-    "custom ERP systems Kenya",
-    "managed IT services Nairobi",
-    "Aptpro",
-  ],
   authors: [{ name: siteConfig.businessName }],
   creator: siteConfig.businessName,
   publisher: siteConfig.businessName,
@@ -78,7 +66,7 @@ export default function RootLayout({
       lang="en"
       className="h-full antialiased"
     >
-      <body className="min-h-full">{children}</body>
+      <body className="min-h-full"><EntitySchema />{children}</body>
     </html>
   );
 }

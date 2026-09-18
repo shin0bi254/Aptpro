@@ -1,0 +1,449 @@
+{
+  "base": "http://localhost:3001",
+  "routeChecks": [
+    {
+      "viewport": "desktop",
+      "route": "/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/website-design",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/erp-systems",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/cybersecurity",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/it-infrastructure",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/services",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/solutions",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/projects",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/about",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/contact",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/automation",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2,
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/industries",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2,
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/industries/veterinary",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2,
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/industries/property-management",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2,
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/industries/professional-services",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2,
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/industries/energy-solar",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2,
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/industries/smes",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2,
+        2
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "route": "/projects/veterinary-systems",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "gridColumns": [
+        2
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/website-design",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/erp-systems",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/cybersecurity",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/it-infrastructure",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/services",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/solutions",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/projects",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/about",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/contact",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/automation",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1,
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/industries",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1,
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/industries/veterinary",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1,
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/industries/property-management",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1,
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/industries/professional-services",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1,
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/industries/energy-solar",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1,
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/industries/smes",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1,
+        1
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/projects/veterinary-systems",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "gridColumns": [
+        1
+      ]
+    }
+  ],
+  "errors": [],
+  "checks": {
+    "desktopFaq": true,
+    "desktopInternalNavigation": true,
+    "mobileFaq": true,
+    "mobileInternalNavigation": true,
+    "mobileDrawer": true,
+    "whatsAppPreparationWithoutOptionalFields": true,
+    "emailChannelLabelAndRequirement": true,
+    "unknownRouteStatus": 404,
+    "trailingSlashStatus": 307,
+    "trailingSlashLocation": "/website-design",
+    "htmlExtensionStatus": 307,
+    "htmlExtensionLocation": "/website-design"
+  },
+  "screenshots": [
+    "desktop-website-design",
+    "desktop-contact",
+    "desktop-industries",
+    "desktop-industries-veterinary",
+    "desktop-industries-property-management",
+    "mobile-website-design",
+    "mobile-contact",
+    "mobile-industries",
+    "mobile-industries-veterinary",
+    "mobile-industries-property-management",
+    "mobile-drawer"
+  ]
+}

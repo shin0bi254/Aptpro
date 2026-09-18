@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ConsultationCta, CredibilityCard, PageHero } from "@/components/PageSections";
+import { Breadcrumbs, ContentGrid, RelatedLinks } from "@/components/SeoSections";
 import { SiteShell } from "@/components/SiteChrome";
 import { createRouteMetadata, positioning, workingApproach } from "@/lib/site-content";
 
@@ -9,10 +10,11 @@ export default function AboutPage() {
   return (
     <SiteShell>
       <main>
+        <Breadcrumbs items={[{href:"/about",label:"About"}]} />
         <PageHero
           eyebrow="About Aptpro"
           title="A practical Kenyan technology partner for real business operations."
-          text="Aptpro combines business understanding, cybersecurity-aware engineering, hands-on technical delivery and long-term operational improvement."
+          text="Aptpro Business & IT Solutions is a technology consultancy based in Kenya. We combine website development, software engineering, defensive cybersecurity and infrastructure work around the needs of business operations."
         />
 
         <section className="section-shell about-story">
@@ -58,6 +60,13 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <ContentGrid title="Engineering and procurement expectations" blocks={[
+          {title:"Requirements before implementation",text:"Identify stakeholders, workflows and acceptance criteria. Define the scope and dependencies before choosing architecture or committing to a release. This applies to a company website as well as a larger business system."},
+          {title:"Controlled change and handover",text:"Where relevant, scope access roles, data preparation, testing, migration and release planning. Agree documentation, training, rollback or recovery responsibilities and support ownership."},
+          {title:"Kenya first, regional work by scope",text:"Kenya is Aptpro’s primary market. Remote discovery, website delivery and selected technical work can be scoped for organisations across East Africa. On-site requirements depend on location."},
+          {title:"Evidence with honest status",text:"Public work distinguishes active development, implemented support, planning and concepts. Veterinary ERP and PACS experience show the connection between software requirements and the operating environment."},
+        ]} />
+        <RelatedLinks links={[{href:"/website-design",label:"Professional websites for Kenyan businesses"},{href:"/projects",label:"Review public engineering experience"},{href:"/industries",label:"Explore industry operating requirements"},{href:"/contact",label:"Discuss scope and technical requirements"}]} />
         <ConsultationCta />
       </main>
     </SiteShell>

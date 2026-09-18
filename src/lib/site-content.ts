@@ -278,9 +278,9 @@ export const servicePageContent = {
   },
   erpSystems: {
     eyebrow: "Custom ERP systems Kenya",
-    title: "Business systems designed around workflows, roles, records and reporting.",
+    title: "Custom ERP and business systems for organisations in Kenya.",
     intro:
-      "Aptpro helps growing SMEs digitise operations in practical phases. The focus is not generic software theatre: it is clear customer records, inventory, billing, service delivery, approvals, dashboards, communication and audit trails that match how staff work.",
+      "Aptpro develops ERP and business software for Kenyan organisations moving beyond manual records and disconnected tools. Phased work connects customer records, inventory, billing, approvals and reporting to staff workflows and role permissions.",
     industries: [
       "Healthcare and veterinary operations",
       "Retail and inventory-led businesses",
@@ -319,9 +319,9 @@ export const servicePageContent = {
   },
   cybersecurity: {
     eyebrow: "Defensive cybersecurity services Kenya",
-    title: "Security reviews and hardening for authorised business environments.",
+    title: "Cybersecurity services for authorised business environments in Kenya.",
     intro:
-      "Aptpro focuses on defensive cybersecurity: reducing practical business risk through assessment, access control, secure configuration, vulnerability management and recovery readiness. The goal is safer operations, not fear-based theatre.",
+      "Aptpro focuses on defensive cybersecurity: reducing practical business risk through assessment, access control, secure configuration, vulnerability management and recovery readiness. Findings are prioritised by business impact and documented for practical remediation.",
     services: [
       "Security assessments",
       "Vulnerability management",
@@ -345,8 +345,8 @@ export const servicePageContent = {
     ],
   },
   infrastructure: {
-    eyebrow: "Managed IT services Nairobi",
-    title: "Structured IT and infrastructure support for the technology staff depend on.",
+    eyebrow: "IT infrastructure & support · Kenya",
+    title: "IT infrastructure and business IT support in Kenya.",
     intro:
       "Aptpro treats infrastructure as a business service: documented, supportable and aligned with continuity. The work covers daily IT support, networks, email, local servers, cloud deployment, remote access, backups and specialist systems.",
     services: [

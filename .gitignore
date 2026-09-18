@@ -43,3 +43,9 @@ next-env.d.ts
 # Local Graphify tooling and generated code graph
 /.tools/graphify/
 /graphify-out/
+
+# Local SEO verification dependencies, temporary helpers and screenshots
+/.tools/seo-*
+
+# Wrangler local development cache
+/.wrangler/

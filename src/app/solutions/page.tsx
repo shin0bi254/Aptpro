@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ConsultationCta, PageHero, SolutionCard } from "@/components/PageSections";
+import { Breadcrumbs, ContentGrid, RelatedLinks } from "@/components/SeoSections";
 import { SiteShell } from "@/components/SiteChrome";
 import { businessSolutions, createRouteMetadata, solutionApproach } from "@/lib/site-content";
 
@@ -9,6 +10,7 @@ export default function SolutionsPage() {
   return (
     <SiteShell>
       <main>
+        <Breadcrumbs items={[{href:"/solutions",label:"Business solutions"}]} />
         <PageHero
           eyebrow="Business solutions"
           title="Start with the operational problem, then choose the technology."
@@ -42,6 +44,8 @@ export default function SolutionsPage() {
           </div>
         </section>
 
+        <ContentGrid title="Choose the smallest scope that addresses the problem" blocks={[{title:"Discovery before software",text:"Manual records and recurring faults can have process causes as well as technical ones. Establish the data, roles and handovers before deciding on automation, ERP or infrastructure changes."},{title:"A plan your organisation can adopt",text:"Agree requirements, ownership, testing, migration and training where needed. Phased implementation lets staff review a defined change before the next scope is added."}]} />
+        <RelatedLinks links={[{href:"/automation",label:"Automation for repeated tasks and disconnected tools"},{href:"/erp-systems",label:"Custom systems for shared records and reporting"},{href:"/industries/smes",label:"Technology progression for growing SMEs"},{href:"/industries/property-management",label:"Property operating requirements"}]} />
         <ConsultationCta />
       </main>
     </SiteShell>

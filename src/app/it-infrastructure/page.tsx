@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
 import { ConsultationCta, PageHero } from "@/components/PageSections";
+import { Breadcrumbs, ContentGrid, FaqSection, RelatedLinks, serviceArea, providerId } from "@/components/SeoSections";
+import { infrastructureBuyerContent, infrastructureFaqs } from "@/lib/seo-content";
 import { SiteShell } from "@/components/SiteChrome";
 import { absoluteUrl, createRouteMetadata } from "@/lib/site-config";
-import { servicePageContent, siteConfig } from "@/lib/site-content";
+import { servicePageContent } from "@/lib/site-content";
 
 export const metadata: Metadata = createRouteMetadata("/it-infrastructure");
 
 export default function ItInfrastructurePage() {
   const content = servicePageContent.infrastructure;
+  const serviceDescriptions = ["Diagnose user, device and application issues with clear support ownership.", "Review connectivity and configuration before changing network equipment.", "Plan multi-computer application access, private permissions and local maintenance.", "Scope hosting, release checks and operating responsibilities for the application.", "Resolve account and device setup issues and document changes for future support.", "Configure branded email and Outlook with account ownership and access documented.", "Support authorised QuickBooks users and access issues within the existing environment.", "Identify what needs protection, who owns backups and how recovery will be checked.", "Review permissions and connectivity so private systems are not casually exposed.", "Plan site coverage, power, connectivity and authorised camera access.", "Assess equipment interfaces and local access; public experience includes PACS/DICOM support.", "Identify service dependencies, recovery responsibilities and practical continuity steps."];
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Managed IT services and infrastructure support in Nairobi",
-    provider: { "@type": "ProfessionalService", name: siteConfig.businessName, url: siteConfig.canonicalOrigin },
-    areaServed: ["Nairobi", "Kenya"],
+    "@type": "Service", "@id": `${absoluteUrl("/it-infrastructure")}#service`, description: content.intro,
+    name: "IT infrastructure and business IT support in Kenya",
+    provider: { "@id": providerId },
+    areaServed: serviceArea,
     serviceType: content.services,
     url: absoluteUrl("/it-infrastructure"),
   };
@@ -22,6 +25,7 @@ export default function ItInfrastructurePage() {
     <SiteShell>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       <main>
+        <Breadcrumbs items={[{href:"/services",label:"Services"},{href:"/it-infrastructure",label:"IT infrastructure"}]} />
         <PageHero eyebrow={content.eyebrow} title={content.title} text={content.intro} />
 
         <section className="section-shell detail-grid">
@@ -32,7 +36,7 @@ export default function ItInfrastructurePage() {
                 <span>{String(index + 1).padStart(2, "0")}</span>
               </div>
               <h2>{service}</h2>
-              <p>Handled as part of a documented support environment, not as disconnected computer repair.</p>
+              <p>{serviceDescriptions[index]}</p>
             </article>
           ))}
         </section>
@@ -62,6 +66,10 @@ export default function ItInfrastructurePage() {
           </div>
         </section>
 
+
+        <ContentGrid title="Support that accounts for the operating environment" blocks={infrastructureBuyerContent} />
+        <FaqSection faqs={infrastructureFaqs} />
+        <RelatedLinks links={[{"href": "/cybersecurity", "label": "Defensive security and access reviews"}, {"href": "/industries/property-management", "label": "Property network and CCTV requirements"}, {"href": "/industries/veterinary", "label": "Veterinary imaging and local infrastructure"}, {"href": "/projects", "label": "IT support and infrastructure experience"}, {"href": "/contact", "label": "Discuss IT support requirements"}]} />
         <ConsultationCta title="Need IT support that leaves your environment clearer than it found it?" />
       </main>
     </SiteShell>

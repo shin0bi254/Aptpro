@@ -4104,3 +4104,29 @@ h3 {
 @media(max-width:900px){.cyber-hero-grid{grid-template-columns:1fr}.cyber-hero h1{max-width:12ch}.security-terminal{max-width:680px}.security-architecture{min-height:340px}}
 @media(max-width:620px){.cyber-hero{padding-top:54px}.cyber-hero h1{max-width:100%;font-size:clamp(2.15rem,11vw,3.1rem)}.cyber-hero-grid{gap:36px}.terminal-bar{grid-template-columns:9px 9px 9px 1fr}.terminal-bar small{display:none}.terminal-body{min-height:310px;padding:20px;font-size:.72rem}.terminal-footer{flex-direction:column}.cyber-page .engagement-notice{grid-template-columns:1fr;margin-bottom:44px}.security-architecture{min-height:430px}.architecture-node{min-width:84px;font-size:.58rem}.architecture-node.node-1,.architecture-node.node-5{left:14px}.architecture-node.node-2,.architecture-node.node-6{right:14px}.architecture-node.node-3{top:40%;left:14px}.architecture-node.node-4{top:40%;right:14px}.technical-divider{align-items:flex-start;flex-direction:column}.cyber-page .security-card{min-height:260px}}
 @media(prefers-reduced-motion:reduce){.cyber-hero::after,.terminal-prompt span{animation:none}.terminal-body p{opacity:1;animation:none}.security-card:hover .security-card-scan,.security-card:focus-visible .security-card-scan{display:none}}
+/* Static content extensions follow the existing card and typography system. */
+.breadcrumbs { padding-top: 1.4rem; padding-bottom: .5rem; font-size: .78rem; }
+.breadcrumbs ol { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+.breadcrumbs li + li::before { content: "/"; margin-right: .5rem; opacity: .5; }
+.breadcrumbs a { text-decoration: underline; text-underline-offset: .2rem; }
+.seo-section { padding-top: 3rem; padding-bottom: 3rem; }
+.seo-content-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+.seo-card h3 { font-size: 1.15rem; line-height: 1.35; margin: 0 0 .8rem; }
+.seo-card p { margin: 0; line-height: 1.8; }
+.seo-answer > p, .case-study-copy > p { max-width: 78ch; line-height: 1.8; }
+.seo-answer > h2, .seo-links-title { max-width: 28ch; }
+.industry-card { display: flex; flex-direction: column; gap: 1rem; }
+.industry-card .inline-link { margin-top: auto; }
+.case-study-copy { scroll-margin-top: 7rem; }
+.case-study-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+.case-study-facts dt { font-weight: 700; margin-bottom: .5rem; }
+.case-study-facts dd { margin: 0; line-height: 1.8; }
+.seo-section .related-links { padding: 0; }
+@media (max-width: 720px) {
+  .seo-content-grid, .case-study-facts { grid-template-columns: minmax(0, 1fr); }
+  .seo-section { padding-top: 2rem; padding-bottom: 2rem; }
+  .breadcrumbs { font-size: .72rem; }
+  .seo-card { min-width: 0; }
+  .seo-answer .hero-actions { flex-wrap: wrap; }
+}
+.seo-content-grid > .detail-card:nth-child(n) { grid-column: auto; min-height: 0; }

@@ -3,9 +3,11 @@ import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
 import { ConsultationCta } from "@/components/PageSections";
 import { NumberedStep, SecurityArchitecture, SecurityCard, SecurityTerminal } from "@/components/ModernUI";
+import { Breadcrumbs, ContentGrid, FaqSection, RelatedLinks, serviceArea, providerId } from "@/components/SeoSections";
+import { securityBuyerContent, securityFaqs } from "@/lib/seo-content";
 import { SiteShell } from "@/components/SiteChrome";
 import { absoluteUrl, createRouteMetadata } from "@/lib/site-config";
-import { servicePageContent, siteConfig } from "@/lib/site-content";
+import { servicePageContent } from "@/lib/site-content";
 
 export const metadata: Metadata = createRouteMetadata("/cybersecurity");
 
@@ -35,12 +37,13 @@ const principleDescriptions = [
 
 export default function CybersecurityPage() {
   const content = servicePageContent.cybersecurity;
-  const jsonLd = { "@context": "https://schema.org", "@type": "Service", name: "Defensive cybersecurity services in Kenya", provider: { "@type": "ProfessionalService", name: siteConfig.businessName, url: siteConfig.canonicalOrigin }, areaServed: ["Nairobi", "Kenya"], serviceType: content.services, url: absoluteUrl("/cybersecurity") };
+  const jsonLd = { "@context": "https://schema.org", "@type": "Service", "@id": `${absoluteUrl("/cybersecurity")}#service`, description: content.intro, name: "Defensive cybersecurity services in Kenya", provider: { "@id": providerId }, areaServed: serviceArea, serviceType: content.services, url: absoluteUrl("/cybersecurity") };
 
   return (
     <SiteShell>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       <main className="cyber-page">
+        <Breadcrumbs items={[{href:"/services",label:"Services"},{href:"/cybersecurity",label:"Cybersecurity"}]} />
         <section className="cyber-hero">
           <div className="section-shell cyber-hero-grid">
             <div className="cyber-hero-copy">
@@ -62,6 +65,9 @@ export default function CybersecurityPage() {
 
         <section className="section-shell split-section cyber-principles"><div className="section-intro sticky-intro"><p className="command-label">$ operating-principles --show</p><h2>Defensive discipline, translated into practical operations.</h2><p>Every engagement stays grounded in authorised assessment, proportionate hardening, clear documentation and practical risk reduction.</p></div><div className="problem-list">{content.principles.map((principle, index) => <NumberedStep key={principle} variant="security" code={`SEC-${String(index + 1).padStart(2, "0")}`} title={principle} description={principleDescriptions[index]} />)}</div></section>
 
+        <ContentGrid title="How to scope a defensive security review" blocks={securityBuyerContent} />
+        <FaqSection faqs={securityFaqs} />
+        <RelatedLinks links={[{href:"/it-infrastructure",label:"Infrastructure support and recovery planning"},{href:"/website-design",label:"Website development with security foundations"},{href:"/projects",label:"Public engineering experience"},{href:"/industries/veterinary",label:"Veterinary access and infrastructure requirements"},{href:"/contact",label:"Discuss an authorised security review"}]} />
         <div className="cyber-cta"><ConsultationCta title="Need a defensive security review before a problem becomes expensive?" text="Define the environment, business concern and desired outcome. Aptpro will help establish an authorised, practical review scope." /></div>
       </main>
     </SiteShell>

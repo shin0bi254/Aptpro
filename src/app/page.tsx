@@ -4,6 +4,7 @@ import Link from "next/link";
 import { OperationsVisual, SignalDivider, IconGlyph } from "@/components/BrandMotif";
 import { ConsultationCta, SolutionCard } from "@/components/PageSections";
 import { CapabilityStrip, CaseStudyTabs, NumberedStep } from "@/components/ModernUI";
+import { ContentGrid, RelatedLinks } from "@/components/SeoSections";
 import { SiteShell } from "@/components/SiteChrome";
 import {
   businessProblems,
@@ -11,48 +12,25 @@ import {
   nascahErp,
   projects,
   services,
-  siteConfig,
   solutionPaths,
   workingApproach,
 } from "@/lib/site-content";
-import { absoluteUrl, createRouteMetadata } from "@/lib/site-config";
+import { createRouteMetadata } from "@/lib/site-config";
 
 export const metadata: Metadata = createRouteMetadata("/");
 
 export default function Home() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: siteConfig.businessName,
-    url: siteConfig.canonicalOrigin,
-    logo: absoluteUrl("/icon.svg"),
-    description: siteConfig.description,
-    areaServed: siteConfig.areaServed,
-    telephone: siteConfig.contact.phoneNumber,
-    email: siteConfig.contact.email,
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "KE",
-    },
-    serviceType: services.map((service) => service.title),
-  };
-
   return (
     <SiteShell>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
-      />
-
       <main id="top">
         <section className="hero">
           <div className="hero-copy">
             <p className="eyebrow">Based in Kenya - supporting growing organizations</p>
             <h1>Websites that convert. Systems that scale. Technology you can trust.</h1>
             <p className="hero-lede">
-              Aptpro helps Nairobi and Kenyan businesses build professional websites, custom ERP
-              systems, defensive cybersecurity programmes and reliable IT infrastructure with the
-              discipline expected from serious technology partners.
+              Aptpro Business &amp; IT Solutions is a Kenyan technology consultancy for professional
+              website design and development, custom ERP systems, defensive cybersecurity,
+              IT infrastructure and workflow integration.
             </p>
             <p className="hero-note">
               The work starts with the business operation: customers, staff, records, risk,
@@ -60,8 +38,8 @@ export default function Home() {
               delivery.
             </p>
             <div className="hero-actions">
-              <Link className="primary-button" href="/contact">
-                Start a Project
+              <Link className="primary-button" href="/website-design">
+                Explore Website Design
               </Link>
               <Link className="secondary-button" href="/projects">
                 Explore Our Work
@@ -302,6 +280,11 @@ export default function Home() {
           <CaseStudyTabs projects={projects.slice(0, 3)} />
         </section>
 
+        <ContentGrid title="Start with the immediate need, build toward structured operations" blocks={[
+          {title:"For SMEs and growing teams",text:"A focused website or IT fix can be the first engagement. Review manual records, spreadsheet reporting, WhatsApp handovers and weak backups before deciding whether automation or a business system is needed."},
+          {title:"For management and procurement",text:"Aptproâ€™s approach starts with requirements and scope. Architecture, RBAC, testing, documentation, migration, training and deployment responsibilities are addressed where the project requires them."},
+        ]} />
+        <RelatedLinks title="Explore the service and industry that fit your requirements" links={[{href:"/website-design",label:"Website design and web development in Kenya"},{href:"/industries",label:"Industry-specific technology requirements"},{href:"/industries/veterinary",label:"Veterinary systems and specialist infrastructure"},{href:"/industries/smes",label:"Phased technology services for Kenyan SMEs"},{href:"/automation",label:"Business workflow automation and integration"}]} />
         <ConsultationCta id="contact" />
       </main>
     </SiteShell>

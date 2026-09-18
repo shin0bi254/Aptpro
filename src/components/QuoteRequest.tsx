@@ -1,22 +1,15 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
-import { getMailToUrl, getWhatsAppUrl, serviceCategories, siteConfig } from "@/lib/site-content";
+import { getMailToUrl, getWhatsAppUrl, siteConfig } from "@/lib/site-content";
 
 type Status = {
   type: "idle" | "error" | "success";
   message: string;
 };
 
-const contactMethods = ["WhatsApp", "Email", "Phone call", "Any convenient channel"];
-const projectTypes = [
-  "Website project",
-  "ERP or business system",
-  "Cybersecurity",
-  "IT support",
-  "Infrastructure",
-  "Consultation",
-];
+const contactMethods = ["WhatsApp", "Email"];
+const projectTypes = ["Website design / redesign", "ERP / business system", "Cybersecurity", "IT infrastructure / support", "Automation / integration", "Technical consultation", "Existing system support"];
 const budgetRanges = [
   "Not sure yet",
   "Under KES 50,000",
@@ -26,6 +19,7 @@ const budgetRanges = [
 ];
 
 export function QuoteRequest() {
+  const [preferredContact, setPreferredContact] = useState("WhatsApp");
   const [status, setStatus] = useState<Status>({ type: "idle", message: "" });
   const isSuccess = status.type === "success";
 
@@ -65,7 +59,7 @@ export function QuoteRequest() {
     const timeline = String(formData.get("timeline") ?? "").trim();
     const message = String(formData.get("message") ?? "").trim();
 
-    if (!name || !organization || !email || !phone || !contactMethod || !service || !timeline || !message) {
+    if (!name || !organization || !contactMethod || !service || !message || (contactMethod === "Email" && !email)) {
       setStatus({
         type: "error",
         message: "Please complete the required fields before preparing your enquiry.",
@@ -76,12 +70,12 @@ export function QuoteRequest() {
     const enquiry = [
       `Name: ${name}`,
       `Organization: ${organization}`,
-      `Email: ${email}`,
-      `Phone: ${phone}`,
+      `Email: ${email || "Not provided"}`,
+      `Phone: ${phone || "Not provided"}`,
       `Preferred contact: ${contactMethod}`,
       `Project type: ${service}`,
       `Budget range: ${budget || "Not provided"}`,
-      `Desired timeline: ${timeline}`,
+      `Desired timeline: ${timeline || "To discuss"}`,
       "",
       message,
     ].join("\n");
@@ -131,7 +125,6 @@ export function QuoteRequest() {
           setStatus({ type: "idle", message: "" });
         }
       }}
-      noValidate
       data-reveal
     >
       <div className="form-row">
@@ -147,12 +140,12 @@ export function QuoteRequest() {
 
       <div className="form-row">
         <label className="floating-field">
-          <span>Email</span>
-          <input name="email" type="email" autoComplete="email" placeholder=" " required />
+          <span>Email (needed for email replies)</span>
+          <input name="email" type="email" autoComplete="email" placeholder=" " required={preferredContact === "Email"} />
         </label>
         <label className="floating-field">
-          <span>Phone</span>
-          <input name="phone" type="tel" autoComplete="tel" placeholder=" " required />
+          <span>Phone (optional)</span>
+          <input name="phone" type="tel" autoComplete="tel" placeholder=" " />
         </label>
       </div>
 
@@ -168,16 +161,11 @@ export function QuoteRequest() {
                 {option}
               </option>
             ))}
-            {serviceCategories.map((option) => (
-              <option key={option.title} value={option.title}>
-                {option.title}
-              </option>
-            ))}
           </select>
         </label>
         <label className="floating-field select-field">
           <span>Preferred contact</span>
-          <select name="contactMethod" required defaultValue="">
+          <select name="contactMethod" required value={preferredContact} onChange={(event) => setPreferredContact(event.target.value)}>
             <option value="" disabled>
               Select a channel
             </option>
@@ -205,8 +193,8 @@ export function QuoteRequest() {
           </select>
         </label>
         <label className="floating-field">
-          <span>Desired timeline</span>
-          <input name="timeline" type="text" placeholder=" " required />
+          <span>Desired timeline (optional)</span>
+          <input name="timeline" type="text" placeholder=" " />
         </label>
       </div>
 
@@ -228,7 +216,7 @@ export function QuoteRequest() {
 
       <div className="form-actions">
         <button type="submit" disabled={!canPrepareEnquiry}>
-          {canPrepareEnquiry ? "Prepare WhatsApp enquiry" : "Contact details required"}
+          {canPrepareEnquiry ? `Prepare ${preferredContact} enquiry` : "Contact details required"}
         </button>
         <p>{fallbackNote || "Your enquiry opens in WhatsApp or email so you can review it before sending."}</p>
       </div>

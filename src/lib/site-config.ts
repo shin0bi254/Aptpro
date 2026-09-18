@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { industryRoutes } from "./industry-routes";
 
 export type ContactChannel = "whatsapp" | "phone" | "email";
 
@@ -14,7 +15,15 @@ export type PublicRoute = {
     | "/solutions"
     | "/projects"
     | "/about"
-    | "/contact";
+    | "/contact"
+    | "/automation"
+    | "/industries"
+    | "/industries/veterinary"
+    | "/industries/property-management"
+    | "/industries/professional-services"
+    | "/industries/energy-solar"
+    | "/industries/smes"
+    | "/projects/veterinary-systems";
   title: string;
   description: string;
   changeFrequency: "weekly" | "monthly" | "yearly";
@@ -26,7 +35,7 @@ export const siteConfig = {
   shortName: "Aptpro",
   tagline: "Websites. Systems. Secure operations.",
   description:
-    "Aptpro designs professional websites, custom ERP systems, cybersecurity programmes and reliable IT infrastructure for growing Kenyan organizations.",
+    "Aptpro is a Kenyan technology consultancy for website design, custom ERP, cybersecurity, IT infrastructure and workflow automation, with scoped remote delivery across East Africa.",
   areaServed: "Kenya",
   primaryDomain: "aptpro.co.ke",
   canonicalOrigin: "https://aptpro.co.ke",
@@ -47,97 +56,101 @@ export const publicRoutes: PublicRoute[] = [
   {
     label: "Home",
     href: "/",
-    title: "Website Design, ERP Systems, Cybersecurity & IT Consulting in Kenya",
+    title: "Technology Consultancy & Website Development in Kenya",
     description:
-      "Aptpro Business & IT Solutions builds conversion-focused websites, custom ERP systems, cybersecurity programmes and reliable IT infrastructure for Nairobi and Kenyan businesses.",
+      "Aptpro helps Kenyan businesses with professional websites, custom ERP, defensive cybersecurity, IT support and workflow integration. Start with a practical scope.",
     changeFrequency: "weekly",
     priority: 1,
   },
   {
     label: "Websites",
     href: "/website-design",
-    title: "Website Design Nairobi & Website Development Kenya",
+    title: "Website Design & Web Development in Kenya",
     description:
-      "Professional website design and website development in Nairobi and Kenya: business websites, e-commerce, redesigns, WordPress support, Next.js builds, SEO foundations, hosting and maintenance.",
+      "Professional websites for Kenyan businesses: company sites, redesigns, WordPress, custom Next.js development, SEO foundations and support. Discuss your requirements.",
     changeFrequency: "monthly",
     priority: 0.96,
   },
   {
     label: "ERP & Business Systems",
     href: "/erp-systems",
-    title: "Custom ERP Systems and Business Software Development in Kenya",
+    title: "Custom ERP Systems & Business Software in Kenya",
     description:
-      "Aptpro designs custom ERP systems, workflow digitisation and business software for Kenyan SMEs that need clearer records, approvals, reporting, billing, inventory and role-based access.",
+      "Custom ERP and business software for Kenyan organisations: workflows, billing, inventory, RBAC, migration and reporting. Scope a phased implementation with Aptpro.",
     changeFrequency: "monthly",
     priority: 0.94,
   },
   {
     label: "Cybersecurity",
     href: "/cybersecurity",
-    title: "Cybersecurity Services Kenya for Defensive Business Security",
+    title: "Cybersecurity Services in Kenya",
     description:
-      "Defensive cybersecurity services in Kenya: security assessments, access-control reviews, vulnerability management, website security, backup reviews, network hardening and secure architecture.",
+      "Authorised defensive cybersecurity for Kenyan organisations: assessments, access reviews, hardening and recovery readiness. Discuss a scoped security review.",
     changeFrequency: "monthly",
     priority: 0.9,
   },
   {
     label: "IT & Infrastructure",
     href: "/it-infrastructure",
-    title: "Managed IT Services Nairobi and Business Infrastructure Support",
+    title: "IT Infrastructure & Business IT Support in Kenya",
     description:
-      "Managed IT services, network support, business email, local servers, intranets, cloud deployment, backups, remote access, CCTV planning and specialist-system integration for Kenyan businesses.",
+      "IT support and infrastructure for businesses in Kenya: networks, email, local systems, backups and specialist integrations. Review your environment with Aptpro.",
     changeFrequency: "monthly",
     priority: 0.88,
   },
   {
     label: "Services",
     href: "/services",
-    title: "Technology Consulting Services for Websites, ERP, Security and IT",
+    title: "Business Technology & IT Services in Kenya",
     description:
-      "Explore Aptpro service divisions for website development, ERP systems, cybersecurity, managed IT, infrastructure and technology consulting in Kenya.",
+      "Explore Aptpro\u2019s website development, ERP, cybersecurity, infrastructure and automation services for Kenyan businesses. Find the scope that fits your operating needs.",
     changeFrequency: "monthly",
     priority: 0.9,
   },
   {
     label: "Solutions",
     href: "/solutions",
-    title: "Business Technology Solutions for Growing Organizations",
+    title: "Business Workflow & Technology Consulting in Kenya",
     description:
-      "Aptpro structures technology solutions around manual records, reporting gaps, weak access controls, unreliable networks and workflow problems.",
+      "Map manual records, reporting gaps and disconnected workflows with Aptpro. Plan phased technology improvements before choosing software or infrastructure.",
     changeFrequency: "monthly",
     priority: 0.85,
   },
   {
     label: "Projects",
     href: "/projects",
-    title: "Projects and Technology Implementation Experience",
+    title: "Technology Projects & Engineering Experience in Kenya",
     description:
-      "Review selected Aptpro experience across ERP systems, clinical imaging, laboratory workflows, websites, CCTV planning, business IT support and operational concepts.",
+      "Explore Aptpro\u2019s public engineering experience in veterinary ERP, PACS/DICOM, WordPress and business IT. Active work, implemented support and concepts stay distinct.",
     changeFrequency: "monthly",
     priority: 0.8,
   },
   {
     label: "About",
     href: "/about",
-    title: "About Aptpro Business & IT Solutions",
+    title: "About Our Kenyan Technology Consultancy",
     description:
-      "Learn about Aptpro, a Kenyan business and technology consultancy focused on practical IT support, cybersecurity-aware engineering and operational improvement.",
+      "Aptpro Business & IT Solutions combines website development, software engineering, defensive security and infrastructure for Kenyan organisations and scoped regional work.",
     changeFrequency: "yearly",
     priority: 0.7,
   },
   {
     label: "Contact",
     href: "/contact",
-    title: "Contact Aptpro for IT Support and Consultation",
+    title: "Website & Technology Project Enquiries in Kenya",
     description:
-      "Contact Aptpro by WhatsApp, phone or info@aptpro.co.ke, or prepare a transparent consultation enquiry that opens in your own app.",
+      "Discuss a website, ERP, security, IT or automation project in Kenya with Aptpro. Contact us by WhatsApp, phone or email, or prepare a short project brief.",
     changeFrequency: "monthly",
     priority: 0.9,
   },
+  { label: "Automation & integration", href: "/automation", title: "Business Automation & System Integration in Kenya", description: "Workflow automation and system integration for Kenyan businesses. Map repeated tasks, review interfaces and scope reporting, approvals and handovers with Aptpro.", changeFrequency: "monthly", priority: 0.82 },
+  { label: "Industries", href: "/industries", title: "Industry Technology Solutions in Kenya", description: "Explore Aptpro service scopes for veterinary operations, property managers, professional services, energy businesses and SMEs in Kenya.", changeFrequency: "monthly", priority: 0.8 },
+  ...industryRoutes.map((industry): PublicRoute => ({ label: industry.label, href: `/industries/${industry.slug}`, title: industry.title, description: industry.description, changeFrequency: "monthly", priority: 0.72 })),
+  { label: "Veterinary engineering case study", href: "/projects/veterinary-systems", title: "Veterinary ERP & PACS Engineering Case Study", description: "Public-safe Aptpro experience around NASCAH ERP, Orthanc PACS/DICOM and laboratory planning. Understand engineering scope and the status of each engagement.", changeFrequency: "monthly", priority: 0.75 },
 ];
 
 export const navItems = publicRoutes
-  .filter((route) => route.href !== "/")
+  .filter((route) => route.href !== "/" && !route.href.startsWith("/industries/") && !route.href.startsWith("/projects/"))
   .map(({ label, href }) => ({ label, href }));
 
 export const homeAnchors = [

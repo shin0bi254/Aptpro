@@ -83,6 +83,10 @@ Paths and query strings must be preserved.
 
 The current repository deployment configuration serves static assets through `wrangler.jsonc` and does not include a repository-owned request handler or redirect mechanism. Implement the permanent WWW-to-root redirect in Cloudflare configuration unless the Worker architecture is intentionally expanded to include a request handler.
 
+## Local SEO review and canonical redirect
+
+The local SEO upgrade is documented in [seo-review.md](seo-review.md), including the exact existing-zone WWW redirect rule. No DNS or Worker handler change is required. The Worker configuration uses native `404-page` handling for the exported `404.html`, replacing the previous SPA fallback. Review this locally before any future push/deployment.
+
 ## Deployment Verification Checklist
 
 - `npm run lint` passes.

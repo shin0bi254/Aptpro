@@ -153,7 +153,7 @@ export function ProjectCard({
       : "";
 
   return (
-    <article className={`project-card status-${statusClass}`} data-reveal style={revealStyle(index)}>
+    <article id={project.name === "Tesni Energies Website" ? "tesni-energies" : project.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")} className={`project-card status-${statusClass}`} data-reveal style={revealStyle(index)}>
       <div className="project-card-top">
         <span>{project.status}</span>
         <small>{String(index + 1).padStart(2, "0")}</small>
@@ -163,11 +163,11 @@ export function ProjectCard({
       <p className="project-category">{project.category}</p>
       <div className="project-brief">
         <p>
-          <strong>Business problem</strong>
+          <strong>Challenge</strong>
           {project.problem}
         </p>
         <p>
-          <strong>Aptpro involvement</strong>
+          <strong>Approach and scope</strong>
           {project.role}
         </p>
       </div>
@@ -176,7 +176,7 @@ export function ProjectCard({
           <li key={capability}>{capability}</li>
         ))}
       </ul>
-      <p className="project-hover-note">Hover detail: scoped around operational value, adoption and maintainability.</p>
+      <p className="project-hover-note">Engineering scope is evaluated alongside the stated delivery status.</p>
     </article>
   );
 }
