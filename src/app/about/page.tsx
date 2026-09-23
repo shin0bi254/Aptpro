@@ -14,7 +14,7 @@ export default function AboutPage() {
         <PageHero
           eyebrow="About Aptpro"
           title="A practical Kenyan technology partner for real business operations."
-          text="Aptpro Business & IT Solutions is a technology consultancy based in Kenya. We combine website development, software engineering, defensive cybersecurity and infrastructure work around the needs of business operations."
+          text="Aptpro Business & IT Solutions is a technology consultancy based in Kenya. We combine website development, software engineering, cybersecurity engineering, endpoint security, AI/data systems, automation and infrastructure work around the needs of business operations."
         />
 
         <section className="section-shell about-story">

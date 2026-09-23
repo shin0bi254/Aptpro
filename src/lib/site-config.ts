@@ -10,6 +10,8 @@ export type PublicRoute = {
     | "/website-design"
     | "/erp-systems"
     | "/cybersecurity"
+    | "/cybersecurity/netafande"
+    | "/cybersecurity/engineering"
     | "/it-infrastructure"
     | "/services"
     | "/solutions"
@@ -90,6 +92,21 @@ export const publicRoutes: PublicRoute[] = [
     priority: 0.9,
   },
   {
+    label: "NETAFANDE endpoint security",
+    href: "/cybersecurity/netafande",
+    title: "NETAFANDE Endpoint Security Platform Kenya",
+    description: "NETAFANDE is Aptpro's Kenya-first endpoint security and security operations engineering platform, developed for visibility, analysis and controlled response workflows.",
+    changeFrequency: "monthly",
+    priority: 0.84,
+  },
+  {
+    label: "Cybersecurity engineering",
+    href: "/cybersecurity/engineering",
+    title: "Cybersecurity Engineering & AI Security Kenya",
+    description: "Explore Aptpro's defensive security engineering: NETAFANDE, security automation, AI and data security research, and focused defensive tooling.",
+    changeFrequency: "monthly",
+    priority: 0.83,
+  },  {
     label: "IT & Infrastructure",
     href: "/it-infrastructure",
     title: "IT Infrastructure & Business IT Support in Kenya",
@@ -150,7 +167,7 @@ export const publicRoutes: PublicRoute[] = [
 ];
 
 export const navItems = publicRoutes
-  .filter((route) => route.href !== "/" && !route.href.startsWith("/industries/") && !route.href.startsWith("/projects/"))
+  .filter((route) => route.href !== "/" && !route.href.startsWith("/industries/") && !route.href.startsWith("/projects/") && !route.href.startsWith("/cybersecurity/"))
   .map(({ label, href }) => ({ label, href }));
 
 export const homeAnchors = [

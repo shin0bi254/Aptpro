@@ -3,6 +3,7 @@ import { ConsultationCta, PageHero, ProjectCard } from "@/components/PageSection
 import { Breadcrumbs, ContentGrid, RelatedLinks } from "@/components/SeoSections";
 import { SiteShell } from "@/components/SiteChrome";
 import { createRouteMetadata, projectGroups, projects } from "@/lib/site-content";
+import { defensiveTools, engineeringGroups } from "@/lib/security-engineering";
 
 export const metadata: Metadata = createRouteMetadata("/projects");
 
@@ -45,6 +46,8 @@ export default function ProjectsPage() {
             ))}
           </div>
         </section>
+
+        <section className="section-shell projects-page cybersecurity-projects"><div className="section-heading compact"><p className="eyebrow">Cybersecurity engineering</p><h2>Defensive tooling, platform development and research—status labelled.</h2><p>NETAFANDE is an active engineering platform. Focused utilities are built work; advanced items are research, prototype or architecture work, not claimed deployments.</p></div><div className="project-grid">{[{name:"NETAFANDE",status:"Active development",role:"Kenya-first endpoint security and security operations engineering platform.",capabilities:["Endpoint visibility","Detection","Triage"]}, ...defensiveTools.slice(0,3).map((tool) => ({name:tool.name,status:tool.status,role:tool.summary,capabilities:["Defensive tooling"]})), ...engineeringGroups[0].items.slice(0,2).map((item) => ({name:item.name,status:item.status,role:item.summary,capabilities:["Security R&D"]}))].map((project,index) => <ProjectCard key={project.name} project={{...project,category:"Cybersecurity engineering",problem:"Public defensive-security engineering scope with maturity stated."}} index={index} />)}</div><RelatedLinks title="Explore cybersecurity engineering" links={[{href:"/cybersecurity/netafande",label:"NETAFANDE platform"},{href:"/cybersecurity/engineering",label:"Full security engineering portfolio"},{href:"/cybersecurity",label:"Cybersecurity services"}]} /></section>
 
         <section className="section-shell projects-page concepts">
           <div className="section-heading compact">
