@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import type { ContentBlock, ContextLink, Faq } from "@/lib/seo-content";
 
@@ -15,7 +15,7 @@ export function ServiceSchema({ path, name, description, serviceType }: { path: 
 
 export function EntitySchema() {
   return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
-    { "@type": ["Organization", "ProfessionalService"], "@id": providerId, name: siteConfig.businessName, alternateName: siteConfig.shortName, url: siteConfig.canonicalOrigin, logo: absoluteUrl("/icon.svg"), description: siteConfig.description, email: siteConfig.contact.email, telephone: `+${siteConfig.contact.whatsappNumber}`, areaServed: serviceArea, address: { "@type": "PostalAddress", addressCountry: "KE" }, knowsAbout: ["Website design and development", "ERP and business systems", "Defensive cybersecurity", "IT infrastructure", "Workflow automation and integration"] },
+    { "@type": ["Organization", "ProfessionalService"], "@id": providerId, name: siteConfig.businessName, alternateName: siteConfig.shortName, url: siteConfig.canonicalOrigin, logo: absoluteUrl("/aptpro-logo.png"), description: siteConfig.description, email: siteConfig.contact.email, telephone: `+${siteConfig.contact.whatsappNumber}`, areaServed: serviceArea, address: { "@type": "PostalAddress", addressCountry: "KE" }, knowsAbout: ["Website design and development", "ERP and business systems", "Defensive cybersecurity", "IT infrastructure", "Workflow automation and integration"] },
     { "@type": "WebSite", "@id": `${siteConfig.canonicalOrigin}/#website`, url: siteConfig.canonicalOrigin, name: siteConfig.businessName, publisher: { "@id": providerId }, inLanguage: "en-KE" },
   ] }} />;
 }

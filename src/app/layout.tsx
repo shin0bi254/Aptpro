@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     canonical: absoluteUrl("/"),
   },
   icons: {
-    icon: "/icon.svg",
+    icon: "/icon.png",
   },
 };
 

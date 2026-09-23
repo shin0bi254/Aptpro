@@ -154,10 +154,6 @@ export function SiteHeader() {
     <header className={`site-header${isScrolled ? " is-scrolled" : ""}`}>
       <Link className="brand" href="/" aria-label={`${siteConfig.businessName} home`}>
         <LogoMark />
-        <span>
-          <strong>{siteConfig.shortName}</strong>
-          <small>Business & IT Solutions</small>
-        </span>
       </Link>
 
       <nav className="desktop-nav" aria-label="Primary navigation">
@@ -249,10 +245,6 @@ export function SiteFooter() {
         <div className="footer-summary">
           <Link className="brand footer-brand" href="/">
             <LogoMark />
-            <span>
-              <strong>{siteConfig.businessName}</strong>
-              <small>{siteConfig.tagline}</small>
-            </span>
           </Link>
           <p>
             A Kenyan technology consultancy for professional websites, ERP and business systems,
